@@ -1,3 +1,5 @@
 dist
 node_modules
 tmp
+yarn-error.log
+npm-error.log
