@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+
+.pt-mono {
+  font-family: 'PT Mono', monospace;
+}
+
+.min-vh-95 {
+  min-height: 95vh;
+}
+
+.skew-l {
+  transform: skewY(-5deg);
+}
+
+.hero-bg {
+  background-color: #1b2033;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: -10%;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 180%;
+  top: 0;
+  -webkit-transform: skewY(-12deg);
+  transform: skewY(-12deg);
+  background: #f6f9fc;
+}

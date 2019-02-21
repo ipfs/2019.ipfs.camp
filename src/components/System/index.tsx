@@ -176,6 +176,7 @@ export const Button = styled(Box)<SystemButton>(
     textAlign: 'center',
     lineHeight: 'inherit',
     textDecoration: 'none',
+    cursor: 'pointer',
   },
   borderColor,
   borderRadius,
@@ -197,6 +198,16 @@ Button.defaultProps = {
   border: 0,
   borderRadius: 4,
 }
+
+type SystemButtonLink = React.DetailedHTMLProps<
+  React.AnchorHTMLAttributes<HTMLAnchorElement>,
+  HTMLAnchorElement
+> &
+  SystemButtonProps
+
+export const ButtonLink = styled(Button)<SystemButtonLink>({})
+
+ButtonLink.defaultProps = { as: 'a' }
 
 type SystemFlexProps = SystemBoxProps &
   AlignItemsProps &
@@ -239,8 +250,7 @@ export const Heading = styled(Text)(themed('Heading'))
 
 Heading.defaultProps = {
   as: 'h2',
-  fontSize: 4,
-  className: 'pt-mono',
+  className: 'montserrat',
 }
 
 type SystemLink = BaseProps<HTMLAnchorElement> & BaseOverrides

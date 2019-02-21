@@ -1,0 +1,40 @@
+@keyframes rotate {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.stars,
+.stars-cl {
+  animation: 4000s linear infinite rotate;
+  background: url('./stars.svg') center/1000px auto repeat;
+  height: 100%;
+  left: calc(50% - 1000px);
+  min-height: 2000px;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  transform-origin: center;
+  width: 2000px;
+  z-index: 0;
+}
+
+.stars-cl {
+  animation: 1000s linear infinite rotate, 10s linear infinite alternate pulse;
+  background-size: 100%;
+  opacity: 0.2;
+}
