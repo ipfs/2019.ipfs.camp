@@ -10,9 +10,9 @@ import { Logo } from '@components/Logo'
 export default withSiteData(() => (
   <>
     <Hero className="min-vh-95 pa4 pa5-ns relative overflow-hidden">
-      <div className="hero-bg absolute top-0 bottom-0 left-0 right-0 skew-l z-00">
+      <aside className="hero-bg absolute top-0 bottom-0 left-0 right-0 skew-l z-00">
         <Stars />
-      </div>
+      </aside>
       <Box className="lh-copy z-1 mw9 center z-999">
         <Box className="mw7 left">
           <Logo style={{ minWidth: '220px', width: '20%' }} />
@@ -30,13 +30,34 @@ export default withSiteData(() => (
               letters="QmcSKzW6SSS2ygfbXHJHtNnDtJd4pHvVHDQUwhiM5FuWkX"
             />
           </Heading>
-          <Text className="measure-wide f4-ns" color="neutral2">
-            IPFS Camp is an experience designed for the builders of the
-            Distributed Web and Decentralization enthusiasts. We will bring
-            together the Core Developers and Contributors to the project,
-            Community Leaders, Builders on top of IPFS and the Distributed Web.
+          <Text className="measure-wide f5 f4-m f3-l" color="neutral1">
+            <Text as="strong" color="primary7">
+              IPFS Camp
+            </Text>{' '}
+            is{' '}
+            <Text as="strong" color="primary1">
+              3 day experience
+            </Text>{' '}
+            designed for the{' '}
+            <Text as="strong" color="primary4">
+              builders
+            </Text>{' '}
+            and{' '}
+            <Text as="strong" color="primary4">
+              enthusiasts
+            </Text>{' '}
+            of the{' '}
+            <Text as="strong" color="primary9">
+              Distributed Web
+            </Text>
+            .
           </Text>
-          <Text className="pt-mono f2" py={4}>
+          <Text className="measure-wide f5 f4-m f4-l" color="neutral1">
+            The schedule will be packed with moments for knowledge transfer and
+            learning, collective brainstorming, empowerment of the core
+            developers, users and contributors.
+          </Text>
+          <Text className="pv4 pt-mono f4 f3-m f2-l">
             June 27-30, Barcelona
           </Text>
           <ButtonLink
@@ -53,9 +74,9 @@ export default withSiteData(() => (
         </Box>
       </Box>
     </Hero>
-    <Box className="pa5 bg-white charcoal lh-copy">
-      <Box className="mw9 center">
-        <h1 className="lh-title montserrat">What to expect</h1>
+    <Box className="pa5 pt0 bg-white lh-copy" color="dark3">
+      <Box className="mw9 center f5 f4-l">
+        <h1 className="lh-title montserrat blue">What to expect</h1>
         <p className="measure-wide">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

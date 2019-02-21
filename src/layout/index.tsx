@@ -1,9 +1,12 @@
 import React from 'react'
+import { Box } from '@components/System'
 
 type PageProps = {
   meta?: {}
 }
 
 export const Page: React.FC<PageProps> = ({ children }) => (
-  <div className="center mw9 charcoal pa5 lh-copy">{children}</div>
+  <Box className="pa5 center mw9 lh-copy" color="dark3">
+    {children}
+  </Box>
 )
