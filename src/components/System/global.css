@@ -20,6 +20,10 @@
   top: -10%;
 }
 
+.z-00 {
+  z-index: -1;
+}
+
 .hero::before {
   content: '';
   position: absolute;
