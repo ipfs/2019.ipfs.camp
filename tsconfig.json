@@ -17,7 +17,8 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@layout/*": ["src/layout/*"]
     },
     "lib": ["dom", "es2015", "es2016"]
   },
