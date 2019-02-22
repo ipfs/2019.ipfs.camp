@@ -62,6 +62,7 @@ import {
   TextAlignProps,
   width,
   WidthProps,
+  BorderProps,
 } from 'styled-system'
 import * as CSS from 'csstype'
 
@@ -115,7 +116,7 @@ export { mergedTheme as theme }
 type BaseOverrides = {
   color?: CSS.ColorProperty
   as?: string
-  border?: number
+  border?: BorderProps['border']
 }
 
 interface BaseProps<T> extends HTMLAttributes<T> {}

@@ -3,7 +3,7 @@ import { Root, Routes, Head } from 'react-static'
 import { Link } from '@reach/router'
 import 'ipfs-system/all.css'
 import '@components/System/global.css'
-import { theme, Box } from '@components/System'
+import { theme, Box, GlobalStyle } from '@components/System'
 import MDXProvider from '@components/System/MDXProvider'
 
 // import system comps
@@ -16,6 +16,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Root>
+        <GlobalStyle />
         <Head htmlAttributes={{ lang: 'en-US' }}>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <title>IPFS Camp 2019 🏕</title>
@@ -23,7 +24,7 @@ function App() {
         <Box className="w-100 sans-serif white transition-all bt bw3 b--silver">
           {/* <Header title="" /> */}
           <FadeIn>
-            <Box as="nav" className="pa2 mw9 center">
+            <Box as="nav" className="pa2 mw9 center nested-links">
               <ul className="list">
                 <li className="dib">
                   <Link className="link white" to="/">
@@ -43,14 +44,7 @@ function App() {
             </MDXProvider>
           </FadeIn>
         </Box>
-        <Footer>
-          <Box p={4} overflow="auto" bg="dark3" color="white">
-            <code>{JSON.stringify(theme)}</code>
-          </Box>
-          <Box bg="dark3" className="pa5 bt-1 gray bt bw3 b--silver sans-serif">
-            I AM A FOOTER
-          </Box>
-        </Footer>
+        <Footer />
       </Root>
     </ThemeProvider>
   )
