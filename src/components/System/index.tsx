@@ -76,7 +76,7 @@ const campTheme = {
     primary3: '#FD5701',
     primary4: '#45D7F8',
     primary5: '#395FD7',
-    primary6: '#395FD7',
+    primary6: '#9772DF',
     primary7: '#64A512',
     primary8: '#465F3D',
     primary9: '#E53E28',
@@ -104,6 +104,9 @@ const themeColors = (theme: any = campTheme, c = '') => {
 
 export const GlobalStyle = createGlobalStyle`
   ${themeColors()}
+  /* .nested-links a {
+    color: #395FD7
+  } */
 `
 
 const themed = (key: string) => (props: any) => props.theme[key]

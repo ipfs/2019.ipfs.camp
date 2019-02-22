@@ -12,6 +12,7 @@ import MDXProvider from '@components/System/MDXProvider'
 import { ThemeProvider } from 'styled-components'
 import { FadeIn } from '@components/Animations/FadeIn'
 import { Footer } from '@components/Footer'
+import { Logo } from '@components/Logo'
 
 function App() {
   return (
@@ -25,12 +26,18 @@ function App() {
         <Box className="w-100 sans-serif white transition-all bt bw3 b--silver">
           {/* <Header title="" /> */}
           <FadeIn>
-            <nav className="nested-links bg-primary6">
-              <div className="ph4 ph5-ns pv2 mw9 center">
-                <div
-                  className="fl db w-10 bg-gray mr3 mt1"
-                  style={{ height: '40px' }}
-                />
+            <nav className="nested-links bg-primary5">
+              <div className="ph4 ph5-ns pv4 mw9 center flex items-center">
+                <Link className="link white" to="/">
+                  <Logo
+                    className="fl db mr2 mt1 cover"
+                    type="h"
+                    style={{
+                      minWidth: '200px',
+                      height: '80px',
+                    }}
+                  />
+                </Link>
                 <ul className="list">
                   <li className="dib">
                     <Link className="link white" to="/">
@@ -39,9 +46,6 @@ function App() {
                   </li>
                   <li className="dib ph2 link">
                     <Link to="/register">Register</Link>
-                  </li>
-                  <li className="dib ph2">
-                    <a href="https://blog.ipfs.io/">Blog</a>
                   </li>
                 </ul>
               </div>

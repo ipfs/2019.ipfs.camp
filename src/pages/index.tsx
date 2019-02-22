@@ -9,11 +9,14 @@ import { Logo } from '@components/Logo'
 
 export default withSiteData(() => (
   <>
-    <Hero className="min-vh-95 pa4 pa5-ns relative overflow-hidden">
+    <Hero className="min-vh-95 relative overflow-hidden">
       <Stars className="bg-dark3 skew-l" style={{ top: '-10%' }} />
-      <Box className="lh-copy mw9 center">
+      <Box className="pa4 pa5-ns lh-copy mw9 center">
         <Box className="mw7 left">
-          <Logo style={{ minWidth: '220px', width: '20%' }} />
+          <Logo
+            type="v"
+            style={{ minWidth: '220px', width: '20%', height: '15rem' }}
+          />
           <Heading
             as="h1"
             fontSize={[5, 7]}
@@ -52,14 +55,19 @@ export default withSiteData(() => (
         </Box>
       </Box>
     </Hero>
-    <section className="pa4 pa5-ns pt0 pt0-ns bg-white lh-copy dark3 ">
-      <div className="mw9 center f5 f4-l">
-        <Heading className="lh-title">What to expect</Heading>
-        <p className="measure-wide">
-          The event will be packed with moments of knowledge transfer,
-          collective brainstorming, pairing with core developers, and empowering
-          users and contributors ✨
-        </p>
+    <section className="bg-white lh-copy dark3 ">
+      <div className="pa4 pa5-ns pt0 pt0-ns mw9 center f5 f4-l">
+        <div className="flex items-center">
+          <div className="w-50-ns">
+            <Heading className="lh-title">What to expect</Heading>
+            <p>
+              The event will be packed with moments of knowledge transfer,
+              collective brainstorming, pairing with core developers, and
+              empowering users and contributors ✨
+            </p>
+          </div>
+          <div className="w-50-ns">[ PROJECT LOGOS ]</div>
+        </div>
         <Heading>Timeline</Heading>
         <ul>
           <li>Registration Opens</li>
