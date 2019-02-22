@@ -64,7 +64,7 @@ import {
   WidthProps,
   BorderProps,
 } from 'styled-system'
-import * as CSS from 'csstype'
+import { ColorProperty } from 'csstype'
 
 // util
 import { merge } from 'lodash'
@@ -114,7 +114,7 @@ export { mergedTheme as theme }
 
 // manual types to avoid conflicts with HTMLAttributes in types/styled-components - IntrinsicElements
 type BaseOverrides = {
-  color?: CSS.ColorProperty
+  color?: ColorProperty
   as?: string
   border?: BorderProps['border']
 }

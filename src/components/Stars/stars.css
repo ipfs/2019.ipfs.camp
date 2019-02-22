@@ -34,7 +34,7 @@
 }
 
 .stars-cl {
-  animation: 1000s linear infinite rotate, 10s linear infinite alternate pulse;
+  animation: 2000s linear infinite rotate, 20s linear infinite alternate pulse;
   background-size: 100%;
   opacity: 0.2;
 }

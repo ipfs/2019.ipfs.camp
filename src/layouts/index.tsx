@@ -14,15 +14,15 @@ type PageProps = {
 export const Page: React.FC<PageProps> = ({ children, meta, title }) => (
   <>
     {title && (
-      <Hero className="pa4 pa5-ns relative overflow-hidden">
+      <Hero className="relative overflow-hidden">
         <Stars className="bg-dark3" />
-        <Box className="lh-copy mw9 center">
+        <Box className="lh-copy pa4 pa5-ns mw9 center">
           <h1 className="f1">{title}</h1>
         </Box>
       </Hero>
     )}
-    <Box className="pa5 center mw9 lh-copy" color="dark3">
-      <Box className={meta.className}>{children}</Box>
+    <Box className="ph4 pv3 ph5-ns pv3-ns center mw9 lh-copy" color="dark3">
+      <Box className={meta && meta.className}>{children}</Box>
     </Box>
   </>
 )

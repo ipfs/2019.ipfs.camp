@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Mono');
-
-.pt-mono {
-  font-family: 'PT Mono', monospace;
-}
-
 .min-vh-95 {
   min-height: 95vh;
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { Root, Routes, Head } from 'react-static'
 import { Link } from '@reach/router'
 import 'ipfs-system/all.css'
+import './app.css'
 import '@components/System/global.css'
 import { theme, Box, GlobalStyle } from '@components/System'
 import MDXProvider from '@components/System/MDXProvider'
@@ -24,8 +25,12 @@ function App() {
         <Box className="w-100 sans-serif white transition-all bt bw3 b--silver">
           {/* <Header title="" /> */}
           <FadeIn>
-            <nav className="pa2 nested-links bg-primary2">
-              <div className="mw9 center">
+            <nav className="nested-links bg-primary6">
+              <div className="ph4 ph5-ns pv2 mw9 center">
+                <div
+                  className="fl db w-10 bg-gray mr3 mt1"
+                  style={{ height: '40px' }}
+                />
                 <ul className="list">
                   <li className="dib">
                     <Link className="link white" to="/">
@@ -33,17 +38,19 @@ function App() {
                     </Link>
                   </li>
                   <li className="dib ph2 link">
-                    <Link to="/about">About</Link>
+                    <Link to="/register">Register</Link>
                   </li>
                   <li className="dib ph2">
-                    <Link to="/blog">Blog</Link>
+                    <a href="https://blog.ipfs.io/">Blog</a>
                   </li>
                 </ul>
               </div>
             </nav>
-            <MDXProvider>
-              <Routes />
-            </MDXProvider>
+            <main className="nested-links">
+              <MDXProvider>
+                <Routes />
+              </MDXProvider>
+            </main>
           </FadeIn>
         </Box>
         <Footer />

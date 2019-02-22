@@ -4,7 +4,7 @@ import { Stars } from '@components/Stars'
 type FooterProps = {}
 
 export const Footer: React.FC<FooterProps> = () => (
-  <footer className="pa4 pa5-ns bt bt-1 bw1 b--gray sans-serif white nested-links relative overflow-hidden">
+  <footer className="pa4 pa5-ns bt bt-1 bw1 b--gray sans-serif white nested-links relative overflow-hidden shadow-1">
     <Stars className="bg-dark3" />
     <div className="flex-ns mw7 mb5 center nested-list-reset lh-copy f6 neutral2">
       <div className="w-third-ns">
@@ -31,19 +31,26 @@ export const Footer: React.FC<FooterProps> = () => (
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/registration">Registration</Link>
+            <Link to="/register">Registration</Link>
           </li>
           <li>
             <Link to="/faq">FAQ</Link>
+          </li>
+          <li>
+            <Link to="/code-of-conduct">Code of Conduct</Link>
           </li>
         </ul>
       </div>
       <div className="w-third-ns">
         <ul>
           <h3 className="monospace">Stay Updated</h3>
-          <li>subscribe to mlist</li>
-          <li>Follow on Twitter</li>
-          <li>Subscribe to blog</li>
+          <li>Subscribe to mlist</li>
+          <li>
+            <a href="https://twitter.com/ipfsbot">@ipfsbot</a>
+          </li>
+          <li>
+            <a href="https://blog.ipfs.io/index.xml">Subscribe to blog</a>
+          </li>
           <li>Join chat on IRC #ipfs-camp</li>
         </ul>
       </div>

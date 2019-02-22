@@ -1,5 +1,5 @@
 import React from 'react'
-const logo = require('./white.svg')
+const logo = require('./ipfs_camp_v_nl.svg')
 
 type LogoProps = {
   style?: React.CSSProperties

@@ -30,46 +30,37 @@ export default withSiteData(() => (
           </Heading>
 
           <Text className="measure-wide f5 f4-m f3-l" color="neutral2">
-            <strong>IPFS Camp</strong> is <strong>3 day experience</strong>{' '}
-            designed for the <strong>builders</strong> and{' '}
-            <strong>enthusiasts</strong> of the <strong>Distributed Web</strong>
-            .
-          </Text>
-          <Text className="measure-wide f5 f4-m f4-l mt4 monospace neutral1">
-            The schedule will be packed with moments for knowledge transfer and
-            learning, collective brainstorming, empowerment of the core
-            developers, users and contributors ✨
+            <strong>IPFS Camp</strong> is a{' '}
+            <strong>3 day hackers retreat</strong> designed for the{' '}
+            <strong>builders</strong> of the <strong>Distributed Web</strong>.
+            Join the core developers for a hands on experience packed with
+            workshops, lectures and deep-dives.
           </Text>
           <Text className="pv4 pt-mono f4 f3-m f2-l">
             June 27-30, Barcelona
           </Text>
           <ButtonLink
-            href="/registration"
+            href="/register"
             px={4}
             py={3}
             fontSize={3}
-            bg="red"
-            color="white"
+            bg="primary3"
             className="grow pointer"
           >
-            Registration
+            <span className="white">Registration Open</span>
           </ButtonLink>
         </Box>
       </Box>
     </Hero>
     <section className="pa4 pa5-ns pt0 pt0-ns bg-white lh-copy dark3 ">
       <div className="mw9 center f5 f4-l">
-        <h2 className="lh-title montserrat">What to expect</h2>
+        <Heading className="lh-title">What to expect</Heading>
         <p className="measure-wide">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          The event will be packed with moments of knowledge transfer,
+          collective brainstorming, pairing with core developers, and empowering
+          users and contributors ✨
         </p>
-        <h2 className="montserrat">Timeline</h2>
+        <Heading>Timeline</Heading>
         <ul>
           <li>Registration Opens</li>
           <li>First Attendees Selected</li>
@@ -77,8 +68,8 @@ export default withSiteData(() => (
           <li>Registration Closes</li>
         </ul>
         <section className="mv4">
-          <h2>Sponsors</h2>
-          <div className="aspect-ratio aspect-ratio--1x1 bg-gray" />
+          <Heading>Sponsors</Heading>
+          <Heading>Want to Sponsor or get involved?</Heading>
         </section>
       </div>
     </section>

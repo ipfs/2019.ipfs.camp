@@ -1,1 +1,10 @@
 @import '~ipfs-system/all.css';
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+
+.pt-mono {
+  font-family: 'PT Mono', monospace;
+}
+
+a {
+  text-decoration: none;
+}
