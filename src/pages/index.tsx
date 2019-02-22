@@ -11,7 +11,7 @@ export default withSiteData(() => (
   <>
     <Hero className="min-vh-95 pa4 pa5-ns relative overflow-hidden">
       <Stars className="bg-dark3 skew-l" style={{ top: '-10%' }} />
-      <Box className="lh-copy z-1 mw9 center z-999">
+      <Box className="lh-copy mw9 center">
         <Box className="mw7 left">
           <Logo style={{ minWidth: '220px', width: '20%' }} />
           <Heading

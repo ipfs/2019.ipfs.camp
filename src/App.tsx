@@ -24,20 +24,22 @@ function App() {
         <Box className="w-100 sans-serif white transition-all bt bw3 b--silver">
           {/* <Header title="" /> */}
           <FadeIn>
-            <nav className="pa2 mw9 center nested-links bg-primary2">
-              <ul className="list">
-                <li className="dib">
-                  <Link className="link white" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li className="dib ph2 link">
-                  <Link to="/about">About</Link>
-                </li>
-                <li className="dib ph2">
-                  <Link to="/blog">Blog</Link>
-                </li>
-              </ul>
+            <nav className="pa2 nested-links bg-primary2">
+              <div className="mw9 center">
+                <ul className="list">
+                  <li className="dib">
+                    <Link className="link white" to="/">
+                      Home
+                    </Link>
+                  </li>
+                  <li className="dib ph2 link">
+                    <Link to="/about">About</Link>
+                  </li>
+                  <li className="dib ph2">
+                    <Link to="/blog">Blog</Link>
+                  </li>
+                </ul>
+              </div>
             </nav>
             <MDXProvider>
               <Routes />
