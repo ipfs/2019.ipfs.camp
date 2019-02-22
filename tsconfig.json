@@ -18,7 +18,7 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@layout/*": ["src/layout/*"]
+      "@layouts/*": ["src/layouts/*"]
     },
     "lib": ["dom", "es2015", "es2016"]
   },
