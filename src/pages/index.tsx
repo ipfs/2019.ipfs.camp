@@ -10,9 +10,7 @@ import { Logo } from '@components/Logo'
 export default withSiteData(() => (
   <>
     <Hero className="min-vh-95 pa4 pa5-ns relative overflow-hidden">
-      <aside className="hero-bg absolute top-0 bottom-0 left-0 right-0 skew-l z-00">
-        <Stars />
-      </aside>
+      <Stars className="bg-dark3 skew-l" style={{ top: '-10%' }} />
       <Box className="lh-copy z-1 mw9 center z-999">
         <Box className="mw7 left">
           <Logo style={{ minWidth: '220px', width: '20%' }} />
@@ -20,8 +18,8 @@ export default withSiteData(() => (
             as="h1"
             fontSize={[5, 7]}
             className="lh-solid pt-mono"
-            style={{ wordWrap: 'break-word' }}
             height="3em"
+            style={{ wordWrap: 'break-word' }}
           >
             <RandomWord
               word="Discover an InterPlanetary Future"
@@ -30,17 +28,14 @@ export default withSiteData(() => (
               letters="QmcSKzW6SSS2ygfbXHJHtNnDtJd4pHvVHDQUwhiM5FuWkX"
             />
           </Heading>
+
           <Text className="measure-wide f5 f4-m f3-l" color="neutral2">
-            <Text as="strong">IPFS Camp</Text> is{' '}
-            <Text as="strong">3 day experience</Text> designed for the{' '}
-            <Text as="strong">builders</Text> and{' '}
-            <Text as="strong">enthusiasts</Text> of the{' '}
-            <Text as="strong">Distributed Web</Text>.
+            <strong>IPFS Camp</strong> is <strong>3 day experience</strong>{' '}
+            designed for the <strong>builders</strong> and{' '}
+            <strong>enthusiasts</strong> of the <strong>Distributed Web</strong>
+            .
           </Text>
-          <Text
-            className="measure-wide f5 f4-m f4-l mt4 monospace"
-            color="neutral1"
-          >
+          <Text className="measure-wide f5 f4-m f4-l mt4 monospace neutral1">
             The schedule will be packed with moments for knowledge transfer and
             learning, collective brainstorming, empowerment of the core
             developers, users and contributors ✨
@@ -49,7 +44,7 @@ export default withSiteData(() => (
             June 27-30, Barcelona
           </Text>
           <ButtonLink
-            href="https://google.com"
+            href="/registration"
             px={4}
             py={3}
             fontSize={3}
@@ -62,9 +57,9 @@ export default withSiteData(() => (
         </Box>
       </Box>
     </Hero>
-    <Box className="pa5 pt0 bg-white lh-copy" color="dark3">
-      <Box className="mw9 center f5 f4-l">
-        <h1 className="lh-title montserrat blue">What to expect</h1>
+    <section className="pa4 pa5-ns pt0 pt0-ns bg-white lh-copy dark3 ">
+      <div className="mw9 center f5 f4-l">
+        <h2 className="lh-title montserrat">What to expect</h2>
         <p className="measure-wide">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -74,14 +69,18 @@ export default withSiteData(() => (
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <h2>Timeline</h2>
+        <h2 className="montserrat">Timeline</h2>
         <ul>
           <li>Registration Opens</li>
           <li>First Attendees Selected</li>
           <li>Full Info Announced</li>
           <li>Registration Closes</li>
         </ul>
-      </Box>
-    </Box>
+        <section className="mv4">
+          <h2>Sponsors</h2>
+          <div className="aspect-ratio aspect-ratio--1x1 bg-gray" />
+        </section>
+      </div>
+    </section>
   </>
 ))

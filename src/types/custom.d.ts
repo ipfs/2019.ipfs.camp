@@ -4,8 +4,9 @@ declare module '*.mdx' {
 }
 
 declare module '@mdx-js/tag'
+
 declare module 'react-random-word'
-declare module 'react-vivus'
+
 declare module 'react-static' {
   export { Helmet as Head } from 'react-helmet'
 }

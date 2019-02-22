@@ -24,7 +24,7 @@ function App() {
         <Box className="w-100 sans-serif white transition-all bt bw3 b--silver">
           {/* <Header title="" /> */}
           <FadeIn>
-            <Box as="nav" className="pa2 mw9 center nested-links">
+            <nav className="pa2 mw9 center nested-links bg-primary2">
               <ul className="list">
                 <li className="dib">
                   <Link className="link white" to="/">
@@ -38,7 +38,7 @@ function App() {
                   <Link to="/blog">Blog</Link>
                 </li>
               </ul>
-            </Box>
+            </nav>
             <MDXProvider>
               <Routes />
             </MDXProvider>

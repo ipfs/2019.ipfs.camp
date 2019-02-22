@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from '@reach/router'
+import { Stars } from '@components/Stars'
 type FooterProps = {}
 
 export const Footer: React.FC<FooterProps> = () => (
-  <footer className="pa4 pa5-ns bt bt-1 bw1 b--gray sans-serif bg-dark3 white overflow-auto nested-links">
+  <footer className="pa4 pa5-ns bt bt-1 bw1 b--gray sans-serif white nested-links relative overflow-hidden">
+    <Stars className="bg-dark3" />
     <div className="flex-ns mw7 mb5 center nested-list-reset lh-copy f6 neutral2">
       <div className="w-third-ns">
         <ul>
