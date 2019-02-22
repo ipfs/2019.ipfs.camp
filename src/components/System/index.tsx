@@ -1,6 +1,6 @@
 import { theme } from 'ipfs-system'
 import { HTMLAttributes } from 'react'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import {
   alignItems,
   AlignItemsProps,
@@ -91,19 +91,25 @@ const campTheme = {
   },
 }
 
+const themeColors = (theme: any = campTheme, c = '') => {
+  for (var key in theme.colors) {
+    if (theme.colors.hasOwnProperty(key)) {
+      c += `.${key} { color: ${theme.colors[key]} }`
+      c += `.bg-${key} { background-color: ${theme.colors[key]} }`
+    }
+  }
+  return c
+}
+
+export const GlobalStyle = createGlobalStyle`
+  ${themeColors()}
+`
+
 const themed = (key: string) => (props: any) => props.theme[key]
 
 // deep merge with ipfs-css theme defaults
 const mergedTheme = merge({}, theme, campTheme)
 export { mergedTheme as theme }
-
-// function swatches(theme: any) {
-//   for (var key in theme.colors) {
-//     if (theme.colors.hasOwnProperty(key)) {
-//       console.log(key + ' -> ' + theme.colors[key])
-//     }
-//   }
-// }
 
 // manual types to avoid conflicts with HTMLAttributes in types/styled-components - IntrinsicElements
 type BaseOverrides = {
