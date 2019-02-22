@@ -6,8 +6,6 @@ import '@components/System/global.css'
 import { theme, Box } from '@components/System'
 import MDXProvider from '@components/System/MDXProvider'
 
-console.log(theme)
-
 // import system comps
 
 import { ThemeProvider } from 'styled-components'
@@ -18,7 +16,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Root>
-        <Head>
+        <Head htmlAttributes={{ lang: 'en-US' }}>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <title>IPFS Camp 2019 🏕</title>
         </Head>
         <Box className="w-100 sans-serif white transition-all bt bw3 b--silver">
