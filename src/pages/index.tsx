@@ -68,13 +68,7 @@ export default withSiteData(() => (
           </div>
           <div className="w-50-ns">[ PROJECT LOGOS ]</div>
         </div>
-        <Heading>Timeline</Heading>
-        <ul>
-          <li>Registration Opens</li>
-          <li>First Attendees Selected</li>
-          <li>Full Info Announced</li>
-          <li>Registration Closes</li>
-        </ul>
+
         <section className="mv4">
           <Heading>Sponsors</Heading>
           <Heading>Want to Sponsor or get involved?</Heading>
