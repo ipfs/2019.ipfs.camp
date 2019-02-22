@@ -30,32 +30,20 @@ export default withSiteData(() => (
               letters="QmcSKzW6SSS2ygfbXHJHtNnDtJd4pHvVHDQUwhiM5FuWkX"
             />
           </Heading>
-          <Text className="measure-wide f5 f4-m f3-l" color="neutral1">
-            <Text as="strong" color="primary7">
-              IPFS Camp
-            </Text>{' '}
-            is{' '}
-            <Text as="strong" color="primary1">
-              3 day experience
-            </Text>{' '}
-            designed for the{' '}
-            <Text as="strong" color="primary4">
-              builders
-            </Text>{' '}
-            and{' '}
-            <Text as="strong" color="primary4">
-              enthusiasts
-            </Text>{' '}
-            of the{' '}
-            <Text as="strong" color="primary9">
-              Distributed Web
-            </Text>
-            .
+          <Text className="measure-wide f5 f4-m f3-l" color="neutral2">
+            <Text as="strong">IPFS Camp</Text> is{' '}
+            <Text as="strong">3 day experience</Text> designed for the{' '}
+            <Text as="strong">builders</Text> and{' '}
+            <Text as="strong">enthusiasts</Text> of the{' '}
+            <Text as="strong">Distributed Web</Text>.
           </Text>
-          <Text className="measure-wide f5 f4-m f4-l" color="neutral1">
+          <Text
+            className="measure-wide f5 f4-m f4-l mt4 monospace"
+            color="neutral1"
+          >
             The schedule will be packed with moments for knowledge transfer and
             learning, collective brainstorming, empowerment of the core
-            developers, users and contributors.
+            developers, users and contributors ✨
           </Text>
           <Text className="pv4 pt-mono f4 f3-m f2-l">
             June 27-30, Barcelona
@@ -69,7 +57,7 @@ export default withSiteData(() => (
             color="white"
             className="grow pointer"
           >
-            Apply to attend
+            Registration
           </ButtonLink>
         </Box>
       </Box>
