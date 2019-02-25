@@ -10,3 +10,8 @@ declare module 'react-random-word'
 declare module 'react-static' {
   export { Helmet as Head } from 'react-helmet'
 }
+
+declare module '*.svg' {
+  const content: any
+  export default content
+}

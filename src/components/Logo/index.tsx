@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const logoV = require('./ipfs_camp_v_nl.svg')
-const logoH = require('./ipfs_camp_h_nl.svg')
+import logoV from './ipfs_camp_v_nl.svg'
+import logoH from './ipfs_camp_h_nl.svg'
 
 type StyledProps = LogoProps & {
   background: typeof logoH
