@@ -8,3 +8,16 @@
 a {
   text-decoration: none;
 }
+
+.features td,
+.features th {
+  padding: 0.5rem 1rem;
+}
+
+.features th {
+  font-size: 1rem;
+}
+
+.features table {
+  float: right;
+}

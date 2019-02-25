@@ -10,9 +10,9 @@ type ProjectProps = {
 
 export const Projects: React.SFC<ProjectProps> = props => (
   <div {...props}>
-    <img src={ipfs} className="w-25 pa2" />
-    <img src={ipld} className="w-25 pa2" />
-    <img src={libp2p} className="w-25 pa2" />
-    <img src={multiformats} className="w-25 pa2" />
+    <img src={libp2p} className="w-25 pa2 h4 grow" />
+    <img src={ipfs} className="w-25 pa2 h6 grow" />
+    <img src={ipld} className="w-25 pa2 h4 grow" />
+    <img src={multiformats} className="w-25 pa2 h4 grow" />
   </div>
 )

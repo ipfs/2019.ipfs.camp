@@ -30,12 +30,12 @@ const Nav: React.SFC<RouteComponentProps> = () => (
       </NavLink>
       <ul className="list flex-grow-1 tr">
         <li className="dib">
-          <NavLink className="link neutral4 pa3 ttu" to="/faq">
+          <NavLink className="link neutral4 pv2 ma3 ttu" to="/faq">
             FAQ
           </NavLink>
         </li>
         <li className="dib ph2 link">
-          <NavLink className="neutral4 pa3 ttu" to="/register">
+          <NavLink className="neutral4 pv2 ma3 ttu" to="/register">
             Register
           </NavLink>
         </li>

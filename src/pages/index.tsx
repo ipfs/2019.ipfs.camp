@@ -52,7 +52,7 @@ export default withSiteData(() => (
     </Hero>
     <section className="bg-white lh-copy dark3 ">
       <div className="pa4 pa5-ns pt0 pt0-ns mw9 center f5 f4-l">
-        <div className="flex items-center">
+        <div className="flex-ns tc tl-ns items-center">
           <div className="w-50-ns">
             <Heading className="lh-title f1 montserrat">What to expect</Heading>
             <p className="f4">
@@ -74,7 +74,7 @@ export default withSiteData(() => (
           />
           <p>
             Want to Sponsor or get involved? Email{' '}
-            <a href="mailto:camp@ipfs.io">camp@ipfs.io</a> to enquire for
+            <a href="mailto:camp@ipfs.io">camp@ipfs.io</a> to enquire about
             opportunities
           </p>
         </section>
