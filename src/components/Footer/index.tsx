@@ -4,31 +4,14 @@ import { Stars } from '@components/Stars'
 type FooterProps = {}
 
 export const Footer: React.FC<FooterProps> = () => (
-  <footer className="pa4 pa5-ns sans-serif white nested-links relative overflow-hidden">
+  <footer className="pa4 pa5-ns sans-serif white nested-links relative overflow-hidden bb bw3 b--neutral4">
     <Stars className="bg-dark3" />
     <div className="flex-ns mw7 mb5 center nested-list-reset lh-copy f6 neutral2">
       <div className="w-third-ns">
         <ul>
-          <h3 className="monospace">Project Pages</h3>
-          <li>
-            <a href="https://ipfs.io/">ipfs.io</a>
-          </li>
-          <li>
-            <a href="https://libp2p.io/">libp2p.io</a>
-          </li>
-          <li>
-            <a href="https://ipld.io">ipld.io</a>
-          </li>
-          <li>
-            <a href="https://multiformats.io/">multiformats.io</a>
-          </li>
-        </ul>
-      </div>
-      <div className="w-third-ns">
-        <ul>
           <h3 className="monospace">IPFS Camp</h3>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/">About</Link>
           </li>
           <li>
             <Link className="" to="/register">
@@ -40,6 +23,23 @@ export const Footer: React.FC<FooterProps> = () => (
           </li>
           <li>
             <Link to="/code-of-conduct">Code of Conduct</Link>
+          </li>
+        </ul>
+      </div>
+      <div className="w-third-ns">
+        <ul>
+          <h3 className="monospace">Related Projects</h3>
+          <li>
+            <a href="https://ipfs.io/">ipfs.io</a>
+          </li>
+          <li>
+            <a href="https://libp2p.io/">libp2p.io</a>
+          </li>
+          <li>
+            <a href="https://ipld.io">ipld.io</a>
+          </li>
+          <li>
+            <a href="https://multiformats.io/">multiformats.io</a>
           </li>
         </ul>
       </div>

@@ -53,7 +53,7 @@ function App() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <title>IPFS Camp 2019 🏕</title>
         </Head>
-        <Box className="w-100 sans-serif white transition-all bt bw3 b--silver">
+        <Box className="w-100 sans-serif white transition-all bt bw3 b--neutral4">
           <Match path="/:item">
             {(props: any) => (props.match ? <Nav /> : null)}
           </Match>
