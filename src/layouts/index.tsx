@@ -17,7 +17,7 @@ export const Page: React.FC<PageProps> = ({ children, meta, title }) => (
       <Hero className="relative overflow-hidden">
         <Stars className="bg-dark3" />
         <Box className="lh-copy pa4 pa5-ns mw9 center">
-          <h1 className="f1">{title}</h1>
+          <h1 className="f3 f1-ns">{title}</h1>
         </Box>
       </Hero>
     )}

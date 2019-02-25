@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from '@components/Links'
+import { Link } from '@components/Router'
 import { Stars } from '@components/Stars'
 type FooterProps = {}
 

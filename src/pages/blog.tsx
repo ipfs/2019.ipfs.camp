@@ -1,6 +1,6 @@
 import React from 'react'
 import { withRouteData } from 'react-static'
-import { Link } from '@components/Links'
+import { Link } from '@components/Router'
 import { Post } from '../types'
 
 export default withRouteData(({ posts }: { posts: Post[] }) => (
