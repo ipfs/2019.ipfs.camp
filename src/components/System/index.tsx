@@ -97,6 +97,7 @@ const themeColors = (theme: any = campTheme, c = '') => {
     if (theme.colors.hasOwnProperty(key)) {
       c += `.${key} { color: ${theme.colors[key]} }`
       c += `.bg-${key} { background-color: ${theme.colors[key]} }`
+      c += `.b--${key} { border-color: ${theme.colors[key]} }`
     }
   }
   return c

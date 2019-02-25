@@ -1,6 +1,6 @@
 import React from 'react'
 import { Root, Routes, Head } from 'react-static'
-import { Link } from '@reach/router'
+import { NavLink } from '@components/Links'
 import 'ipfs-system/all.css'
 import './app.css'
 import '@components/System/global.css'
@@ -26,9 +26,9 @@ function App() {
         <Box className="w-100 sans-serif white transition-all bt bw3 b--silver">
           {/* <Header title="" /> */}
           <FadeIn>
-            <nav className="nested-links bg-primary5">
-              <div className="ph4 ph5-ns pv4 mw9 center flex items-center">
-                <Link className="link white" to="/">
+            <nav className="monospace ttu f5 bg-primary5">
+              <div className="ph4 ph5-ns pv3 mw9 center flex items-center">
+                <NavLink className="link white" to="/">
                   <Logo
                     className="fl db mr2 mt1 cover"
                     type="h"
@@ -37,15 +37,17 @@ function App() {
                       height: '80px',
                     }}
                   />
-                </Link>
-                <ul className="list">
+                </NavLink>
+                <ul className="list flex-grow-1 tr">
                   <li className="dib">
-                    <Link className="link white" to="/">
-                      Home
-                    </Link>
+                    <NavLink className="link neutral4 pa3 ttu" to="/faq">
+                      FAQ
+                    </NavLink>
                   </li>
                   <li className="dib ph2 link">
-                    <Link to="/register">Register</Link>
+                    <NavLink className="neutral4" to="/register">
+                      Register
+                    </NavLink>
                   </li>
                 </ul>
               </div>

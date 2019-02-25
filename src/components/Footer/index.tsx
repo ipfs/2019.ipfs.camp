@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from '@reach/router'
+import { Link } from '@components/Links'
 import { Stars } from '@components/Stars'
 type FooterProps = {}
 
 export const Footer: React.FC<FooterProps> = () => (
-  <footer className="pa4 pa5-ns bt bt-1 bw1 b--gray sans-serif white nested-links relative overflow-hidden shadow-1">
+  <footer className="pa4 pa5-ns sans-serif white nested-links relative overflow-hidden">
     <Stars className="bg-dark3" />
     <div className="flex-ns mw7 mb5 center nested-list-reset lh-copy f6 neutral2">
       <div className="w-third-ns">
@@ -31,7 +31,9 @@ export const Footer: React.FC<FooterProps> = () => (
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/register">Registration</Link>
+            <Link className="" to="/register">
+              Registration
+            </Link>
           </li>
           <li>
             <Link to="/faq">FAQ</Link>
