@@ -11,11 +11,12 @@ import { Projects } from '@components/Projects'
 
 export default withSiteData(() => (
   <>
-    <Hero className="min-vh-95 relative overflow-hidden">
+    <Hero className="min-vh-95 relative overflow-hidden tc tl-ns">
       <Stars className="bg-dark3 skew-l" style={{ top: '-10%' }} />
       <Box className="pa4 pa5-ns lh-copy mw9 center">
         <Box className="mw7 left">
           <Logo
+            className="left-ns mb5"
             type="v"
             style={{ minWidth: '220px', width: '20%', height: '15rem' }}
           />
@@ -50,11 +51,13 @@ export default withSiteData(() => (
         </Box>
       </Box>
     </Hero>
-    <section className="bg-white lh-copy dark3 ">
-      <div className="pa4 pa5-ns pt0 pt0-ns mw9 center f5 f4-l">
-        <div className="flex-ns tc tl-ns items-center">
+    <section className="bg-white lh-copy dark3 tc tl-ns">
+      <div className="pa4 pa5-ns pt0 mw9 center f5 f4-l">
+        <div className="flex-ns items-center">
           <div className="w-50-ns">
-            <Heading className="lh-title f1 montserrat">What to expect</Heading>
+            <Heading className="lh-title f2 f1-ns montserrat">
+              What to expect
+            </Heading>
             <p className="f4">
               The event will be packed with moments of knowledge transfer,
               collective brainstorming, pairing with core developers, and
@@ -69,7 +72,7 @@ export default withSiteData(() => (
         <section className="mv5">
           <Heading>Thanks to our Sponsors</Heading>
           <img
-            className="mw6 w-20"
+            className="mw6 w-20-ns"
             src={require('@components/Projects/protocol-labs-logo-horizontal-alt-black.svg')}
           />
           <p>

@@ -105,9 +105,12 @@ const themeColors = (theme: any = campTheme, c = '') => {
 
 export const GlobalStyle = createGlobalStyle`
   ${themeColors()}
-  /* .nested-links a {
-    color: #395FD7
-  } */
+  .nested-links a {
+    color: ${campTheme.colors.primary5};
+    &:hover {
+      color: ${campTheme.colors.primary1};
+    }
+  }
 `
 
 const themed = (key: string) => (props: any) => props.theme[key]

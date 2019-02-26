@@ -1,15 +1,28 @@
 import React from 'react'
 import { Link } from '@components/Router'
 import { Stars } from '@components/Stars'
+import styled from 'styled-components'
+
 type FooterProps = {}
 
+const StyledFooter = styled.footer`
+  line-height: 2em;
+  text-transform: uppercase;
+  a {
+    color: ${props => props.theme.colors.primary4};
+    &:hover {
+      color: ${props => props.theme.colors.primary1};
+    }
+  }
+`
+
 export const Footer: React.FC<FooterProps> = () => (
-  <footer className="pa4 pa5-ns sans-serif white nested-links relative overflow-hidden">
+  <StyledFooter className="pa4 tc tl-ns pa5-ns sans-serif white relative overflow-hidden monospace">
     <Stars className="bg-dark3" />
-    <div className="flex-ns mw7 mb5 center nested-list-reset lh-copy f5 neutral2">
-      <div className="w-third-ns">
+    <div className="flex-ns mw8 mb5 center nested-list-reset f5 neutral2">
+      <div className="w-third-ns pb3">
         <ul>
-          <h3 className="monospace">IPFS Camp</h3>
+          <h3 className="monospace white">IPFS Camp</h3>
           <li>
             <Link to="/">About</Link>
           </li>
@@ -26,9 +39,9 @@ export const Footer: React.FC<FooterProps> = () => (
           </li>
         </ul>
       </div>
-      <div className="w-third-ns">
+      <div className="w-third-ns pb3">
         <ul>
-          <h3 className="monospace">Related Projects</h3>
+          <h3 className="white">Related Projects</h3>
           <li>
             <a href="https://ipfs.io/">ipfs.io</a>
           </li>
@@ -62,5 +75,5 @@ export const Footer: React.FC<FooterProps> = () => (
         © Protocol Labs | Except as noted, content licensed CC-BY 3.0.
       </p>
     </div>
-  </footer>
+  </StyledFooter>
 )
