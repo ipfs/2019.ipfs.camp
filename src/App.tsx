@@ -1,7 +1,6 @@
 import React from 'react'
 import { Root, Routes, Head } from 'react-static'
 import { NavLink, Match } from '@components/Router'
-import 'ipfs-system/all.css'
 import './app.css'
 import '@components/System/global.css'
 import { theme, Box, GlobalStyle } from '@components/System'

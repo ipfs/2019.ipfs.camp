@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from '@components/System'
-import { Hero } from 'ipfs-system'
+import { Hero } from '@components/Hero'
 import { Stars } from '@components/Stars'
 
 type PageProps = {

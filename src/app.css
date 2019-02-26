@@ -1,4 +1,5 @@
-@import '~ipfs-system/all.css';
+@import '~tachyons';
+@import '~ipfs-css';
 @import url('https://fonts.googleapis.com/css?family=PT+Mono');
 
 .pt-mono {

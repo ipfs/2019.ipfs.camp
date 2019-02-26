@@ -1,4 +1,4 @@
-import { theme } from 'ipfs-system'
+import theme from 'ipfs-css/theme.json'
 import { HTMLAttributes } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import {

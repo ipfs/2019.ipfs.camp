@@ -1,7 +1,7 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
 
-import { Hero } from 'ipfs-system'
+import { Hero } from '@components/Hero'
 import RandomWord from 'react-random-word'
 import { Stars } from '@components/Stars'
 import { Box, Heading, Text } from '@components/System'
