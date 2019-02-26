@@ -22,7 +22,7 @@ const Nav: React.SFC<RouteComponentProps> = () => (
           className="fl db mr2 mt1 cover"
           type="h"
           style={{
-            minWidth: '200px',
+            minWidth: '210px',
             height: '80px',
           }}
         />

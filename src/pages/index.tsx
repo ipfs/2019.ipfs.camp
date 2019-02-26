@@ -66,8 +66,8 @@ export default withSiteData(() => (
           </div>
         </div>
 
-        <section className="mv4">
-          <Heading>Sponsors</Heading>
+        <section className="mv5">
+          <Heading>Thanks to our Sponsors</Heading>
           <img
             className="mw6 w-20"
             src={require('@components/Projects/protocol-labs-logo-horizontal-alt-black.svg')}
