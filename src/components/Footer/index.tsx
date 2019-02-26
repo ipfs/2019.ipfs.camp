@@ -4,7 +4,7 @@ import { Stars } from '@components/Stars'
 type FooterProps = {}
 
 export const Footer: React.FC<FooterProps> = () => (
-  <footer className="pa4 pa5-ns sans-serif white nested-links relative overflow-hidden bb bw3 b--neutral4">
+  <footer className="pa4 pa5-ns sans-serif white nested-links relative overflow-hidden">
     <Stars className="bg-dark3" />
     <div className="flex-ns mw7 mb5 center nested-list-reset lh-copy f6 neutral2">
       <div className="w-third-ns">

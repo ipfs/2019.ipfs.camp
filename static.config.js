@@ -7,7 +7,7 @@ export default {
     'react-static-plugin-styled-components',
     'react-static-plugin-mdx',
   ],
-  siteRoot: 'https://camp.ipfs.io/',
+  // siteRoot: 'https://camp.ipfs.io/',
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getSiteData: () => ({
     title: 'IPFS Camp 2019',

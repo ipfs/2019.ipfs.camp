@@ -11,13 +11,14 @@ a {
 
 .features td,
 .features th {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
 }
 
-.features th {
-  font-size: 1rem;
+.features td:first-child {
+  text-align: right;
 }
 
-.features table {
-  float: right;
+.features th:first-child {
+  border-bottom: none;
 }
