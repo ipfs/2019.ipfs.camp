@@ -1,6 +1,7 @@
 import React from 'react'
 import { Head } from '@components/Meta'
 import { RouteComponentProps } from '@reach/router'
+import 'element-closest'
 
 export class Analytics extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ export class Analytics extends React.Component {
   }
 
   track() {
-    const gtag = window.gtag
+    const { gtag } = window
     if (typeof gtag === 'function') {
       gtag('config', this.GA_TRACKING_ID)
     }
@@ -32,6 +33,34 @@ export class Analytics extends React.Component {
 
   componentDidMount() {
     this.startGtag()
+    const self = this
+
+    // add outbound tracking
+    document.addEventListener(
+      'click',
+      function(e) {
+        var href =
+          e.target.closest('a') && e.target.closest('a').getAttribute('href')
+
+        if (href && href.indexOf('http') === 0) {
+          self.trackOutbound(href)
+          window.open(href)
+          e.preventDefault()
+        }
+      },
+      false,
+    )
+  }
+
+  trackOutbound(href) {
+    const { gtag } = window
+    if (typeof gtag === 'function') {
+      gtag('event', 'click', {
+        event_category: 'outbound',
+        event_label: href,
+        transport_type: 'beacon',
+      })
+    }
   }
 
   render() {
