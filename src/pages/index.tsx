@@ -16,7 +16,7 @@ export default withSiteData(() => (
       <Box className="pa4 pa5-ns lh-copy mw9 center">
         <Box className="mw7 left">
           <Logo
-            className="left-ns mb5 mr0-ns ml0-ns center"
+            className="left-ns mb5 mr0-ns ml0-ns center grow"
             type="v"
             style={{ minWidth: '220px', width: '15rem', height: '16rem' }}
           />
@@ -37,7 +37,7 @@ export default withSiteData(() => (
 
           <Text className="measure-wide f5 f4-m f3-l" color="neutral2">
             <strong>IPFS Camp</strong> is a{' '}
-            <strong>3 day hackers retreat</strong> designed for the{' '}
+            <strong>3 day hacker retreat</strong> designed for the{' '}
             <strong>builders</strong> of the <strong>Distributed Web</strong>.
             Join the core developers for a hands on experience packed with
             workshops, lectures and deep-dives.
@@ -61,16 +61,17 @@ export default withSiteData(() => (
               What to expect
             </Heading>
             <p>
-              This unique experience is designed to bring together pioneers in
-              the Distributed Web space and is an opportunity to develop your
-              ideas and learn from the IPFS core team and community.
+              This unique experience is designed to bring together{' '}
+              <strong>150 pioneers</strong> in the Distributed Web space and is
+              an opportunity to develop your ideas and learn from the IPFS core
+              team and community.
             </p>
             <p>
-              You’ll be welcomed to our amazing hacker retreat on the outskirts
-              of Barcelona and after an opening address from mission control,
-              we’ll have our first group dinner under the stars where you can
-              meet your fellow campers and get ready for an action packed
-              weekend of hacking, activities, workshops and more...
+              You’ll be welcomed to our amazing campus on the outskirts of
+              Barcelona and after an opening address from mission control, we’ll
+              have our first group dinner under the stars where you can meet
+              your fellow campers and get ready for an action packed weekend of
+              hacking, activities, workshops and more...
             </p>
           </div>
           <div className="w-50-ns">

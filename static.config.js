@@ -18,7 +18,7 @@ export default {
       keywords: 'IPFS, IPFS Camp, IPFS Conf, dweb, libp2p, multiformats',
       twitter: 'ipfsbot',
       desc:
-        'IPFS Camp is a 3 day hackers retreat designed for the builders of the Distributed Web.',
+        'IPFS Camp is a 3 day hacker retreat designed for the builders of the Distributed Web.',
     },
   }),
 }
