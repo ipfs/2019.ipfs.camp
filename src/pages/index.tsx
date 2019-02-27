@@ -16,9 +16,9 @@ export default withSiteData(() => (
       <Box className="pa4 pa5-ns lh-copy mw9 center">
         <Box className="mw7 left">
           <Logo
-            className="left-ns mb5"
+            className="left-ns mb5 mr0-ns ml0-ns center"
             type="v"
-            style={{ minWidth: '220px', width: '20%', height: '15rem' }}
+            style={{ minWidth: '220px', width: '15rem', height: '16rem' }}
           />
           <Heading
             as="h1"
@@ -71,10 +71,12 @@ export default withSiteData(() => (
 
         <section className="mv5">
           <Heading>Thanks to our Sponsors</Heading>
-          <img
-            className="mw6 w-20-ns"
-            src={require('@components/Projects/protocol-labs-logo-horizontal-alt-black.svg')}
-          />
+          <a href="https://protocol.ai">
+            <img
+              className="mw6 w-20-ns"
+              src={require('@components/Projects/protocol-labs-logo-horizontal-alt-black.svg')}
+            />
+          </a>
           <p>
             Want to Sponsor or get involved? Email{' '}
             <a href="mailto:camp@ipfs.io">camp@ipfs.io</a> to enquire about

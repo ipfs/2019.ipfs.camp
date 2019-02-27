@@ -12,7 +12,7 @@ const StyledLogo = styled.div<StyledProps>`
   background-image: url(${props => props.background});
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: contain;
+  background-size: cover;
 `
 
 type LogoProps = {
@@ -23,8 +23,8 @@ type LogoProps = {
 
 export const Logo: React.FC<LogoProps> = props => {
   return props.type === 'v' ? (
-    <StyledLogo className="w-30 grow" background={logoV} {...props} />
+    <StyledLogo className="grow" background={logoV} {...props} />
   ) : (
-    <StyledLogo className="w-30 grow" background={logoH} {...props} />
+    <StyledLogo className="grow" background={logoH} {...props} />
   )
 }
