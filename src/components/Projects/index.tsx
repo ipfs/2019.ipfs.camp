@@ -46,9 +46,17 @@ type ProjectProps = {
 
 export const Projects: React.SFC<ProjectProps> = props => (
   <ProjectGrid {...props} className="dn db-ns">
-    <img src={ipfs} className="ipfs-logo y1 x1 h4 grow" />
-    <img src={libp2p} className="libp2p-logo y2 x2 h4 grow" />
-    <img src={ipld} className="ipld-logo y1 x3 h4 grow" />
-    <img src={multiformats} className="multiformats-logo y2 x4 h4 grow" />
+    <a href="https://ipfs.io/">
+      <img src={ipfs} className="ipfs-logo y1 x1 h4 grow" />
+    </a>
+    <a href="https://libp2p.io/">
+      <img src={libp2p} className="libp2p-logo y2 x2 h4 grow" />
+    </a>
+    <a href="https://ipld.io">
+      <img src={ipld} className="ipld-logo y1 x3 h4 grow" />
+    </a>
+    <a href="https://multiformats.io/">
+      <img src={multiformats} className="multiformats-logo y2 x4 h4 grow" />
+    </a>
   </ProjectGrid>
 )

@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
   line-height: 2em;
   text-transform: uppercase;
   a {
-    color: ${props => props.theme.colors.primary4};
+    color: ${props => props.theme.colors.neutral1};
     &:hover {
       color: ${props => props.theme.colors.primary1};
     }
@@ -58,8 +58,10 @@ export const Footer: React.FC<FooterProps> = () => (
       </div>
       <div className="w-third-ns">
         <ul>
-          <h3 className="monospace">Stay Updated</h3>
-          <li>Subscribe to mlist</li>
+          <h3 className="monospace white">Stay Updated</h3>
+          <li>
+            <a href="http://eepurl.com/giMQzj">Subscribe to mlist</a>
+          </li>
           <li>
             <a href="https://twitter.com/ipfsbot">@ipfsbot</a>
           </li>

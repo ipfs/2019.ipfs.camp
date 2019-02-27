@@ -12,12 +12,11 @@ a {
 
 .features td,
 .features th {
-  padding: 0.5rem 0.5rem;
   text-align: center;
 }
 
 .features td:first-child {
-  text-align: right;
+  text-align: left;
 }
 
 .features th:first-child {
