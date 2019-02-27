@@ -22,11 +22,11 @@ const Nav: React.SFC<RouteComponentProps> = () => (
     <div className="ph4 ph5-ns pv3 mw9 center flex items-center">
       <NavLink className="link white" activeClassName="" to="/">
         <Logo
-          className="fl db mr2 mt1 cover"
+          className="fl db mr2 mt1 contain grow"
           type="h"
           style={{
-            minWidth: '210px',
-            height: '80px',
+            minWidth: '255px',
+            height: '55px',
           }}
         />
       </NavLink>
@@ -64,7 +64,7 @@ function App({ gtagId, title }: SiteData) {
           </Match>
 
           <FadeIn>
-            <main className="nested-links">
+            <main className="nested-links f4-l">
               <MDXProvider>
                 <Routes />
               </MDXProvider>

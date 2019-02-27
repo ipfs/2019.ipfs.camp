@@ -60,10 +60,17 @@ export default withSiteData(() => (
             <Heading className="lh-title f2 f1-ns montserrat">
               What to expect
             </Heading>
-            <p className="f4">
-              The event will be packed with moments of knowledge transfer,
-              collective brainstorming, pairing with core developers, and
-              empowering users and contributors ✨
+            <p>
+              This unique experience is designed to bring together pioneers in
+              the Distributed Web space and is an opportunity to develop your
+              ideas and learn from the IPFS core team and community.
+            </p>
+            <p>
+              You’ll be welcomed to our amazing hacker retreat on the outskirts
+              of Barcelona and after an opening address from mission control,
+              we’ll have our first group dinner under the stars where you can
+              meet your fellow campers and get ready for an action packed
+              weekend of hacking, activities, workshops and more...
             </p>
           </div>
           <div className="w-50-ns">
@@ -72,17 +79,17 @@ export default withSiteData(() => (
         </div>
 
         <section className="mv5">
-          <Heading>Thanks to our Sponsors</Heading>
+          <Heading>Thanks to our sponsors</Heading>
           <a href="https://protocol.ai">
             <img
-              className="mw6 w-20-ns"
+              className="mw6 pv3 w-20-ns"
               src={require('@components/Projects/protocol-labs-logo-horizontal-alt-black.svg')}
             />
           </a>
           <p>
-            Want to Sponsor or get involved? Email{' '}
+            Interested in sponsoring IPFS Camp 2019? Email{' '}
             <a href="mailto:camp@ipfs.io">camp@ipfs.io</a> to enquire about
-            opportunities
+            opportunities.
           </p>
         </section>
       </div>
