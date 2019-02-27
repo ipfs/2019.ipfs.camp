@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import logoV from './ipfs_camp_v_nl.svg'
-import logoH from './ipfs_camp_h_nl.svg'
+import logoH from './ipfs_camp_h_nl_.svg'
 
 type StyledProps = LogoProps & {
   background: typeof logoH
