@@ -10,6 +10,7 @@ export default {
   // siteRoot: 'https://camp.ipfs.io/',
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getSiteData: () => ({
-    title: 'IPFS Camp 2019',
+    title: 'IPFS Camp 2019 🏕',
+    gtagId: '',
   }),
 }
