@@ -3,3 +3,8 @@ export interface Post {
   id: number
   title: string
 }
+
+export type SiteData = {
+  title: string
+  gtagId?: string
+}
