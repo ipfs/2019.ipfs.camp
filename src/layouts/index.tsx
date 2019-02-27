@@ -2,6 +2,7 @@ import React from 'react'
 import { Box } from '@components/System'
 import { Hero } from '@components/Hero'
 import { Stars } from '@components/Stars'
+import { Head } from '@components/Meta'
 
 type PageProps = {
   meta?: {
@@ -13,6 +14,11 @@ type PageProps = {
 
 export const Page: React.FC<PageProps> = ({ children, meta, title }) => (
   <>
+    {title && (
+      <Head>
+        <title>{title}</title>
+      </Head>
+    )}
     {title && (
       <Hero className="relative overflow-hidden">
         <Stars className="bg-dark3" />
