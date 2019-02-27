@@ -1,6 +1,7 @@
 import React from 'react'
-import { Root, Routes, Head, withSiteData } from 'react-static'
+import { Root, Routes, withSiteData } from 'react-static'
 import { NavLink, Match, Router } from '@components/Router'
+import { DefaultMeta, Card } from '@components/Meta'
 import './app.css'
 import '@components/System/global.css'
 import { theme, Box, GlobalStyle } from '@components/System'
@@ -53,10 +54,10 @@ function App({ gtagId, title }: SiteData) {
         <Router>
           <Analytics id={gtagId} path="/*" />
         </Router>
-        <Head htmlAttributes={{ lang: 'en-US' }}>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <DefaultMeta>
           <title>{title}</title>
-        </Head>
+        </DefaultMeta>
+        <Card />
         <Box className="w-100 sans-serif white transition-all">
           <Match path="/:item">
             {(props: any) => (props.match ? <Nav /> : null)}

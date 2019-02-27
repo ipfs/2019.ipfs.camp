@@ -6,5 +6,12 @@ export interface Post {
 
 export type SiteData = {
   title: string
+  meta: {
+    url: string
+    title?: string
+    keywords: string
+    twitter: string
+    desc: string
+  }
   gtagId?: string
 }

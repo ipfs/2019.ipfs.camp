@@ -1,5 +1,5 @@
 import React from 'react'
-import { Head } from 'react-static'
+import { Head } from '@components/Meta'
 import { RouteComponentProps } from '@reach/router'
 
 export class Analytics extends React.Component {
