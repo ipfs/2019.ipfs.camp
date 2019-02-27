@@ -11,7 +11,7 @@ import { Projects } from '@components/Projects'
 
 export default withSiteData(() => (
   <>
-    <Hero className="min-vh-95 relative overflow-hidden tc tl-ns">
+    <Hero className="relative overflow-hidden tc tl-ns">
       <Stars className="bg-dark3 skew-l" style={{ top: '-10%' }} />
       <Box className="pa4 pa5-ns lh-copy mw9 center">
         <Box className="mw7 left">
@@ -42,12 +42,14 @@ export default withSiteData(() => (
             Join the core developers for a hands on experience packed with
             workshops, lectures and deep-dives.
           </Text>
-          <Text className="pv4 pt-mono f4 f3-m f2-l">
+          <Text className="mv4 pt-mono f4 f3-m f2-l">
             June 27-30, Barcelona
           </Text>
-          <Button to="register" size="large">
-            Registration Open
-          </Button>
+          <p className="mv4">
+            <Button to="register" size="large">
+              Registration Open
+            </Button>
+          </p>
         </Box>
       </Box>
     </Hero>

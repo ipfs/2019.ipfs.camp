@@ -10,10 +10,10 @@ const ProjectGrid = styled.div`
   background: url(${grid}) no-repeat top left;
   background-size: 800px;
   position: absolute;
-  top: 80%;
+  top: 850px;
   left: 50%;
   width: 50%;
-  height: 100%;
+  height: 800px;
   overflow: hidden;
   img {
     width: 150px;
@@ -37,14 +37,6 @@ const ProjectGrid = styled.div`
   }
   .x4 {
     left: 396px;
-  }
-  .ipfs-logo {
-  }
-  .libp2p-logo {
-  }
-  .ipld-logo {
-  }
-  .multiformats-logo {
   }
 `
 
