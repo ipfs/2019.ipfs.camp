@@ -1,0 +1,119 @@
+.hamburgler-hit {
+  height: 50px;
+  width: 60px;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+}
+
+body.noscroll {
+  position: fixed;
+  overflow: hidden;
+}
+
+.hamburgler-icon-wrapper {
+  position: relative;
+  top: 33%;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  text-align: left;
+  z-index: 9999;
+}
+
+.hamburgler-icon,
+.hamburgler-icon:before,
+.hamburgler-icon:after {
+  content: '';
+  position: absolute;
+  border-radius: 1em;
+  height: 2px;
+  width: 26px;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.hamburgler-icon:before {
+  top: -0.55em;
+}
+
+.hamburgler-icon:after {
+  top: 0.55em;
+}
+
+.hamburgler-active .hamburgler-icon {
+  background: transparent;
+  transform: rotate(-135deg);
+}
+
+.hamburgler-active .hamburgler-icon:before,
+.hamburgler-active .hamburgler-icon:after {
+  top: 0;
+}
+
+.hamburgler-active .hamburgler-icon:before {
+  transform: rotate(90deg);
+}
+
+.hamburgler-active .hamburgler-icon,
+.hamburgler-active .hamburgler-icon:before,
+.hamburgler-active .hamburgler-icon:after {
+  background: white;
+  position: fixed;
+}
+
+.hamburgler-menu {
+  transition: all 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #151616;
+  color: white;
+  text-align: left;
+}
+
+.hamburgler-active .hamburgler-menu {
+  opacity: 1;
+  pointer-events: initial;
+  z-index: 999;
+}
+
+.hamburgler-menu-list {
+  display: block;
+  transition: all 0.4s ease;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  transform: scale(1.1);
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.hamburgler-menu-list a {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.6em;
+  display: block;
+  border-bottom: none;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hamburgler-menu-list > .container {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.hamburgler-menu-list > a.btn {
+  opacity: 1 !important;
+}
+
+.hamburgler-active .hamburgler-menu-list {
+  transform: scale(1);
+}
