@@ -2,6 +2,9 @@ import axios from 'axios'
 import path from 'path'
 
 export default {
+  // tweaks for CI
+  maxThreads: process.env.CI ? 1 : Infinity,
+  outputFileRate: process.env.CI ? 10 : 100,
   plugins: [
     'react-static-plugin-typescript',
     'react-static-plugin-styled-components',

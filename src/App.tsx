@@ -74,7 +74,7 @@ const Nav: React.FC<RouteComponentProps> = () => (
   </nav>
 )
 
-function App({ gtagId, title }: SiteData) {
+function App({ gtagId }: SiteData) {
   return (
     <ThemeProvider theme={theme}>
       <Root>
@@ -82,9 +82,7 @@ function App({ gtagId, title }: SiteData) {
         <Router>
           <Analytics id={gtagId} path="/*" />
         </Router>
-        <DefaultMeta>
-          <title>{title}</title>
-        </DefaultMeta>
+        <DefaultMeta />
         <Card />
         <Box className="w-100 sans-serif white transition-all">
           <Match path="/:item">

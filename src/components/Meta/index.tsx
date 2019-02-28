@@ -3,12 +3,13 @@ import { Head as Helmet, withSiteData } from 'react-static'
 import { SiteData as TSiteData } from 'src/types'
 import { HelmetProps } from 'react-helmet'
 
-type HeadProps = PropsWithChildren<TSiteData>
+type HeadProps = HelmetProps & PropsWithChildren<TSiteData>
 
 export const Head: React.FC<HelmetProps> = withSiteData(
   ({ title, children, meta, ...rest }: HeadProps) => (
     <Helmet
       htmlAttributes={{ lang: 'en-US' }}
+      defaultTitle={title}
       titleTemplate={`%s | ${title}`}
       {...rest}
     >
