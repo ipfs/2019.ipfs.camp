@@ -49,7 +49,11 @@ export class Analytics extends React.Component {
         var href =
           e.target.closest('a') && e.target.closest('a').getAttribute('href')
 
-        if (href && href.indexOf('http') === 0) {
+        if (
+          href &&
+          href.indexOf('http') === 0 &&
+          href.indexOf(window.location.href) === -1
+        ) {
           self.trackOutbound(href)
           window.open(href)
           e.preventDefault()
