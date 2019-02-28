@@ -11,7 +11,7 @@ export default {
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getSiteData: () => ({
     title: 'IPFS Camp, June 27-30 2019 🏕',
-    gtagId: '',
+    gtagId: 'UA-96910779-12',
     meta: {
       url: 'https://camp.ipfs.io',
       title: '',

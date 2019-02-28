@@ -66,7 +66,7 @@ export const Footer: React.FC<FooterProps> = () => (
             <a href="https://twitter.com/ipfsbot">@ipfsbot</a>
           </li>
           <li>
-            <a href="https://blog.ipfs.io/index.xml">Subscribe to blog</a>
+            <a href="https://blog.ipfs.io/">Subscribe to blog</a>
           </li>
           <li>Join chat on IRC #ipfs-camp</li>
         </ul>
