@@ -31,7 +31,7 @@ export default withSiteData(() => (
               word="Discover an InterPlanetary Future"
               speed={40}
               rounds={30}
-              letters="QmcSKzW6SSS2ygfbXHJHtNnDtJd4pHvVHDQUwhiM5FuWkX"
+              letters="Qmb77g5AXanuvRKNXH79hAMpLUm6iyfqJDn7aAkEukWnna"
             />
           </Heading>
 
