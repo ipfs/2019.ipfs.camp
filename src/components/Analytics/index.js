@@ -10,7 +10,7 @@ export class Analytics extends React.Component {
   }
 
   gtag() {
-    if (!window.dataLayer) return
+    if (window.location.hostname == 'localhost' || !window.dataLayer) return
     window.dataLayer.push(arguments)
   }
 
@@ -23,25 +23,13 @@ export class Analytics extends React.Component {
   }
 
   startGtag() {
+    const self = this
+
     if (window.location.hostname !== 'localhost') {
       window.dataLayer = window.dataLayer || []
       this.gtag('js', new Date())
       this.track()
     }
-  }
-
-  track() {
-    this.gtag('config', this.GA_TRACKING_ID)
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.location.pathname === this.props.location.pathname) return
-    this.track()
-  }
-
-  componentDidMount() {
-    this.startGtag()
-    const self = this
 
     // add outbound tracking
     document.addEventListener(
@@ -62,6 +50,19 @@ export class Analytics extends React.Component {
       },
       false,
     )
+  }
+
+  track() {
+    this.gtag('config', this.GA_TRACKING_ID)
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.location.pathname === this.props.location.pathname) return
+    this.track()
+  }
+
+  componentDidMount() {
+    this.startGtag()
   }
 
   render() {
