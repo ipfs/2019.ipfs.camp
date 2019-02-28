@@ -10,7 +10,8 @@ export class Analytics extends React.Component {
   }
 
   gtag() {
-    dataLayer.push(arguments)
+    if (!window.dataLayer) return
+    window.dataLayer.push(arguments)
   }
 
   trackOutbound(href) {
