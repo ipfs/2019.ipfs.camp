@@ -22,6 +22,7 @@ export default {
       twitter: 'ipfsbot',
       desc:
         'IPFS Camp is a 3 day hacker retreat designed for the builders of the Distributed Web.',
+      lastBuilt: Date.now(),
     },
   }),
 }

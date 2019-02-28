@@ -12,6 +12,7 @@ export type SiteData = {
     keywords: string
     twitter: string
     desc: string
+    lastBuilt: number
   }
   gtagId?: string
 }
