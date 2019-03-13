@@ -37,6 +37,9 @@ export const Footer: React.FC<FooterProps> = () => (
           <li>
             <Link to="/code-of-conduct">Code of Conduct</Link>
           </li>
+          <li>
+            <Link to="/privacy">Privacy Policy</Link>
+          </li>
         </ul>
       </div>
       <div className="w-third-ns pb3">
