@@ -45,7 +45,7 @@ workflows:
   build-deploy:
     jobs:
       - build
-      - deploy:
-          context: ipfs-dns-deploy
-          requires:
-            - build
+      # - deploy:
+      #     context: ipfs-dns-deploy
+      #     requires:
+      #       - build
