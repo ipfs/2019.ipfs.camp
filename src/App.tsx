@@ -1,5 +1,5 @@
 import React from 'react'
-import { Root, Routes, withSiteData } from 'react-static'
+import { Root, Routes, useSiteData } from 'react-static'
 import { NavLink, Match, Router } from '@components/Router'
 import { DefaultMeta, Card } from '@components/Meta'
 import './app.css'
@@ -74,33 +74,44 @@ const Nav: React.FC<RouteComponentProps> = () => (
   </nav>
 )
 
-function App({ gtagId }: SiteData) {
+const App = () => {
+  const { gtagId }: SiteData = useSiteData()
   return (
     <ThemeProvider theme={theme}>
       <Root>
-        <GlobalStyle />
-        <Router>
-          <Analytics id={gtagId} path="/*" />
-        </Router>
-        <DefaultMeta />
-        <Card />
-        <Box className="w-100 sans-serif white transition-all">
-          <Match path="/:item">
-            {(props: any) => (props.match ? <Nav /> : null)}
-          </Match>
+        <React.Suspense fallback={<em>Loading...</em>}>
+          <GlobalStyle />
 
-          <FadeIn>
-            <main className="nested-links f4-l">
-              <MDXProvider>
-                <Routes />
-              </MDXProvider>
-            </main>
-          </FadeIn>
-        </Box>
-        <Footer />
+          <Router>
+            <Analytics id={gtagId} path="*" />
+          </Router>
+
+          <DefaultMeta />
+          <Card />
+          <Box className="w-100 sans-serif white transition-all">
+            <Match path="/:item">
+              {(props: any) => (props.match ? <Nav /> : null)}
+            </Match>
+
+            <FadeIn>
+              <main className="nested-links f4-l">
+                <MDXProvider>
+                  <Router>
+                    <Routes path="*" />
+                  </Router>
+                </MDXProvider>
+              </main>
+            </FadeIn>
+          </Box>
+          <Footer />
+        </React.Suspense>
       </Root>
     </ThemeProvider>
   )
 }
 
-export default withSiteData(App)
+export default () => (
+  <React.Suspense fallback={<em />}>
+    <App />
+  </React.Suspense>
+)
