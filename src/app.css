@@ -2,6 +2,10 @@
 @import '~ipfs-css';
 @import url('https://fonts.googleapis.com/css?family=PT+Mono');
 
+html {
+  scroll-behavior: smooth;
+}
+
 .pt-mono {
   font-family: 'PT Mono', monospace;
 }
