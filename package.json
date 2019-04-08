@@ -22,6 +22,7 @@
     "react-hot-loader": "^4.8.3",
     "react-static": "^7.0.6",
     "react-static-plugin-mdx": "^7.0.6",
+    "react-static-plugin-sitemap": "^7.0.0",
     "styled-components": "^4.2.0",
     "styled-system": "^3.1.0",
     "tachyons": "^4.11.1"

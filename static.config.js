@@ -9,6 +9,7 @@ export default {
     'react-static-plugin-typescript',
     'react-static-plugin-styled-components',
     'react-static-plugin-mdx',
+    'react-static-plugin-sitemap',
     [
       'react-static-plugin-source-filesystem',
       {

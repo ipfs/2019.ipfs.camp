@@ -6677,6 +6677,11 @@ react-static-plugin-mdx@^7.0.6:
   dependencies:
     "@mdx-js/loader" "^0.20.3"
 
+react-static-plugin-sitemap@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/react-static-plugin-sitemap/-/react-static-plugin-sitemap-7.0.0.tgz#4bf43db91cad21fedbeb02c8db02cc1dd168867c"
+  integrity sha512-mIi5wzJoizMJlt9sEZuzr6dDXOWAqE2mKMdW2X9jhStZlgaKDjQ1AwtAF7IhsfwhYZfEeZQuYa3lq+gojFXqvg==
+
 react-static-plugin-source-filesystem@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/react-static-plugin-source-filesystem/-/react-static-plugin-source-filesystem-7.0.0.tgz#865c76748d038a8d1bccdd005bec04c3c674f61a"
