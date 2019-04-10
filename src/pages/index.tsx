@@ -1,15 +1,14 @@
 import React from 'react'
-import { withSiteData } from 'react-static'
 
 import { Hero } from '@components/Hero'
-import RandomWord from 'react-random-word'
+import { RandomWord } from '@components/RandomWord'
 import { Stars } from '@components/Stars'
 import { Box, Heading, Text } from '@components/System'
 import { Button } from '@components/Buttons'
 import { Logo } from '@components/Logo'
 import { Projects } from '@components/Projects'
 
-export default withSiteData(() => (
+export default () => (
   <>
     <Hero className="relative overflow-hidden tc tl-ns">
       <Stars className="bg-dark3 skew-l" style={{ top: '-10%' }} />
@@ -96,4 +95,4 @@ export default withSiteData(() => (
       </div>
     </section>
   </>
-))
+)

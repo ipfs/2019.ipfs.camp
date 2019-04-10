@@ -9,6 +9,13 @@ export default {
     'react-static-plugin-typescript',
     'react-static-plugin-styled-components',
     'react-static-plugin-mdx',
+    'react-static-plugin-sitemap',
+    [
+      'react-static-plugin-source-filesystem',
+      {
+        location: path.resolve('./src/pages'),
+      },
+    ],
   ],
   siteRoot: 'https://camp.ipfs.io',
   entry: path.join(__dirname, 'src', 'index.tsx'),

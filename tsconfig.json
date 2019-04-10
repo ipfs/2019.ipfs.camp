@@ -6,21 +6,24 @@
     "jsx": "preserve",
     "allowJs": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": false,
-    "resolveJsonModule": true,
     "preserveConstEnums": true,
     "sourceMap": true,
     "skipLibCheck": true,
+    "noEmit": true,
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"]
+      "@containers/*": ["src/containers/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@types/*": ["src/types/*"]
     },
     "lib": ["dom", "es2015", "es2016"]
   },
-  "exclude": ["dist/**/*", "public/**/*", "node_modules"]
+  "exclude": ["artifacts/**/*", "dist/**/*", "public/**/*", "node_modules"]
 }
