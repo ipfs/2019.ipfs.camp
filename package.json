@@ -20,7 +20,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.8.3",
-    "react-static": "^7.0.6",
+    "react-static": "^7.0.7",
     "react-static-plugin-mdx": "^7.0.6",
     "react-static-plugin-sitemap": "^7.0.0",
     "styled-components": "^4.2.0",
