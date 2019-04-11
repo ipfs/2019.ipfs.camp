@@ -16,9 +16,10 @@
 
     // add style
     var style = document.createElement('link')
-    style.href = window.location.href.indexOf('//localhost')
-      ? '/ribbon.css'
-      : '//camp.ipfs.io/ribbon.css'
+    style.href =
+      window.location.href.indexOf('//localhost') > -1
+        ? '//localhost:3000/ribbon.css'
+        : '//camp.ipfs.io/ribbon.css'
     style.type = 'text/css'
     style.rel = 'stylesheet'
     head.append(style)

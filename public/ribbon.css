@@ -34,6 +34,8 @@
   color: white;
   -webkit-animation: fadeIn 1s ease;
   animation: fadeIn 1s ease;
+  line-height: 20px;
+  z-index: 9999;
 }
 
 .ipfs-camp-ribbon-inner {
