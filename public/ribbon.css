@@ -32,8 +32,8 @@
   height: 230px;
   pointer-events: none;
   color: white;
-  -webkit-animation: fadeIn 10s ease;
-  animation: fadeIn 10s ease;
+  -webkit-animation: fadeIn 1s ease;
+  animation: fadeIn 1s ease;
 }
 
 .ipfs-camp-ribbon-inner {
