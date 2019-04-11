@@ -1,0 +1,66 @@
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* disable on smaller screens for now */
+@media only screen and (max-width: 600px) {
+  .ipfs-camp-ribbon {
+    display: none;
+  }
+}
+
+.ipfs-camp-ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  width: 230px;
+  height: 230px;
+  pointer-events: none;
+  color: white;
+  -webkit-animation: fadeIn 10s ease;
+  animation: fadeIn 10s ease;
+}
+
+.ipfs-camp-ribbon-inner {
+  pointer-events: auto;
+  position: absolute;
+  top: 40px;
+  right: -70px;
+  background: rgb(255, 112, 60);
+  cursor: pointer;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  font-size: 16px;
+  width: 300px;
+  text-align: center;
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.ipfs-camp-ribbon-inner:hover {
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: rotate(45deg) scale(1.1);
+  -ms-transform: rotate(45deg) scale(1.1);
+  transform: rotate(45deg) scale(1.1);
+}
