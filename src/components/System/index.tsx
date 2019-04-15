@@ -67,7 +67,7 @@ import {
 import { ColorProperty } from 'csstype'
 
 // util
-import { merge } from 'lodash'
+import merge from 'lodash/merge'
 
 const campTheme = {
   colors: {
