@@ -17,7 +17,7 @@
 }
 
 /* disable on smaller screens for now */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .ipfs-camp-ribbon {
     display: none;
   }
