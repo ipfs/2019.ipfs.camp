@@ -4,10 +4,11 @@
   "scripts": {
     "start": "react-static start",
     "stage": "react-static build --staging",
-    "build": "react-static build",
+    "build": "react-static build && yarn ribbon:minify",
     "bundle": "react-static bundle",
     "export": "react-static export",
-    "serve": "serve dist -p 3000 -s"
+    "serve": "serve dist -p 3000 -s",
+    "ribbon:minify": "terser public/ribbon.js -o public/ribbon.min.js -c -m --source-map"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
@@ -46,6 +47,7 @@
     "react-static-plugin-styled-components": "^7.0.0",
     "react-static-plugin-typescript": "^7.0.0",
     "serve": "11.0.0",
+    "terser": "^3.17.0",
     "typescript": "^3.4.3"
   },
   "husky": {
