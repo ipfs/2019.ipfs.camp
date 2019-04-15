@@ -35,6 +35,14 @@
     ribbonChild.innerHTML =
       '<div>Join us at<br/><span style="font-size:18px; font-weight: bold">IPFS Camp</span><br/>27-30 June</div>'
     ribbon.appendChild(ribbonChild)
+
+    // remove any existing ribbons
+    if ('querySelectorAll' in document)
+      document.querySelectorAll('.' + ribbon.className).forEach(function(n) {
+        n.remove()
+      })
+
+    // inject ribbon
     document.body.append(ribbon)
   })
 })()
