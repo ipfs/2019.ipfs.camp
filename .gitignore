@@ -17,7 +17,7 @@
 .env.test.local
 .env.production.local
 
-# ribbom banner
+# ribbon banner
 ribbon.min.js*
 
 npm-debug.log*
