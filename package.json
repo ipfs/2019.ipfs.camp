@@ -8,7 +8,7 @@
     "bundle": "react-static bundle",
     "export": "react-static export",
     "serve": "serve dist -p 3000 -s",
-    "ribbon:minify": "terser public/ribbon.js -o public/ribbon.min.js -c -m --source-map"
+    "ribbon:minify": "terser dist/ribbon.js -o dist/ribbon.min.js -c -m --source-map"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
