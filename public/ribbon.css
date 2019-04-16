@@ -10,10 +10,12 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
   to {
     opacity: 1;
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
 }
@@ -72,6 +74,8 @@
 /* Cluster display patches */
 
 .container > .table-container > .header-section.right {
+  -webkit-transition: padding ease 0.5s;
+  -o-transition: padding ease 0.5s;
   transition: padding ease 0.5s;
 }
 
@@ -84,6 +88,8 @@
 /* ipfs.io display patches */
 
 .container > nav.top-nav {
+  -webkit-transition: padding ease 0.5s;
+  -o-transition: padding ease 0.5s;
   transition: padding ease 0.5s;
 }
 
