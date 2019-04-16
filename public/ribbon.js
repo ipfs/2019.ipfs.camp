@@ -28,6 +28,7 @@
     var ribbon = document.createElement('div')
     var ribbonChild = document.createElement('div')
     ribbon.className = 'ipfs-camp-ribbon'
+    ribbon.style = 'display:none;'
     ribbonChild.className = 'ipfs-camp-ribbon-inner'
     ribbonChild.onclick = function() {
       window.open('https://camp.ipfs.io')
