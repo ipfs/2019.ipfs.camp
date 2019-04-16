@@ -80,3 +80,15 @@
     padding-right: 100px;
   }
 }
+
+/* ipfs.io display patches */
+
+.container > nav.top-nav {
+  transition: padding ease 0.5s;
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1200px) {
+  .container > nav.top-nav {
+    padding-right: 70px;
+  }
+}
