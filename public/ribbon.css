@@ -16,13 +16,6 @@
   }
 }
 
-/* disable on smaller screens for now */
-@media only screen and (max-width: 768px) {
-  .ipfs-camp-ribbon {
-    display: none;
-  }
-}
-
 .ipfs-camp-ribbon {
   display: block !important;
   position: absolute;
@@ -66,6 +59,13 @@
   -webkit-transform: rotate(45deg) scale(1.1);
   -ms-transform: rotate(45deg) scale(1.1);
   transform: rotate(45deg) scale(1.1);
+}
+
+/* disable on smaller screens for now */
+@media only screen and (max-width: 768px) {
+  .ipfs-camp-ribbon {
+    display: none !important;
+  }
 }
 
 /* Cluster display patches */
