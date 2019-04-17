@@ -22,7 +22,7 @@
         : '//camp.ipfs.io/ribbon.css'
     style.type = 'text/css'
     style.rel = 'stylesheet'
-    head.append(style)
+    head.appendChild(style)
 
     // create ribbon
     var ribbon = document.createElement('div')
@@ -44,6 +44,6 @@
       })
 
     // inject ribbon
-    document.body.append(ribbon)
+    document.body.appendChild(ribbon)
   })
 })()
