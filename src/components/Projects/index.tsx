@@ -5,6 +5,7 @@ import ipfs from './ipfs-logo.svg'
 import ipld from './ipld-logo.svg'
 import libp2p from './libp2p-logo.svg'
 import multiformats from './multiformats-logo.svg'
+import protoschool from './protoschool-logo.svg'
 
 const ProjectGrid = styled.div`
   background: url(${grid}) no-repeat top left;
@@ -38,6 +39,9 @@ const ProjectGrid = styled.div`
   .x4 {
     left: 396px;
   }
+  .x5 {
+    left: 467px;
+  }
 `
 
 type ProjectProps = {
@@ -57,6 +61,9 @@ export const Projects: React.SFC<ProjectProps> = props => (
     </a>
     <a href="https://multiformats.io/">
       <img src={multiformats} className="multiformats-logo y2 x4 h4 grow" />
+    </a>
+    <a href="https://proto.school/">
+      <img src={protoschool} className="protoschool-logo y1 x5 h4 grow" />
     </a>
   </ProjectGrid>
 )
