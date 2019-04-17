@@ -32,7 +32,7 @@ export const NavLink: React.SFC<NavLinkProps<HTMLAnchorElement>> = ({
 )
 
 NavLink.defaultProps = {
-  activeClassName: 'bb bw1 b--primary1',
+  activeClassName: 'bb',
 }
 
 type Props = { component: FunctionComponent } & RouteComponentProps

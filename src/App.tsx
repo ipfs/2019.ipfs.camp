@@ -21,12 +21,27 @@ import { Hamburgler } from '@components/Hamburgler'
 const NavItems: React.FC = () => (
   <>
     <li className="dib">
-      <NavLink className="link neutral4 pv3 mh3 ttu" to="/faq">
+      <NavLink className="link dark3 pv3 mh3" to="/schedule">
+        Schedule
+      </NavLink>
+    </li>
+    <li className="dib">
+      <NavLink className="link dark3 pv3 mh3" to="/location">
+        Location
+      </NavLink>
+    </li>
+    <li className="dib">
+      <NavLink className="link dark3 pv3 mh3" to="/faq">
         FAQ
       </NavLink>
     </li>
+    <li className="dib">
+      <NavLink className="link dark3 pv3 mh3" to="/sponsor">
+        Sponsor
+      </NavLink>
+    </li>
     <li className="dib pv2 link">
-      <NavLink className="link neutral4 pv3 mh3 ttu" to="/register">
+      <NavLink className="link ba pa3 mh3" to="/register">
         Register
       </NavLink>
     </li>
@@ -34,14 +49,15 @@ const NavItems: React.FC = () => (
 )
 
 const Nav: React.FC<RouteComponentProps> = () => (
-  <nav className="monospace ttu f5 bg-primary5">
+  <nav className="monospace f5 fixed left-0 right-0 z-max bg-white">
     <div className="ph4 ph5-ns pv3 mw9 center flex items-center">
       <NavLink className="link white" activeClassName="" to="/">
         <Logo
           className="fl db mr2 mt1 contain grow"
           type="h"
+          color="r"
           style={{
-            minWidth: '255px',
+            minWidth: '155px',
             height: '55px',
           }}
         />
@@ -60,7 +76,11 @@ const Nav: React.FC<RouteComponentProps> = () => (
               <ul className="flex flex-column justify-center items-center vh-100 pa0 ma0">
                 <div className="mb3 tc">
                   <NavLink to="/">
-                    <Logo type="h" style={{ height: '70px', width: '200px' }} />
+                    <Logo
+                      type="h"
+                      color="i"
+                      style={{ height: '58px', width: '200px' }}
+                    />
                   </NavLink>
                   <p className="neutral1 pa2">June 27-30, Barcelona</p>
                 </div>
@@ -88,11 +108,13 @@ const App = () => {
 
           <DefaultMeta />
           <Card />
-          <Box className="w-100 sans-serif white transition-all">
-            <Match path="/:item">
-              {(props: any) => (props.match ? <Nav /> : null)}
-            </Match>
-
+          <Match path="/*">
+            {(props: any) => (props.match ? <Nav /> : null)}
+          </Match>
+          <Box
+            className="w-100 sans-serif white transition-all"
+            style={{ paddingTop: '96px' }}
+          >
             <FadeIn>
               <main className="nested-links f4-l">
                 <MDXProvider>

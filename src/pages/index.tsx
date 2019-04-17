@@ -17,6 +17,7 @@ export default () => (
           <Logo
             className="left-ns mb5 mr0-ns ml0-ns center grow"
             type="v"
+            color="r"
             style={{ minWidth: '220px', width: '15rem', height: '16rem' }}
           />
           <Heading
