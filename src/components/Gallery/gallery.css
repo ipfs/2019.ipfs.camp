@@ -1,0 +1,16 @@
+.scroll-wrapper {
+  -webkit-overflow-scrolling: touch;
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (min-width: 30em) {
+  .scroll-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

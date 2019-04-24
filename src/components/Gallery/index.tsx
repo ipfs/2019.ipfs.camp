@@ -1,6 +1,8 @@
 import React from 'react'
 import Lightbox from 'react-images'
 
+import './gallery.css'
+
 type GalleryState = {
   lightboxIsOpen: boolean
   currentImage: number
@@ -78,8 +80,9 @@ export class Gallery extends React.Component<GalleryProps, GalleryState> {
       return (
         <a
           href={obj.src}
-          // className={css(classes.thumbnail, classes[obj.orientation])}
+          className="mr2 dib w5"
           key={i}
+          style={{ flex: '0 0 auto' }}
           onClick={e => this.openLightbox(i, e)}
         >
           <img src={obj.thumbnail || obj.src} />
@@ -87,7 +90,11 @@ export class Gallery extends React.Component<GalleryProps, GalleryState> {
       )
     })
 
-    return <div>{gallery}</div>
+    return (
+      <div className="scroll-wrapper flex nowrap overflow-x-scroll">
+        {gallery}
+      </div>
+    )
   }
   render() {
     return (

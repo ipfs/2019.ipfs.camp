@@ -11,30 +11,34 @@ import { Projects } from '@components/Projects'
 export default () => (
   <>
     <Hero className="relative overflow-hidden tc tl-ns">
-      <Stars className="bg-dark3 skew-l" style={{ top: '-10%' }} />
+      <Stars className="bg-dark3" />
       <Box className="pa4 pa5-ns lh-copy mw9 center">
         <Box className="mw7 left">
-          <Logo
-            className="left-ns mb5 mr0-ns ml0-ns center grow"
-            type="v"
-            color="r"
-            style={{ minWidth: '220px', width: '15rem', height: '16rem' }}
-          />
-          <Heading
-            as="h1"
-            fontSize={[5, 7]}
-            className="lh-solid pt-mono"
-            height="3em"
-            style={{ wordWrap: 'break-word' }}
-          >
-            <RandomWord
-              word="Discover an InterPlanetary Future"
-              speed={40}
-              rounds={30}
-              letters="Qmb77g5AXanuvRKNXH79hAMpLUm6iyfqJDn7aAkEukWnna"
-            />
-          </Heading>
-
+          <Box className="mv4 flex flex-column flex-row-ns items-center-ns">
+            <Box>
+              <Logo
+                className="mr0-ns ml0-ns center grow"
+                type="v"
+                color="r"
+                style={{ minWidth: '220px', width: '15rem', height: '16rem' }}
+              />
+            </Box>
+            <Box className="mh4-ns mw6">
+              <Heading
+                as="h1"
+                fontSize={[5, 6]}
+                className="lh-solid pt-mono"
+                style={{ wordWrap: 'break-word' }}
+              >
+                <RandomWord
+                  word="Discover an InterPlanetary Future"
+                  speed={40}
+                  rounds={30}
+                  letters="Qmb77g5AXanuvRKNXH79hAMpLUm6iyfqJDn7aAkEukWnna"
+                />
+              </Heading>
+            </Box>
+          </Box>
           <Text className="measure-wide f5 f4-m f3-l" color="neutral2">
             <strong>IPFS Camp</strong> is a{' '}
             <strong>3 day hacker retreat</strong> designed for the{' '}

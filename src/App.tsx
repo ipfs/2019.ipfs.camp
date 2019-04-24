@@ -21,27 +21,27 @@ import { Hamburgler } from '@components/Hamburgler'
 const NavItems: React.FC = () => (
   <>
     <li className="dib">
-      <NavLink className="link dark3 pv3 mh3" to="/schedule">
+      <NavLink className="dark3 pv3 mh3" to="/schedule">
         Schedule
       </NavLink>
     </li>
     <li className="dib">
-      <NavLink className="link dark3 pv3 mh3" to="/location">
+      <NavLink className="dark3 pv3 mh3" to="/location">
         Location
       </NavLink>
     </li>
     <li className="dib">
-      <NavLink className="link dark3 pv3 mh3" to="/faq">
+      <NavLink className="dark3 pv3 mh3" to="/faq">
         FAQ
       </NavLink>
     </li>
     <li className="dib">
-      <NavLink className="link dark3 pv3 mh3" to="/sponsor">
+      <NavLink className="dark3 pv3 mh3" to="/sponsor">
         Sponsor
       </NavLink>
     </li>
     <li className="dib pv2 link">
-      <NavLink className="link ba pa3 mh3" to="/register">
+      <NavLink className="ba pa3 mh3" to="/register">
         Register
       </NavLink>
     </li>
