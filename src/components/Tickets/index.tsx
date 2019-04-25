@@ -1,13 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Button } from '@components/Buttons'
 
+const StyledOptions = styled.ul`
+  list-style: square inside url(${require('./checkmark.svg')});
+`
+
 const Benefits = () => (
-  <ul className="tl pa0">
+  <StyledOptions className="tl pa0">
     <li>All talks, workshops and sessions</li>
     <li>Breakfast, lunch and dinner</li>
     <li>Airport or train station transfers</li>
     <li>Awesome group activities</li>
-  </ul>
+  </StyledOptions>
 )
 
 const Card: React.FC = ({ children }) => (
