@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Button } from '@components/Buttons'
 
 const StyledOptions = styled.ul`
-  list-style: square inside url('./checkmark.svg');
+  list-style: square inside url(${require('./checkmark.svg')});
 `
 
 const Benefits = () => (
