@@ -5,6 +5,7 @@ import { DefaultMeta, Card } from '@components/Meta'
 import './app.css'
 import '@components/System/global.css'
 import { theme, Box, GlobalStyle } from '@components/System'
+import { Button } from '@components/Buttons'
 import MDXProvider from '@components/System/MDXProvider'
 
 // import system comps
@@ -17,6 +18,7 @@ import { Logo } from '@components/Logo'
 import { RouteComponentProps } from '@reach/router'
 import { SiteData } from './types'
 import { Hamburgler } from '@components/Hamburgler'
+import { Sponsors } from '@components/Sponsors'
 
 const NavItems: React.FC = () => (
   <>
@@ -36,20 +38,18 @@ const NavItems: React.FC = () => (
       </NavLink>
     </li>
     <li className="dib">
-      <NavLink className="dark3 pv3 mh3" to="/sponsor">
-        Sponsor
+      <NavLink className="dark3 pv3 mh3" to="/code-of-conduct">
+        Conduct
       </NavLink>
     </li>
     <li className="dib pv2 link">
-      <NavLink className="ba pa3 mh3" to="/register">
-        Register
-      </NavLink>
+      <Button to="/register">Register</Button>
     </li>
   </>
 )
 
 const Nav: React.FC<RouteComponentProps> = () => (
-  <nav className="monospace f5 fixed left-0 right-0 z-max bg-white">
+  <nav className="monospace f5 fixed left-0 right-0 top-0 z-max bg-white">
     <div className="ph4 ph5-ns pv3 mw9 center flex items-center">
       <NavLink className="link white" activeClassName="" to="/">
         <Logo
@@ -111,17 +111,15 @@ const App = () => {
           <Match path="/*">
             {(props: any) => (props.match ? <Nav /> : null)}
           </Match>
-          <Box
-            className="w-100 sans-serif white transition-all"
-            style={{ paddingTop: '96px' }}
-          >
+          <Box className="mt6 w-100 sans-serif white transition-all">
             <FadeIn>
-              <main className="nested-links f4-l">
+              <main className="nested-links">
                 <MDXProvider>
                   <Router>
                     <Routes path="*" />
                   </Router>
                 </MDXProvider>
+                <Sponsors />
               </main>
             </FadeIn>
           </Box>
