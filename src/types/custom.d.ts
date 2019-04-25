@@ -3,7 +3,7 @@ declare module '*.mdx' {
   export default MDXComponent
 }
 
-declare module '@mdx-js/tag'
+declare module '@mdx-js/react'
 
 declare module '*.svg' {
   const content: any
