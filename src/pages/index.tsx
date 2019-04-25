@@ -58,7 +58,7 @@ export default () => (
       </Box>
     </Hero>
     <section className="bg-white lh-copy dark3 tc tl-ns">
-      <div className="pa4 pa5-ns pt0 mw9 center f5 f4-l">
+      <div className="mt4 mb4 pa4 pa5-ns pt0 mw9 center f5 f4-l">
         <div className="flex-ns items-center">
           <div className="w-50-ns">
             <Heading className="lh-title f2 f1-ns montserrat">

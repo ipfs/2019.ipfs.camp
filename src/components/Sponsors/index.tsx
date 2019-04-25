@@ -1,9 +1,14 @@
 import React from 'react'
 import { Heading } from '@components/System'
+import styled from 'styled-components'
+
+const SponsorBlock = styled.div`
+  background: linear-gradient(#ffffff, #e8eaff);
+`
 
 export const Sponsors = () => (
-  <div className="bg-primary10">
-    <section className="ph4 ph5-ns pv5 mw9 center tc">
+  <SponsorBlock>
+    <section className="ph4 ph5-ns pv5 mw9 center tc dark3">
       <Heading>Thanks to our sponsors</Heading>
       <a href="https://protocol.ai">
         <img
@@ -17,5 +22,5 @@ export const Sponsors = () => (
         opportunities.
       </p>
     </section>
-  </div>
+  </SponsorBlock>
 )
