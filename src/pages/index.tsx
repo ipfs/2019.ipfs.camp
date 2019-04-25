@@ -46,8 +46,8 @@ export default () => (
             Join the core developers for a hands on experience packed with
             workshops, lectures and deep-dives.
           </Text>
-          <Text className="mv4 pt-mono f4 f3-m f2-l">
-            June 27-30, Barcelona
+          <Text className="mv4 pt-mono f4 f3-ns">
+            June 27-30 · Barcelona, Spain · 150 attendees
           </Text>
           <p className="mv4">
             <Button to="register" size="large">
@@ -82,21 +82,6 @@ export default () => (
             <Projects className="tc" />
           </div>
         </div>
-
-        <section className="mv5">
-          <Heading>Thanks to our sponsors</Heading>
-          <a href="https://protocol.ai">
-            <img
-              className="mw6 pv3 w-20-ns"
-              src={require('@components/Projects/protocol-labs-logo-horizontal-alt-black.svg')}
-            />
-          </a>
-          <p>
-            Interested in sponsoring IPFS Camp 2019? Email{' '}
-            <a href="mailto:camp@ipfs.io">camp@ipfs.io</a> to enquire about
-            opportunities.
-          </p>
-        </section>
       </div>
     </section>
   </>
