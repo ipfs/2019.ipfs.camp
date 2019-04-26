@@ -1,4 +1,4 @@
-import { Page } from '@layouts'
+import { Page, Section } from '@layouts'
 import { CFGallery } from '@components/Chateauform/Gallery'
 
 export default Page
@@ -11,6 +11,8 @@ export const meta = {
   className: '',
 }
 
+<Section>
+
 # Campus La Mola, Barcelona
 
 <div className="mw7">
@@ -21,9 +23,11 @@ IPFS Camp will take place at [Campus La Mola](https://www.chateauform.com/en/hou
 
 <CFGallery />
 
-## Transportation
+</Section>
 
-<div className="mw7">
+<Section className="mw7">
+
+## Transportation
 
 IPFS Camp shuttles will leave from Terminal 1 (international terminal) at BCN at 4:00pm. There will be guides at arrivals (look out for the IPFS Camp signs!) who will lead you to the bus.
 
@@ -31,7 +35,7 @@ If you’re coming from central Barcelona then you can take a train (R4) from Ba
 
 Shuttles will run every half hour from 3pm - 6pm. Maybe put a little shuttle schedule?
 
-</div>
+</Section>
 
 ## How to find Campus La Mola
 

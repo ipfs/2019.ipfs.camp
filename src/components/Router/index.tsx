@@ -15,7 +15,7 @@ type NavLinkProps<T> = LinkProps<T> & {
   activeClassName?: string
 }
 
-export const NavLink: React.SFC<NavLinkProps<HTMLAnchorElement>> = ({
+export const NavLink: React.FC<NavLinkProps<HTMLAnchorElement>> = ({
   activeClassName,
   ...props
 }) => (

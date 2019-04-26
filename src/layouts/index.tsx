@@ -32,3 +32,8 @@ export const Page: React.FC<PageProps> = ({ children, meta, title }) => (
     </Box>
   </>
 )
+
+export const Section: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
+  children,
+  className,
+}) => <section className={`mb5 ${className}`}>{children}</section>

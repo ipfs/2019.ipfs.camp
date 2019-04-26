@@ -13,7 +13,7 @@ type ButtonProps<T> = LinkProps<T> & {
 
 const defaultClassName = 'white pv3 ph4 grow pointer br2 bg-primary3'
 
-const Button: React.SFC<ButtonProps<HTMLAnchorElement>> = ({
+const Button: React.FC<ButtonProps<HTMLAnchorElement>> = ({
   to,
   href,
   children,

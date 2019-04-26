@@ -48,7 +48,7 @@ type ProjectProps = {
   className?: string
 }
 
-export const Projects: React.SFC<ProjectProps> = props => (
+export const Projects: React.FC<ProjectProps> = props => (
   <ProjectGrid {...props} className="dn db-ns">
     <a href="https://ipfs.io/">
       <img src={ipfs} className="ipfs-logo y1 x1 h4 grow" />

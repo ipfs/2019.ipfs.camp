@@ -1,4 +1,4 @@
-import { Page } from '@layouts'
+import { Page, Section } from '@layouts'
 import { Button } from '@components/Buttons'
 import { Tickets } from '@components/Tickets'
 import { CFGallery } from '@components/Chateauform/Gallery'
@@ -9,11 +9,15 @@ export const title = 'Registration'
 
 # 👋 Hello Space Ranger
 
-<div className="mw7">
+<Section className="mw7">
 
 Your ticket includes hotel accommodation for three nights, airport transfers, all food and drinks, group activities and hacking sessions. Everything is taken care of so we can focus on building the future of the internet.
 
 <Tickets />
+
+</Section>
+
+<Section className="mw7">
 
 ## Application Timeline
 
@@ -21,6 +25,6 @@ Your ticket includes hotel accommodation for three nights, airport transfers, al
 
 - **May 17th**: Applications Close 🔏
 
-</div>
+</Section>
 
 <CFGallery />
