@@ -282,11 +282,6 @@ Link.defaultProps = {
   className: 'link',
 }
 
-// type formatDateParams = {
-//   dateStr: string
-//   formatStr?: string
-// }
-
-export function formatDate(dateStr: string, formatStr = 'MM/dd/YYYY'): string {
+export function formatDate(dateStr: string, formatStr = 'dddd Do'): string {
   return format(new Date(dateStr), formatStr)
 }
