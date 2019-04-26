@@ -1,0 +1,154 @@
+[
+  {
+    "date": "2019-06-27",
+    "title": "Thursday June 27th",
+    "sessions": [
+      {
+        "time": "15:00",
+        "title": "Check in opens"
+      },
+      {
+        "time": "15:00",
+        "title": "Shuttles begin from Terrassa Train Station (every half hour until 6pm)"
+      },
+      {
+        "time": "16:00",
+        "title": "Shuttle departs BCN (Terminal 1)"
+      },
+      {
+        "time": "18:00",
+        "title": "Aperitifs"
+      },
+      {
+        "time": "19:00",
+        "title": "Welcome to IPFS Camp"
+      },
+      {
+        "time": "19:30",
+        "title": "Group Activity"
+      },
+      {
+        "time": "20:00pm",
+        "title": "Group Dinner in restaurant"
+      },
+      {
+        "time": "21:30",
+        "title": "Group Activity (optional)"
+      }
+    ]
+  },
+  {
+    "date": "2019-06-28",
+    "title": "Friday June 28th",
+    "sessions": [
+      {
+        "time": "07:00 - 08:00",
+        "title": "Daily Morning Fitness (Running, Biking, Yoga, Swimming)"
+      },
+      {
+        "time": "07:00 - 08:45",
+        "title": "Breakfast"
+      },
+      {
+        "time": "08:30 - 09:00",
+        "title": "Opening Announcements"
+      },
+      {
+        "time": "09:00 - 13:30",
+        "title": "Morning Workshops"
+      },
+      {
+        "time": "13:30 - 14:30",
+        "title": "Lunch"
+      },
+      {
+        "time": "14:30 - 19:00",
+        "title": "Afternoon Workshops"
+      },
+      {
+        "time": "19:00 - 19:30",
+        "title": "Aperitifs"
+      },
+      {
+        "time": "19:30 - 21:30",
+        "title": "Group Dinner"
+      },
+      {
+        "time": "21:30 -",
+        "title": "Group Activity (optional)"
+      }
+    ]
+  },
+  {
+    "date": "2019-06-29",
+    "title": "Saturday June 29th",
+    "sessions": [
+      {
+        "time": "07:00 - 08:00",
+        "title": "Daily Morning Fitness (Running, Biking, Yoga, Swimming)"
+      },
+      {
+        "time": "07:00 - 08:45",
+        "title": "Breakfast"
+      },
+      {
+        "time": "08:30 - 09:00",
+        "title": "Opening Announcements"
+      },
+      {
+        "time": "09:00 - 13:30",
+        "title": "Morning Sessions"
+      },
+      {
+        "time": "13:30 - 14:30",
+        "title": "Lunch"
+      },
+      {
+        "time": "14:30 - 19:00",
+        "title": "Afternoon Sessions (Deep Dives and Lightning Talks)"
+      },
+      {
+        "time": "16:30 - 18:00",
+        "title": "Sci-Fi Fair"
+      },
+      {
+        "time": "19:00 - 19:30",
+        "title": "Aperitifs Break"
+      },
+      {
+        "time": "19:30 - 21:30",
+        "title": "Special Group Dinner"
+      },
+      {
+        "time": "21:30 -",
+        "title": "Music on the Terrace"
+      }
+    ]
+  },
+  {
+    "date": "2019-06-30",
+    "title": "Sunday June 30th",
+    "sessions": [
+      {
+        "time": "7:00 - 8:00",
+        "title": "Daily Morning Fitness (Running, Biking, Yoga, Swimming)"
+      },
+      {
+        "time": "7:00 - 8:45",
+        "title": "Breakfast"
+      },
+      {
+        "time": "9:00 - 12:00",
+        "title": "Closing sessions"
+      },
+      {
+        "time": "12:00 - 13:00",
+        "title": "Lunch"
+      },
+      {
+        "time": "13:00",
+        "title": "Shuttles depart for airport"
+      }
+    ]
+  }
+]
