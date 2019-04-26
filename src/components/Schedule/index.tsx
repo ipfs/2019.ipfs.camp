@@ -5,13 +5,15 @@ import { formatDate } from '@components/System'
 import schedule from './schedule.json'
 
 type Session = {
-  time: string
+  startTime: string
+  endTime?: string
   title: string
 }
 
 type Day = {
   date: string
   title: string
+  desc?: string
   sessions: Session[]
 }
 
@@ -20,17 +22,30 @@ type DayProps = {
 }
 
 const Day: React.FC<DayProps> = ({ day }) => (
-  <div className="dt">
-    <div className="dt-row" style={{ position: 'sticky' }}>
-      <h2>{formatDate(day.date)}</h2>
-      <h4>{day.title}</h4>
-    </div>
-    {day.sessions.map(session => (
-      <div className="dt-row">
-        <div className="dtc">{session.time}</div>
-        <div className="dtc">{session.title}</div>
+  <div className="mb4">
+    <div className="dt">
+      <div className="dt-row" style={{ position: 'sticky' }}>
+        <h2>{formatDate(day.date)}</h2>
+        {day.desc && <h4>{day.desc}</h4>}
       </div>
-    ))}
+    </div>
+    <div className="dt" style={{ borderSpacing: '0 10px' }}>
+      <div className="dt-row">
+        <div className="dtc pr4 b">Time</div>
+        <div className="dtc b ph3">Session</div>
+      </div>
+
+      {day.sessions.map(session => (
+        <div className="dt-row pt2 pb2">
+          <div className="dtc nowrap bb primary9 pv3 b--neutral5 b">
+            {session.startTime} {session.endTime && ` - ${session.endTime}`}
+          </div>
+          <div className="dtc ph3 pv3 bb b--neutral4 f4-ns">
+            {session.title}
+          </div>
+        </div>
+      ))}
+    </div>
   </div>
 )
 

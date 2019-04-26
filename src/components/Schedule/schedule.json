@@ -2,37 +2,38 @@
   {
     "date": "2019-06-27",
     "title": "Thursday June 27th",
+    "desc": "Arrive, settle in and get acquainted with your fellow campers.",
     "sessions": [
       {
-        "time": "15:00",
+        "startTime": "15:00",
         "title": "Check in opens"
       },
       {
-        "time": "15:00",
+        "startTime": "15:00",
         "title": "Shuttles begin from Terrassa Train Station (every half hour until 6pm)"
       },
       {
-        "time": "16:00",
+        "startTime": "16:00",
         "title": "Shuttle departs BCN (Terminal 1)"
       },
       {
-        "time": "18:00",
+        "startTime": "18:00",
         "title": "Aperitifs"
       },
       {
-        "time": "19:00",
+        "startTime": "19:00",
         "title": "Welcome to IPFS Camp"
       },
       {
-        "time": "19:30",
+        "startTime": "19:30",
         "title": "Group Activity"
       },
       {
-        "time": "20:00pm",
+        "startTime": "20:00",
         "title": "Group Dinner in restaurant"
       },
       {
-        "time": "21:30",
+        "startTime": "21:30",
         "title": "Group Activity (optional)"
       }
     ]
@@ -40,41 +41,51 @@
   {
     "date": "2019-06-28",
     "title": "Friday June 28th",
+    "desc": "Foundation DWeb Training, Poster Sessions, Lightning Talks.",
     "sessions": [
       {
-        "time": "07:00 - 08:00",
+        "startTime": "07:00",
+        "endTime": "08:00",
         "title": "Daily Morning Fitness (Running, Biking, Yoga, Swimming)"
       },
       {
-        "time": "07:00 - 08:45",
+        "startTime": "07:00",
+        "endTime": "08:45",
         "title": "Breakfast"
       },
       {
-        "time": "08:30 - 09:00",
+        "startTime": "08:30",
+        "endTime": "09:00",
         "title": "Opening Announcements"
       },
       {
-        "time": "09:00 - 13:30",
+        "startTime": "09:00",
+        "endTime": "13:30",
         "title": "Morning Workshops"
       },
       {
-        "time": "13:30 - 14:30",
+        "startTime": "13:30",
+        "endTime": "14:30",
         "title": "Lunch"
       },
       {
-        "time": "14:30 - 19:00",
+        "startTime": "14:30",
+        "endTime": "19:00",
         "title": "Afternoon Workshops"
       },
       {
-        "time": "19:00 - 19:30",
+        "startTime": "19:00",
+        "endTime": "19:30",
         "title": "Aperitifs"
       },
       {
-        "time": "19:30 - 21:30",
+        "startTime": "19:30",
+        "endTime": "21:30",
         "title": "Group Dinner"
       },
       {
-        "time": "21:30 -",
+        "startTime": "21:30",
+        "endTime": "...",
         "title": "Group Activity (optional)"
       }
     ]
@@ -82,45 +93,56 @@
   {
     "date": "2019-06-29",
     "title": "Saturday June 29th",
+    "desc": "Core training & Electives sessions.",
     "sessions": [
       {
-        "time": "07:00 - 08:00",
+        "startTime": "07:00",
+        "endTime": "08:00",
         "title": "Daily Morning Fitness (Running, Biking, Yoga, Swimming)"
       },
       {
-        "time": "07:00 - 08:45",
+        "startTime": "07:00",
+        "endTime": "08:45",
         "title": "Breakfast"
       },
       {
-        "time": "08:30 - 09:00",
+        "startTime": "08:30",
+        "endTime": "09:00",
         "title": "Opening Announcements"
       },
       {
-        "time": "09:00 - 13:30",
+        "startTime": "09:00",
+        "endTime": "13:30",
         "title": "Morning Sessions"
       },
       {
-        "time": "13:30 - 14:30",
+        "startTime": "13:30",
+        "endTime": "14:30",
         "title": "Lunch"
       },
       {
-        "time": "14:30 - 19:00",
+        "startTime": "14:30",
+        "endTime": "19:00",
         "title": "Afternoon Sessions (Deep Dives and Lightning Talks)"
       },
       {
-        "time": "16:30 - 18:00",
+        "startTime": "16:30",
+        "endTime": "18:00",
         "title": "Sci-Fi Fair"
       },
       {
-        "time": "19:00 - 19:30",
+        "startTime": "19:00",
+        "endTime": "19:30",
         "title": "Aperitifs Break"
       },
       {
-        "time": "19:30 - 21:30",
+        "startTime": "19:30",
+        "endTime": "21:30",
         "title": "Special Group Dinner"
       },
       {
-        "time": "21:30 -",
+        "startTime": "21:30",
+        "endTime": "...",
         "title": "Music on the Terrace"
       }
     ]
@@ -128,25 +150,30 @@
   {
     "date": "2019-06-30",
     "title": "Sunday June 30th",
+    "desc": "Presentation of the Deep Dives, Awards & Graduation Ceremony",
     "sessions": [
       {
-        "time": "7:00 - 8:00",
+        "startTime": "07:00",
+        "endTime": "8:00",
         "title": "Daily Morning Fitness (Running, Biking, Yoga, Swimming)"
       },
       {
-        "time": "7:00 - 8:45",
+        "startTime": "07:00",
+        "endTime": "8:45",
         "title": "Breakfast"
       },
       {
-        "time": "9:00 - 12:00",
+        "startTime": "09:00",
+        "endTime": "12:00",
         "title": "Closing sessions"
       },
       {
-        "time": "12:00 - 13:00",
+        "startTime": "12:00",
+        "endTime": "13:00",
         "title": "Lunch"
       },
       {
-        "time": "13:00",
+        "startTime": "13:00",
         "title": "Shuttles depart for airport"
       }
     ]
