@@ -42,7 +42,7 @@ const NavItems: React.FC = () => (
         Conduct
       </NavLink>
     </li>
-    <li className="dib pv2 link">
+    <li className="dib pv2 link ml3-ns">
       <Button to="/register">Register</Button>
     </li>
   </>
@@ -99,7 +99,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Root>
-        <React.Suspense fallback={<em>Loading...</em>}>
+        <React.Suspense fallback={<em />}>
           <GlobalStyle />
 
           <Router>
@@ -111,16 +111,16 @@ const App = () => {
           <Match path="/*">
             {(props: any) => (props.match ? <Nav /> : null)}
           </Match>
-          <Box className="mt6 w-100 sans-serif white transition-all">
+          <Box className="mt5 mt6-ns sans-serif white transition-all">
             <FadeIn>
               <main className="nested-links">
                 <MDXProvider>
-                  <Router>
+                  <Router primary={false}>
                     <Routes path="*" />
                   </Router>
                 </MDXProvider>
-                <Sponsors />
               </main>
+              <Sponsors />
             </FadeIn>
           </Box>
           <Footer />
