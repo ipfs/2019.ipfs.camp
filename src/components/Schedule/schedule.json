@@ -18,7 +18,8 @@
       },
       {
         "startTime": "18:00",
-        "title": "Aperitifs"
+        "title": "Aperitifs",
+        "type": "break"
       },
       {
         "startTime": "19:00",
@@ -50,8 +51,9 @@
       },
       {
         "startTime": "07:00",
-        "endTime": "08:45",
-        "title": "Breakfast"
+        "endTime": "08:30",
+        "title": "Breakfast",
+        "type": "break"
       },
       {
         "startTime": "08:30",
@@ -66,7 +68,8 @@
       {
         "startTime": "13:30",
         "endTime": "14:30",
-        "title": "Lunch"
+        "title": "Lunch",
+        "type": "break"
       },
       {
         "startTime": "14:30",
@@ -76,7 +79,8 @@
       {
         "startTime": "19:00",
         "endTime": "19:30",
-        "title": "Aperitifs"
+        "title": "Aperitifs",
+        "type": "break"
       },
       {
         "startTime": "19:30",
@@ -102,8 +106,9 @@
       },
       {
         "startTime": "07:00",
-        "endTime": "08:45",
-        "title": "Breakfast"
+        "endTime": "08:30",
+        "title": "Breakfast",
+        "type": "break"
       },
       {
         "startTime": "08:30",
@@ -118,7 +123,8 @@
       {
         "startTime": "13:30",
         "endTime": "14:30",
-        "title": "Lunch"
+        "title": "Lunch",
+        "type": "break"
       },
       {
         "startTime": "14:30",
@@ -133,7 +139,8 @@
       {
         "startTime": "19:00",
         "endTime": "19:30",
-        "title": "Aperitifs Break"
+        "title": "Aperitifs",
+        "type": "break"
       },
       {
         "startTime": "19:30",
@@ -150,7 +157,7 @@
   {
     "date": "2019-06-30",
     "title": "Sunday June 30th",
-    "desc": "Presentation of the Deep Dives, Awards & Graduation Ceremony",
+    "desc": "Presentation of the Deep Dives, Awards & Graduation Ceremony.",
     "sessions": [
       {
         "startTime": "07:00",
@@ -159,8 +166,9 @@
       },
       {
         "startTime": "07:00",
-        "endTime": "8:45",
-        "title": "Breakfast"
+        "endTime": "8:30",
+        "title": "Breakfast",
+        "type": "break"
       },
       {
         "startTime": "09:00",
@@ -170,7 +178,8 @@
       {
         "startTime": "12:00",
         "endTime": "13:00",
-        "title": "Lunch"
+        "title": "Lunch",
+        "type": "break"
       },
       {
         "startTime": "13:00",

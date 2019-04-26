@@ -8,6 +8,7 @@ type Session = {
   startTime: string
   endTime?: string
   title: string
+  type?: string
 }
 
 type Day = {
@@ -37,10 +38,14 @@ const Day: React.FC<DayProps> = ({ day }) => (
 
       {day.sessions.map(session => (
         <div className="dt-row pt2 pb2">
-          <div className="dtc nowrap bb primary9 pv3 b--neutral5 b">
+          <div className="dtc nowrap bb primary9 pv3 b--neutral5">
             {session.startTime} {session.endTime && ` - ${session.endTime}`}
           </div>
-          <div className="dtc ph3 pv3 bb b--neutral4 f4-ns">
+          <div
+            className={`dtc ph3 pv3 bb b--neutral4 f4-ns w-100 ${
+              session.type && session.type === 'break' ? 'neutral3' : 'dark3'
+            }`}
+          >
             {session.title}
           </div>
         </div>
