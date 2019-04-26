@@ -111,7 +111,7 @@ export class Gallery extends React.Component<GalleryProps, GalleryState> {
           onClickPrev={this.gotoPrevious}
           onClickThumbnail={this.gotoImage}
           onClose={this.closeLightbox}
-          showThumbnails={this.props.showThumbnails || true}
+          showThumbnails={this.props.showThumbnails}
         />
       </div>
     )
