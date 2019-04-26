@@ -65,6 +65,7 @@ import {
   BorderProps,
 } from 'styled-system'
 import { ColorProperty } from 'csstype'
+import { format } from 'date-fns'
 
 // util
 import merge from 'lodash/merge'
@@ -279,4 +280,13 @@ Link.defaultProps = {
   as: 'a',
   color: 'blue',
   className: 'link',
+}
+
+// type formatDateParams = {
+//   dateStr: string
+//   formatStr?: string
+// }
+
+export function formatDate(dateStr: string, formatStr = 'MM/dd/YYYY'): string {
+  return format(new Date(dateStr), formatStr)
 }
