@@ -29,9 +29,9 @@ TicketCard.defaultProps = {
 const Benefits = () => (
   <StyledOptions className="tl pa0">
     <li>All talks, workshops and sessions</li>
-    <li>Breakfast, lunch and dinner</li>
+    <li>All meals, snacks and drinks</li>
     <li>Airport or train station transfers</li>
-    <li>Awesome group activities</li>
+    <li>Evening activities</li>
   </StyledOptions>
 )
 
