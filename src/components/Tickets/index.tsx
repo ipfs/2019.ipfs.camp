@@ -6,6 +6,26 @@ const StyledOptions = styled.ul`
   list-style: square inside url(${require('./checkmark.svg')});
 `
 
+const TicketCard = styled.div`
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  transition-timing-function: ease-out;
+  transition-duration: 0.15s;
+  transform: translateY(0);
+  overflow: hidden;
+  position: relative;
+  &:hover {
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+  }
+`
+
+TicketCard.defaultProps = {
+  className: 'br3 shadow-4 pa4 ma3 tc',
+}
+
 const Benefits = () => (
   <StyledOptions className="tl pa0">
     <li>All talks, workshops and sessions</li>
@@ -13,10 +33,6 @@ const Benefits = () => (
     <li>Airport or train station transfers</li>
     <li>Awesome group activities</li>
   </StyledOptions>
-)
-
-const Card: React.FC = ({ children }) => (
-  <div className="br2 shadow-4 pa4 ma3 tc">{children}</div>
 )
 
 const Price: React.FC = ({ children }) => (
@@ -32,20 +48,20 @@ const ApplicationBtn = () => (
 )
 
 const Shared = () => (
-  <Card>
+  <TicketCard>
     <h2>Shared Twin Room</h2>
     <Price>795 €</Price>
     <Benefits />
     <ApplicationBtn />
-  </Card>
+  </TicketCard>
 )
 const Private = () => (
-  <Card>
+  <TicketCard>
     <h2>Private Double Room</h2>
     <Price>995 €</Price>
     <Benefits />
     <ApplicationBtn />
-  </Card>
+  </TicketCard>
 )
 
 export const Tickets = () => (
