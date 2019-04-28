@@ -49,7 +49,7 @@ const NavItems: React.FC = () => (
 )
 
 const Nav: React.FC<RouteComponentProps> = () => (
-  <nav className="monospace f5 fixed left-0 right-0 top-0 z-999 bg-white shadow-3">
+  <nav className="monospace f5 fixed-ns left-0 right-0 top-0 z-999 bg-white shadow-3">
     <div className="ph4 ph5-ns pv3 mw9 center flex items-center">
       <NavLink className="link white" activeClassName="" to="/">
         <Logo
@@ -72,7 +72,7 @@ const Nav: React.FC<RouteComponentProps> = () => (
       <div className="db dn-ns">
         <Hamburgler>
           <div className="vh-100">
-            <nav className="vh-">
+            <nav className="">
               <ul className="flex flex-column justify-center items-center vh-100 pa0 ma0">
                 <div className="mb3 tc">
                   <NavLink to="/">
@@ -111,7 +111,7 @@ const App = () => {
           <Match path="/*">
             {(props: any) => (props.match ? <Nav /> : null)}
           </Match>
-          <Box className="mt5 mt6-ns sans-serif white transition-all">
+          <Box className="mt6-ns sans-serif white transition-all">
             <FadeIn>
               <main className="nested-links">
                 <MDXProvider>
