@@ -15,7 +15,7 @@ type NavLinkProps<T> = LinkProps<T> & {
   activeClassName?: string
 }
 
-export const NavLink: React.SFC<NavLinkProps<HTMLAnchorElement>> = ({
+export const NavLink: React.FC<NavLinkProps<HTMLAnchorElement>> = ({
   activeClassName,
   ...props
 }) => (
@@ -32,7 +32,7 @@ export const NavLink: React.SFC<NavLinkProps<HTMLAnchorElement>> = ({
 )
 
 NavLink.defaultProps = {
-  activeClassName: 'bb bw1 b--primary1',
+  activeClassName: 'bb',
 }
 
 type Props = { component: FunctionComponent } & RouteComponentProps

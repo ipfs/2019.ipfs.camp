@@ -1,5 +1,7 @@
-import { Page } from '@layouts'
+import { Page, Section } from '@layouts'
 import { Button } from '@components/Buttons'
+import { Tickets } from '@components/Tickets'
+import { CFGallery } from '@components/Chateauform/Gallery'
 
 export default Page
 
@@ -7,46 +9,24 @@ export const title = 'Registration'
 
 # 👋 Hello Space Ranger
 
-<div className="mw7">
+<Section className="mw7">
 
-Prepare for an intergalactic adventure! We’re excited to welcome you to the inaugural IPFS Camp, a three day hacker retreat for the creators and builders of the distributed web. Join us on 27-30th June at the beautiful [Campus La Mola](https://www.chateauform.com/en/house/campus-la-mola/) in Barcelona for an action-packed program of workshops, talks and deep dives on everything IPFS.
+Your ticket includes hotel accommodation for three nights, airport transfers, all food and drinks, group activities and hacking sessions. Everything is taken care of so we can focus on building the future of the internet.
 
-![](https://ipfs.io/ipfs/QmUiucP3oRVnqvuM6hnrF9D5H6tRSeVhyWk6ggkhf4ebEH)
+<Tickets />
 
-The space for IPFS camp is limited so we’re asking everyone to apply and let us know why they want to join the adventure. Maybe you’ve built something amazing on top of IPFS or you’re just getting started but have some awesome ideas.
+## Timeline
 
-Your camp ticket includes accommodation for three nights, airport transfers, all food and drinks, group activities and hacking sessions. Everything is taken care of so we can focus on building the future of the internet.
+- Applications will be reviewed in order of submission until tickets are sold out. Apply early to increase your chance of securing a space
 
-</div>
+- **May 17th**: Applications Close 🔏
 
-<div className="features pv4 mw7">
+## Financial assistance
 
-|                                   | <span className="mh2-ns tc">Private Room</span><span className="primary3 f3 tc db mv2 nowrap">995 €</span> | <span className="mh2-ns tc">Shared Twin Room</span><span className="primary3 f3 tc db mv2 nowrap">795 €</span> |
-| --------------------------------- | :--------------------------------------------------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------: |
-| All talks, workshops and sessions |                                                     ✔️                                                     |                                                                                                             ✔️ |
-| Breakfast, lunch and dinner       |                                                     ✔️                                                     |                                                                                                             ✔️ |
-| Airport or train station transfer |                                                     ✔️                                                     |                                                                                                             ✔️ |
-| Awesome group activities          |                                                     ✔️                                                     |                                                                                                             ✔️ |
-| Private en-suite double           |                                                     ✔️                                                     |                                                                                                             ❌ |
+We have a limited number of diversity scholarships to provide support to those from traditionally underrepresented and/or marginalised groups in technology and a limited number of need-based scholarships for those who may not otherwise have the opportunity to attend IPFS camp for financial reasons.
 
-<br />
+You can indicate if you would like to be considered for a scholarship on our application form.
 
-## Application Timeline
+</Section>
 
-- **Feb 28**: Registration Opens ✨
-
-  - _Applications will be reviewed in order of submission until tickets are sold out. Apply early to increase the chance of securing a space_
-
-  - _If successful you will receive a notification and a payment link that is valid for **48 hours** before being offered to the next attende in line_
-
-  - Tickets will be released in multiple batches<br/> Starting on: **March 25** / **April 15** / **May 06**
-
-* **April 26**: Applications Close 🔏
-
-<p className="pv2 db tc tl-ns">
-  <Button size="large" href="https://goo.gl/forms/GmzwgMzfR0RUpfs13">
-    <div className="tc">Begin Application</div>
-  </Button>
-</p>
-
-</div>
+<CFGallery />

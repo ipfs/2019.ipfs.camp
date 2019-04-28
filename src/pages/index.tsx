@@ -11,29 +11,34 @@ import { Projects } from '@components/Projects'
 export default () => (
   <>
     <Hero className="relative overflow-hidden tc tl-ns">
-      <Stars className="bg-dark3 skew-l" style={{ top: '-10%' }} />
+      <Stars className="bg-dark3" />
       <Box className="pa4 pa5-ns lh-copy mw9 center">
         <Box className="mw7 left">
-          <Logo
-            className="left-ns mb5 mr0-ns ml0-ns center grow"
-            type="v"
-            style={{ minWidth: '220px', width: '15rem', height: '16rem' }}
-          />
-          <Heading
-            as="h1"
-            fontSize={[5, 7]}
-            className="lh-solid pt-mono"
-            height="3em"
-            style={{ wordWrap: 'break-word' }}
-          >
-            <RandomWord
-              word="Discover an InterPlanetary Future"
-              speed={40}
-              rounds={30}
-              letters="Qmb77g5AXanuvRKNXH79hAMpLUm6iyfqJDn7aAkEukWnna"
-            />
-          </Heading>
-
+          <Box className="mv4 flex flex-column flex-row-ns items-center-ns">
+            <Box>
+              <Logo
+                className="mr0-ns ml0-ns center grow"
+                type="v"
+                color="r"
+                style={{ minWidth: '220px', width: '15rem', height: '16rem' }}
+              />
+            </Box>
+            <Box className="mh4-ns mw6">
+              <Heading
+                as="h1"
+                fontSize={[5, 6]}
+                className="lh-solid pt-mono"
+                style={{ wordWrap: 'break-word' }}
+              >
+                <RandomWord
+                  word="Discover an InterPlanetary Future"
+                  speed={40}
+                  rounds={30}
+                  letters="Qmb77g5AXanuvRKNXH79hAMpLUm6iyfqJDn7aAkEukWnna"
+                />
+              </Heading>
+            </Box>
+          </Box>
           <Text className="measure-wide f5 f4-m f3-l" color="neutral2">
             <strong>IPFS Camp</strong> is a{' '}
             <strong>3 day hacker retreat</strong> designed for the{' '}
@@ -41,8 +46,9 @@ export default () => (
             Join the core developers for a hands on experience packed with
             workshops, lectures and deep-dives.
           </Text>
-          <Text className="mv4 pt-mono f4 f3-m f2-l">
-            June 27-30, Barcelona
+          <Text className="mv4 pt-mono f4 f3-ns">
+            June 27-30 · Barcelona, Spain <span className="dn di-ns">· </span>
+            <span className="db dib-ns">150 attendees</span>
           </Text>
           <p className="mv4">
             <Button to="register" size="large">
@@ -53,7 +59,7 @@ export default () => (
       </Box>
     </Hero>
     <section className="bg-white lh-copy dark3 tc tl-ns">
-      <div className="pa4 pa5-ns pt0 mw9 center f5 f4-l">
+      <div className="mt4 mb4 pa4 pa5-ns pt0 mw9 center f5 f4-l">
         <div className="flex-ns items-center">
           <div className="w-50-ns">
             <Heading className="lh-title f2 f1-ns montserrat">
@@ -77,21 +83,6 @@ export default () => (
             <Projects className="tc" />
           </div>
         </div>
-
-        <section className="mv5">
-          <Heading>Thanks to our sponsors</Heading>
-          <a href="https://protocol.ai">
-            <img
-              className="mw6 pv3 w-20-ns"
-              src={require('@components/Projects/protocol-labs-logo-horizontal-alt-black.svg')}
-            />
-          </a>
-          <p>
-            Interested in sponsoring IPFS Camp 2019? Email{' '}
-            <a href="mailto:camp@ipfs.io">camp@ipfs.io</a> to enquire about
-            opportunities.
-          </p>
-        </section>
       </div>
     </section>
   </>

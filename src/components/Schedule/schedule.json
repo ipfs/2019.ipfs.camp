@@ -1,0 +1,186 @@
+[
+  {
+    "date": "2019-06-27",
+    "title": "Thursday June 27th",
+    "desc": "Arrive, settle in and get acquainted with your fellow campers.",
+    "sessions": [
+      {
+        "startTime": "15:00",
+        "title": "Check in opens"
+      },
+      {
+        "startTime": "15:00",
+        "title": "Shuttles begin from Terrassa Train Station (every half hour until 6pm)"
+      },
+      {
+        "startTime": "16:00",
+        "title": "Shuttle departs BCN (Terminal 1)"
+      },
+      {
+        "startTime": "18:00",
+        "title": "Aperitifs",
+        "type": "break"
+      },
+      {
+        "startTime": "19:00",
+        "title": "Welcome to IPFS Camp"
+      },
+      {
+        "startTime": "20:00",
+        "title": "Group Dinner in restaurant"
+      },
+      {
+        "startTime": "21:30",
+        "title": "Group Activity"
+      }
+    ]
+  },
+  {
+    "date": "2019-06-28",
+    "title": "Friday June 28th",
+    "desc": "Foundation DWeb Training, Poster Sessions, Lightning Talks.",
+    "sessions": [
+      {
+        "startTime": "07:00",
+        "endTime": "08:00",
+        "title": "Daily Morning Fitness (Running, Biking, Yoga, Swimming)"
+      },
+      {
+        "startTime": "07:00",
+        "endTime": "08:30",
+        "title": "Breakfast",
+        "type": "break"
+      },
+      {
+        "startTime": "08:30",
+        "endTime": "09:00",
+        "title": "Opening Announcements"
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "13:30",
+        "title": "Morning Workshops"
+      },
+      {
+        "startTime": "13:30",
+        "endTime": "14:30",
+        "title": "Lunch",
+        "type": "break"
+      },
+      {
+        "startTime": "14:30",
+        "endTime": "19:00",
+        "title": "Afternoon Workshops"
+      },
+      {
+        "startTime": "19:00",
+        "endTime": "19:30",
+        "title": "Aperitifs",
+        "type": "break"
+      },
+      {
+        "startTime": "19:30",
+        "endTime": "21:30",
+        "title": "Group Dinner"
+      },
+      {
+        "startTime": "21:30",
+        "endTime": "...",
+        "title": "Group Activity"
+      }
+    ]
+  },
+  {
+    "date": "2019-06-29",
+    "title": "Saturday June 29th",
+    "desc": "Core training & Electives sessions.",
+    "sessions": [
+      {
+        "startTime": "07:00",
+        "endTime": "08:00",
+        "title": "Daily Morning Fitness (Running, Biking, Yoga, Swimming)"
+      },
+      {
+        "startTime": "07:00",
+        "endTime": "08:30",
+        "title": "Breakfast",
+        "type": "break"
+      },
+      {
+        "startTime": "08:30",
+        "endTime": "09:00",
+        "title": "Opening Announcements"
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "13:30",
+        "title": "Morning Sessions"
+      },
+      {
+        "startTime": "13:30",
+        "endTime": "14:30",
+        "title": "Lunch",
+        "type": "break"
+      },
+      {
+        "startTime": "14:30",
+        "endTime": "19:00",
+        "title": "Afternoon Sessions (Deep Dives and Lightning Talks)"
+      },
+      {
+        "startTime": "16:30",
+        "endTime": "18:00",
+        "title": "Sci-Fi Fair"
+      },
+      {
+        "startTime": "19:00",
+        "endTime": "19:30",
+        "title": "Aperitifs",
+        "type": "break"
+      },
+      {
+        "startTime": "19:30",
+        "endTime": "21:30",
+        "title": "Special Group Dinner"
+      },
+      {
+        "startTime": "21:30",
+        "endTime": "...",
+        "title": "Music on the Terrace"
+      }
+    ]
+  },
+  {
+    "date": "2019-06-30",
+    "title": "Sunday June 30th",
+    "desc": "Presentation of the Deep Dives, Awards & Graduation Ceremony.",
+    "sessions": [
+      {
+        "startTime": "07:00",
+        "endTime": "8:00",
+        "title": "Daily Morning Fitness (Running, Biking, Yoga, Swimming)"
+      },
+      {
+        "startTime": "07:00",
+        "endTime": "8:30",
+        "title": "Breakfast",
+        "type": "break"
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "12:00",
+        "title": "Closing session"
+      },
+      {
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "title": "Lunch",
+        "type": "break"
+      },
+      {
+        "startTime": "13:00",
+        "title": "Shuttles depart for airport"
+      }
+    ]
+  }
+]

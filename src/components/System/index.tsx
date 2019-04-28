@@ -65,6 +65,7 @@ import {
   BorderProps,
 } from 'styled-system'
 import { ColorProperty } from 'csstype'
+import { format } from 'date-fns'
 
 // util
 import merge from 'lodash/merge'
@@ -89,6 +90,7 @@ const campTheme = {
     neutral3: '#A3ADC4',
     neutral4: '#CFD4E2',
     neutral5: '#E9EBF2',
+    neutral6: '#fffdfc',
   },
 }
 
@@ -105,6 +107,9 @@ const themeColors = (theme: any = campTheme, c = '') => {
 
 export const GlobalStyle = createGlobalStyle`
   ${themeColors()}
+  body {
+    background-color: ${campTheme.colors.neutral6};
+  }
   .nested-links a {
     color: ${campTheme.colors.primary5};
     &:hover {
@@ -275,4 +280,8 @@ Link.defaultProps = {
   as: 'a',
   color: 'blue',
   className: 'link',
+}
+
+export function formatDate(dateStr: string, formatStr = 'dddd Do'): string {
+  return format(new Date(dateStr), formatStr)
 }

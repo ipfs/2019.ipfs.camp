@@ -5,6 +5,7 @@ import { DefaultMeta, Card } from '@components/Meta'
 import './app.css'
 import '@components/System/global.css'
 import { theme, Box, GlobalStyle } from '@components/System'
+import { Button } from '@components/Buttons'
 import MDXProvider from '@components/System/MDXProvider'
 
 // import system comps
@@ -17,31 +18,46 @@ import { Logo } from '@components/Logo'
 import { RouteComponentProps } from '@reach/router'
 import { SiteData } from './types'
 import { Hamburgler } from '@components/Hamburgler'
+import { Sponsors } from '@components/Sponsors'
 
 const NavItems: React.FC = () => (
   <>
     <li className="dib">
-      <NavLink className="link neutral4 pv3 mh3 ttu" to="/faq">
+      <NavLink className="dark3 pv3 mh3" to="/schedule">
+        Schedule
+      </NavLink>
+    </li>
+    <li className="dib">
+      <NavLink className="dark3 pv3 mh3" to="/location">
+        Location
+      </NavLink>
+    </li>
+    <li className="dib">
+      <NavLink className="dark3 pv3 mh3" to="/faq">
         FAQ
       </NavLink>
     </li>
-    <li className="dib pv2 link">
-      <NavLink className="link neutral4 pv3 mh3 ttu" to="/register">
-        Register
+    <li className="dib">
+      <NavLink className="dark3 pv3 mh3" to="/code-of-conduct">
+        Conduct
       </NavLink>
+    </li>
+    <li className="dib pv2 link ml3-ns">
+      <Button to="/register">Register</Button>
     </li>
   </>
 )
 
 const Nav: React.FC<RouteComponentProps> = () => (
-  <nav className="monospace ttu f5 bg-primary5">
+  <nav className="monospace f5 fixed-ns left-0 right-0 top-0 z-999 bg-white shadow-3">
     <div className="ph4 ph5-ns pv3 mw9 center flex items-center">
       <NavLink className="link white" activeClassName="" to="/">
         <Logo
           className="fl db mr2 mt1 contain grow"
           type="h"
+          color="r"
           style={{
-            minWidth: '255px',
+            minWidth: '155px',
             height: '55px',
           }}
         />
@@ -56,11 +72,15 @@ const Nav: React.FC<RouteComponentProps> = () => (
       <div className="db dn-ns">
         <Hamburgler>
           <div className="vh-100">
-            <nav className="vh-">
+            <nav className="">
               <ul className="flex flex-column justify-center items-center vh-100 pa0 ma0">
                 <div className="mb3 tc">
                   <NavLink to="/">
-                    <Logo type="h" style={{ height: '70px', width: '200px' }} />
+                    <Logo
+                      type="h"
+                      color="i"
+                      style={{ height: '58px', width: '200px' }}
+                    />
                   </NavLink>
                   <p className="neutral1 pa2">June 27-30, Barcelona</p>
                 </div>
@@ -79,7 +99,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Root>
-        <React.Suspense fallback={<em>Loading...</em>}>
+        <React.Suspense fallback={<em />}>
           <GlobalStyle />
 
           <Router>
@@ -88,19 +108,19 @@ const App = () => {
 
           <DefaultMeta />
           <Card />
-          <Box className="w-100 sans-serif white transition-all">
-            <Match path="/:item">
-              {(props: any) => (props.match ? <Nav /> : null)}
-            </Match>
-
+          <Match path="/*">
+            {(props: any) => (props.match ? <Nav /> : null)}
+          </Match>
+          <Box className="mt6-ns sans-serif white transition-all">
             <FadeIn>
-              <main className="nested-links f4-l">
+              <main className="nested-links">
                 <MDXProvider>
-                  <Router>
+                  <Router primary={false}>
                     <Routes path="*" />
                   </Router>
                 </MDXProvider>
               </main>
+              <Sponsors />
             </FadeIn>
           </Box>
           <Footer />

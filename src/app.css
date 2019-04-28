@@ -2,8 +2,12 @@
 @import '~ipfs-css';
 @import url('https://fonts.googleapis.com/css?family=PT+Mono');
 
-html {
+html,
+body {
   scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir,
+    'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial,
+    sans-serif;
 }
 
 .pt-mono {
@@ -14,19 +18,8 @@ a {
   text-decoration: none;
 }
 
-.features table {
-  width: 100%;
-}
-
-.features td,
-.features th {
-  text-align: center;
-}
-
-.features td:first-child {
-  text-align: left;
-}
-
-.features th:first-child {
-  border-bottom: none;
+a,
+a:active,
+a:focus {
+  outline: 0;
 }
