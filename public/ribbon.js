@@ -1,4 +1,9 @@
 ;(function() {
+  // polyfill for ie11
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach
+  }
+
   function ready(fn) {
     if (document.readyState != 'loading') {
       fn()
@@ -22,7 +27,7 @@
         : '//camp.ipfs.io/ribbon.css'
     style.type = 'text/css'
     style.rel = 'stylesheet'
-    head.append(style)
+    head.appendChild(style)
 
     // create ribbon
     var ribbon = document.createElement('div')
@@ -44,6 +49,6 @@
       })
 
     // inject ribbon
-    document.body.append(ribbon)
+    document.body.appendChild(ribbon)
   })
 })()
