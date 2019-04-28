@@ -1,5 +1,4 @@
 import React from 'react'
-// import styled from 'styled-components'
 import { formatDate } from '@components/System'
 
 import schedule from './schedule.json'
