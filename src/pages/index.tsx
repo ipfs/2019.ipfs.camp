@@ -47,7 +47,8 @@ export default () => (
             workshops, lectures and deep-dives.
           </Text>
           <Text className="mv4 pt-mono f4 f3-ns">
-            June 27-30 · Barcelona, Spain · 150 attendees
+            June 27-30 · Barcelona, Spain <span className="dn di-ns">· </span>
+            <span className="db dib-ns">150 attendees</span>
           </Text>
           <p className="mv4">
             <Button to="register" size="large">
