@@ -26,16 +26,12 @@
         "title": "Welcome to IPFS Camp"
       },
       {
-        "startTime": "19:30",
-        "title": "Group Activity"
-      },
-      {
         "startTime": "20:00",
         "title": "Group Dinner in restaurant"
       },
       {
         "startTime": "21:30",
-        "title": "Group Activity (optional)"
+        "title": "Group Activity"
       }
     ]
   },
@@ -90,7 +86,7 @@
       {
         "startTime": "21:30",
         "endTime": "...",
-        "title": "Group Activity (optional)"
+        "title": "Group Activity"
       }
     ]
   },
@@ -173,7 +169,7 @@
       {
         "startTime": "09:00",
         "endTime": "12:00",
-        "title": "Closing sessions"
+        "title": "Closing session"
       },
       {
         "startTime": "12:00",
