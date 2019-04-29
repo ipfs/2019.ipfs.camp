@@ -48,51 +48,56 @@ const NavItems: React.FC = () => (
   </>
 )
 
-const Nav: React.FC<RouteComponentProps> = () => (
-  <nav className="monospace f5 fixed-ns left-0 right-0 top-0 z-999 bg-white shadow-3">
-    <div className="ph4 ph5-ns pv3 mw9 center flex items-center">
-      <NavLink className="link white" activeClassName="" to="/">
-        <Logo
-          className="fl db mr2 mt1 contain grow"
-          type="h"
-          color="r"
-          style={{
-            minWidth: '155px',
-            height: '55px',
-          }}
-        />
-      </NavLink>
+const Nav: React.FC<RouteComponentProps> = () => {
+  return (
+    <>
+      <nav className="monospace f5 fixed-ns left-0 right-0 top-0 z-999 bg-white shadow-3">
+        <div className="ph4 ph5-ns pv3 pv1-ns mw9 center flex items-center">
+          <NavLink className="link white" activeClassName="" to="/">
+            <Logo
+              className="fl db mr2 mt1 contain grow"
+              type="h"
+              color="r"
+              style={{
+                minWidth: '155px',
+                height: '55px',
+              }}
+            />
+          </NavLink>
 
-      <nav className="dn db-ns flex-grow-1">
-        <ul className="list tr">
-          <NavItems />
-        </ul>
-      </nav>
+          <nav className="dn db-ns flex-grow-1">
+            <ul className="list tr">
+              <NavItems />
+            </ul>
+          </nav>
 
-      <div className="db dn-ns">
-        <Hamburgler>
-          <div className="vh-100">
-            <nav className="">
-              <ul className="flex flex-column justify-center items-center vh-100 pa0 ma0">
-                <div className="mb3 tc">
-                  <NavLink to="/">
-                    <Logo
-                      type="h"
-                      color="i"
-                      style={{ height: '58px', width: '200px' }}
-                    />
-                  </NavLink>
-                  <p className="neutral1 pa2">June 27-30, Barcelona</p>
-                </div>
-                <NavItems />
-              </ul>
-            </nav>
+          <div className="db dn-ns">
+            <Hamburgler>
+              <div className="vh-100">
+                <nav className="">
+                  <ul className="flex flex-column justify-center items-center vh-100 pa0 ma0">
+                    <div className="mb3 tc">
+                      <NavLink to="/">
+                        <Logo
+                          type="h"
+                          color="i"
+                          style={{ height: '58px', width: '200px' }}
+                        />
+                      </NavLink>
+                      <p className="neutral1 pa2">June 27-30, Barcelona</p>
+                    </div>
+                    <NavItems />
+                  </ul>
+                </nav>
+              </div>
+            </Hamburgler>
           </div>
-        </Hamburgler>
-      </div>
-    </div>
-  </nav>
-)
+        </div>
+      </nav>
+      <div className="nav-margin dn db-ns" style={{ height: '105px' }} />
+    </>
+  )
+}
 
 const App = () => {
   const { gtagId }: SiteData = useSiteData()
@@ -111,7 +116,7 @@ const App = () => {
           <Match path="/*">
             {(props: any) => (props.match ? <Nav /> : null)}
           </Match>
-          <Box className="mt6-ns sans-serif white transition-all">
+          <Box className="sans-serif white transition-all">
             <FadeIn>
               <main className="nested-links">
                 <MDXProvider>

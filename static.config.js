@@ -17,7 +17,8 @@ export default {
       },
     ],
   ],
-  siteRoot: 'https://camp.ipfs.io',
+  siteRoot:
+    process.env.CONTEXT === 'production' ? 'https://camp.ipfs.io' : undefined,
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getSiteData: () => ({
     title: 'IPFS Camp, June 27-30 2019 🏕',

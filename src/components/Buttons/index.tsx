@@ -11,7 +11,7 @@ type ButtonProps<T> = LinkProps<T> & {
   block?: boolean
 }
 
-const defaultClassName = 'white pv3 ph4 grow pointer br2 bg-primary3'
+const defaultClassName = 'white pv3 ph4 grow pointer br2 bg-primary3 monospace'
 
 const Button: React.FC<ButtonProps<HTMLAnchorElement>> = ({
   to,
