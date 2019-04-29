@@ -1,8 +1,6 @@
 import React from 'react'
 import { formatDate } from '@components/System'
 
-import schedule from './schedule.json'
-
 type Session = {
   startTime: string
   endTime?: string
@@ -53,7 +51,11 @@ const Day: React.FC<DayProps> = ({ day }) => (
   </div>
 )
 
-export const Schedule = () => (
+type ScheduleProps = {
+  schedule: Day[]
+}
+
+export const Schedule: React.FC<ScheduleProps> = ({ schedule }) => (
   <div>
     {schedule.map(day => (
       <Day key={day.date} day={day} />
