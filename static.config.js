@@ -8,8 +8,10 @@ import { reloadClientData } from 'react-static/node'
 // promisify readFile
 const readFile = util.promisify(fs.readFile)
 
-// hot reload routeData when files change
-chokidar.watch('./data').on('all', () => reloadClientData())
+// hot reload routeData when files change in dev mode
+if (process.env.REACT_STATIC_ENV === 'development') {
+  chokidar.watch('./data').on('all', () => reloadClientData())
+}
 
 // util to fetch JSON from the filesystem
 const readJSON = async file => {
