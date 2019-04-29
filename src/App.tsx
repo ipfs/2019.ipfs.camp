@@ -94,7 +94,7 @@ const Nav: React.FC<RouteComponentProps> = () => {
           </div>
         </div>
       </nav>
-      <div className="nav-margin dn db-ns" style={{ height: '105px' }} />
+      <div className="nav-margin dn db-ns" style={{ height: '95px' }} />
     </>
   )
 }

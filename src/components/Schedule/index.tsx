@@ -35,8 +35,8 @@ const Day: React.FC<DayProps> = ({ day }) => (
         <div className="dtc b ph3">Session</div>
       </div>
 
-      {day.sessions.map(session => (
-        <div className="dt-row pt2 pb2">
+      {day.sessions.map((session, i) => (
+        <div key={i} className="dt-row pt2 pb2">
           <div className="dtc nowrap bb primary9 pv3 b--neutral5">
             {session.startTime} {session.endTime && ` - ${session.endTime}`}
           </div>
@@ -56,7 +56,7 @@ const Day: React.FC<DayProps> = ({ day }) => (
 export const Schedule = () => (
   <div>
     {schedule.map(day => (
-      <Day day={day} />
+      <Day key={day.date} day={day} />
     ))}
   </div>
 )
