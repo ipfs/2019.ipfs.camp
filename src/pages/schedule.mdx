@@ -1,5 +1,6 @@
 import { Page } from '@layouts'
 import { Schedule } from '@components/Schedule'
+import { useRouteData } from 'react-static'
 
 export default Page
 
@@ -17,4 +18,4 @@ IPFS Camp is a mix of talks, workshops, deep dives and shared experiences buildi
 
 Our full schedule is to be confirmed, but here's a rough guide of what to expect.
 
-<Schedule />
+<Schedule schedule={useRouteData().schedule} />

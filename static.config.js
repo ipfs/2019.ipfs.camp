@@ -1,5 +1,25 @@
 import axios from 'axios'
 import path from 'path'
+import chokidar from 'chokidar'
+import fs from 'fs'
+import util from 'util'
+import { reloadClientData } from 'react-static/node'
+
+// promisify readFile
+const readFile = util.promisify(fs.readFile)
+
+// hot reload routeData when files change
+chokidar.watch('./data').on('all', () => reloadClientData())
+
+// util to fetch JSON from the filesystem
+const readJSON = async file => {
+  try {
+    const data = await readFile(file, 'utf8')
+    return JSON.parse(data)
+  } catch (e) {
+    throw new Error(e)
+  }
+}
 
 export default {
   // tweaks for CI
@@ -33,4 +53,12 @@ export default {
       lastBuilt: Date.now(),
     },
   }),
+  getRoutes: async ({ dev }) => [
+    {
+      path: 'schedule',
+      getData: async () => ({
+        schedule: await readJSON('./data/schedule.json'),
+      }),
+    },
+  ],
 }
