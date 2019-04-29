@@ -19,7 +19,7 @@ const StyledFooter = styled.footer`
 export const Footer: React.FC<FooterProps> = () => (
   <StyledFooter className="pa4 tc tl-ns pa5-ns sans-serif white relative overflow-hidden monospace">
     <Stars className="bg-dark3" />
-    <div className="flex-ns mw8 mb5 center nested-list-reset f5 neutral2">
+    <div className="flex-ns mw8 mb5 center nested-list-reset f6 neutral2">
       <div className="w-third-ns pb3">
         <ul>
           <h3 className="monospace white">IPFS Camp</h3>
