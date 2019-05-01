@@ -41,8 +41,8 @@ const Price: React.FC = ({ children }) => (
   </p>
 )
 
-const ApplicationBtn = () => (
-  <Button block href="https://goo.gl/forms/GmzwgMzfR0RUpfs13">
+const ApplicationBtn = ({ href }: { href: string }) => (
+  <Button block href={href}>
     <div className="tc">Apply</div>
   </Button>
 )
@@ -52,7 +52,7 @@ const Shared = () => (
     <h2>Shared Twin Room</h2>
     <Price>795 €</Price>
     <Benefits />
-    <ApplicationBtn />
+    <ApplicationBtn href="https://docs.google.com/forms/d/e/1FAIpQLSesrGYpB6JbvFyRtd_vmol-nMxiAljfylab-hRizzrzbEAZww/viewform?usp=pp_url&entry.552566347=Shared+Twin+Room+795+%E2%82%AC" />
   </TicketCard>
 )
 const Private = () => (
@@ -60,7 +60,7 @@ const Private = () => (
     <h2>Private Double Room</h2>
     <Price>995 €</Price>
     <Benefits />
-    <ApplicationBtn />
+    <ApplicationBtn href="https://docs.google.com/forms/d/e/1FAIpQLSesrGYpB6JbvFyRtd_vmol-nMxiAljfylab-hRizzrzbEAZww/viewform?usp=pp_url&entry.552566347=Private+Double+Room+995+%E2%82%AC" />
   </TicketCard>
 )
 
