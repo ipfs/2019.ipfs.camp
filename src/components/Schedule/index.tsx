@@ -1,4 +1,5 @@
 import React from 'react'
+import { formatDate } from '@components/System'
 
 type Session = {
   startTime: string
@@ -22,7 +23,7 @@ const Day: React.FC<DayProps> = ({ day }) => (
   <div className="mb4">
     <div className="dt">
       <div className="dt-row" style={{ position: 'sticky' }}>
-        <h2>{day.title}</h2>
+        <h2>{formatDate(day.date)}</h2>
         {day.desc && <h4>{day.desc}</h4>}
       </div>
     </div>
