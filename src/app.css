@@ -23,3 +23,10 @@ a:active,
 a:focus {
   outline: 0;
 }
+
+.hash-link-offset:before {
+  content: '';
+  display: block;
+  height: 120px; /* fixed header height*/
+  margin: -120px 0 0; /* negative fixed header height */
+}

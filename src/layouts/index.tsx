@@ -35,5 +35,10 @@ export const Page: React.FC<PageProps> = ({ children, meta, title }) => (
 
 export const Section: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
   children,
-  className,
-}) => <section className={`mb5 ${className}`}>{children}</section>
+  className = '',
+  id,
+}) => (
+  <section id={id} className={`mb5 hash-link-offset ${className}`}>
+    {children}
+  </section>
+)
