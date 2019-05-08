@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from '@components/Router'
-import { LinkProps } from '@components/router'
+import { LinkProps } from '@components/Router'
 import styled from 'styled-components'
 
 type ButtonProps<T> = LinkProps<T> & {
