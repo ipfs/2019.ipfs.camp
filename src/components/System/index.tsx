@@ -66,6 +66,7 @@ import {
 } from 'styled-system'
 import { ColorProperty } from 'csstype'
 import { format, parse } from 'date-fns'
+import { Link as SLink } from '@components/Router'
 
 // util
 import merge from 'lodash/merge'
@@ -274,10 +275,9 @@ Heading.defaultProps = {
 
 type SystemLink = BaseProps<HTMLAnchorElement> & BaseOverrides
 
-export const Link = styled(Box)<SystemLink>(themed('Link'))
+export const Link = styled(SLink)<SystemLink>(themed('Link'))
 
 Link.defaultProps = {
-  as: 'a',
   color: 'blue',
   className: 'link',
 }
