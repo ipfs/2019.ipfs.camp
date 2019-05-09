@@ -23,6 +23,30 @@ const readJSON = async file => {
   }
 }
 
+// loads any contentURL to the content field
+const fetchContent = async item => {
+  if (item.contentURL) {
+    const res = await axios.get(item.contentURL)
+    item.content = res.data
+  }
+  return item
+}
+
+// map and resolve all content links
+const getContent = async data => {
+  return await Promise.all(data.map(item => fetchContent(item)))
+}
+
+const resolveContent = async file => {
+  try {
+    const data = await readJSON(file)
+    const content = await getContent(data)
+    return content
+  } catch (e) {
+    throw new Error(e)
+  }
+}
+
 export default {
   // tweaks for CI
   maxThreads: process.env.CI ? 1 : Infinity,
