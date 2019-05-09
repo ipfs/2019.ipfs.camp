@@ -33,6 +33,21 @@ export const Page: React.FC<PageProps> = ({ children, meta, title }) => (
   </>
 )
 
+type IncludeProps = {
+  meta?: {
+    className?: string
+    id?: string
+  }
+}
+
+export const Include: React.FC<IncludeProps> = ({ children, meta }) => (
+  <>
+    <Box id={meta && meta.id} className={meta && meta.className}>
+      {children}
+    </Box>
+  </>
+)
+
 export const Section: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
   children,
   className = '',
