@@ -1,4 +1,6 @@
 import React from 'react'
+import { NavLink } from '@components/Router'
+import { Heading } from '@components/System'
 
 type Session = {
   startTime: string
@@ -16,6 +18,14 @@ type Day = {
 
 type DayProps = {
   day: Day
+}
+
+type Format = {
+  type: string
+  title: string
+  legend: string
+  contents: string
+  contentURL?: string
 }
 
 const Day: React.FC<DayProps> = ({ day }) => (
@@ -52,10 +62,43 @@ const Day: React.FC<DayProps> = ({ day }) => (
 
 type ScheduleProps = {
   schedule: Day[]
+  formats: Format[]
 }
 
-export const Schedule: React.FC<ScheduleProps> = ({ schedule }) => (
+type FormatProps = {
+  formats: Format[]
+  title?: string
+}
+
+export const Formats: React.FC<FormatProps> = ({
+  formats,
+  title = 'Session Formats',
+}) => (
+  <>
+    {title && <Heading>{title}</Heading>}
+    <div className="nested-list-reset">
+      <ul>
+        {formats.map(format => (
+          <li>
+            <NavLink
+              to={`schedule/formats/${format.type}`}
+              title={format.title}
+              className="dib pv1 mv1"
+              activeClassName="bb b--primary1"
+            >
+              {format.legend}
+              {format.title}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </>
+)
+
+export const Schedule: React.FC<ScheduleProps> = ({ schedule, formats }) => (
   <div>
+    <Formats formats={formats} />
     {schedule.map(day => (
       <Day key={day.date} day={day} />
     ))}

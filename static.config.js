@@ -1,16 +1,26 @@
 import axios from 'axios'
+import jdown from 'jdown'
 import path from 'path'
 import chokidar from 'chokidar'
 import fs from 'fs'
 import util from 'util'
-import { reloadClientData } from 'react-static/node'
+import {
+  reloadClientData,
+  rebuildRoutes,
+  createSharedData,
+} from 'react-static/node'
 
 // promisify readFile
 const readFile = util.promisify(fs.readFile)
 
 // hot reload routeData when files change in dev mode
 if (process.env.REACT_STATIC_ENV === 'development') {
-  chokidar.watch('./data').on('all', () => reloadClientData())
+  chokidar
+    .watch('data', { ignoreInitial: true })
+    .on('all', () => reloadClientData())
+  chokidar
+    .watch('content', { ignoreInitial: true })
+    .on('all', () => rebuildRoutes())
 }
 
 // util to fetch JSON from the filesystem
@@ -79,12 +89,53 @@ export default {
       lastBuilt: Date.now(),
     },
   }),
-  getRoutes: async ({ dev }) => [
-    {
-      path: 'schedule',
-      getData: async () => ({
-        schedule: await readJSON('./data/schedule.json'),
-      }),
-    },
-  ],
+  getRoutes: async ({ dev }) => {
+    const content = await jdown('content')
+    const schedule = await readJSON('./data/schedule.json')
+    const formats = content.formats.sort((a, b) => (a.title > b.title ? 1 : -1))
+    const formatsShared = createSharedData(formats)
+    const scheduleShared = createSharedData(schedule)
+
+    return [
+      {
+        path: 'schedule',
+        template: 'src/containers/Schedule.mdx',
+        sharedData: {
+          schedule: scheduleShared,
+          formats: formatsShared,
+        },
+        getData: async () => ({}),
+        children: [
+          {
+            path: 'formats',
+            template: 'src/pages/formats.mdx',
+            sharedData: {
+              schedule: scheduleShared,
+              formats: formatsShared,
+            },
+          },
+          ...formats.map(format => ({
+            path: `formats/${format.type}`,
+            template: 'src/containers/Page',
+            sharedData: {
+              schedule: scheduleShared,
+              formats: formatsShared,
+            },
+            getData: () => ({
+              title: 'Session Formats',
+              back: {
+                to: '/schedule',
+                title: 'Schedule',
+              },
+              meta: {
+                title: 'testing',
+                className: 'mw7',
+              },
+              contents: format.contents,
+            }),
+          })),
+        ],
+      },
+    ]
+  },
 }

@@ -45,9 +45,9 @@ export const NavLink: React.FC<NavLinkProps<HTMLAnchorElement>> = ({
 }) => (
   <Link
     {...props}
-    getProps={({ isCurrent }) => {
+    getProps={({ isPartiallyCurrent }) => {
       return {
-        className: isCurrent
+        className: isPartiallyCurrent
           ? `${props.className} ${activeClassName}`
           : props.className,
       }

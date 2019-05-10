@@ -1,12 +1,6 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
-import { Heading, Link } from '@components/System'
-
-const components = {
-  h1: Heading,
-  h2: Heading,
-  a: Link,
-}
+import { components } from './mdTransforms'
 
 export default (props: any) => (
   <MDXProvider components={components}>

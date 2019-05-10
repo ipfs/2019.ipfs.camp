@@ -1,12 +1,7 @@
 import { Page, Section } from '@layouts'
 import { Router } from '@components/Router'
-
-import Core from '@components/Formats/Core.mdx'
-import Poster from '@components/Formats/Poster.mdx'
-import Lighting from '@components/Formats/Lighting.mdx'
-import DeepDive from '@components/Formats/DeepDive.mdx'
-import Unconf from '@components/Formats/Unconf.mdx'
-import SciFi from '@components/Formats/SciFi.mdx'
+import { useRouteData } from 'react-static'
+import { convert } from '@components/System/hrmr'
 
 export default Page
 
@@ -20,18 +15,4 @@ export const meta = {
 
 # What will I learn at IPFS Camp?
 
-### Session Types
-
-- 👩🏽‍🏫 [Core & Elective Courses](#core)
-- 📃 [Poster Sessions](#poster)
-- 🐋 [Deep Dives](#deepdive)
-- ⚡️ [Lighting Talks](/formats/lighting)
-- 🧩 [Unconf](#unconf)
-- 🧬 [Sci-Fi Fair](#scifi)
-
-<Core />
-<Poster />
-<Lighting />
-<DeepDive  />
-<Unconf />
-<SciFi />
+<div>{useRouteData().formats.map(format => convert(format.contents))}</div>
