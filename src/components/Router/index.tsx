@@ -1,14 +1,12 @@
 import React, { FunctionComponent } from 'react'
 import {
-  Router,
-  Match,
   Link as RouterLink,
   LinkProps as RouterLinkProps,
   RouteComponentProps,
 } from '@reach/router'
 
 // default exports from @reach/router
-export { Router, Match }
+export { Router, Match, navigate } from '@reach/router'
 
 export type LinkProps<T> = RouterLinkProps<T> & {
   ref?: React.LegacyRef<RouterLink<T>>
@@ -65,3 +63,39 @@ export const Route: FunctionComponent<Props> = ({
   component: Component,
   ...rest
 }) => <Component {...rest} />
+
+type ScrollToTopProps = RouteComponentProps & {
+  children: React.ReactNode
+  exclude?: RegExp
+}
+
+export const ScrollToTop: React.FC<ScrollToTopProps> = ({
+  children,
+  location,
+  exclude,
+}) => {
+  React.useEffect(() => scroll(location), [location.pathname])
+
+  const scrollTo = (offsetTop: number) => {
+    if ('scrollBehavior' in document.documentElement.style) {
+      return window.scrollTo({ top: offsetTop, behavior: 'smooth' })
+    } else {
+      return window.scrollTo(0, offsetTop)
+    }
+  }
+
+  const scroll = (location: RouteComponentProps['location']) => {
+    if (exclude && location.pathname.search(exclude) !== -1) return
+
+    const findEl = async (hash: string) => await document.querySelector(hash)
+
+    if (location.hash) {
+      findEl(location.hash).then(el => {
+        return scrollTo((el as any).offsetTop)
+      })
+    } else {
+      return scrollTo(0)
+    }
+  }
+  return <>{children}</>
+}

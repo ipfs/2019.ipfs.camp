@@ -116,7 +116,7 @@ export default {
           },
           ...formats.map(format => ({
             path: `formats/${format.type}`,
-            template: 'src/containers/Page',
+            template: 'src/containers/Schedule.mdx',
             sharedData: {
               schedule: scheduleShared,
               formats: formatsShared,

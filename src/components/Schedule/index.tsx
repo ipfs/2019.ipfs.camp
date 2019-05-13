@@ -1,6 +1,10 @@
 import React from 'react'
-import { NavLink } from '@components/Router'
+import { Router, NavLink, navigate } from '@components/Router'
+import { RouteComponentProps } from '@reach/router'
+import { convert } from '@components/System/hrmr'
+
 import { Heading } from '@components/System'
+import { Modal } from '@components/Modal'
 
 type Session = {
   startTime: string
@@ -96,11 +100,33 @@ export const Formats: React.FC<FormatProps> = ({
   </>
 )
 
+const shouldOpenModal = (locationPath: string) => {
+  return /formats|session/.test(locationPath)
+}
+
+type ScheduleModal = ScheduleProps & RouteComponentProps
+
+const ScheduleModal: React.FC<ScheduleModal> = props => {
+  const current = props.location.pathname.split('/').pop()
+  const format = props.formats.find(format => format.type === current)
+  return (
+    <Modal
+      isOpen={shouldOpenModal(props.location.pathname)}
+      onRequestClose={() => navigate('/schedule')}
+    >
+      {format && convert(format.contents)}
+    </Modal>
+  )
+}
+
 export const Schedule: React.FC<ScheduleProps> = ({ schedule, formats }) => (
   <div>
     <Formats formats={formats} />
     {schedule.map(day => (
       <Day key={day.date} day={day} />
     ))}
+    <Router primary={false}>
+      <ScheduleModal path="schedule/*" schedule={schedule} formats={formats} />
+    </Router>
   </div>
 )

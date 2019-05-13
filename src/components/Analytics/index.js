@@ -55,41 +55,9 @@ export class Analytics extends React.Component {
     this.gtag('config', this.GA_TRACKING_ID)
   }
 
-  scrollTo = offsetTop => {
-    if ('scrollBehavior' in document.documentElement.style) {
-      return window.scrollTo({ top: offsetTop, behavior: 'smooth' })
-    } else {
-      return window.scrollTo(0, offsetTop)
-    }
-  }
-
-  scroll = async location => {
-    const findEl = async (hash, x) => {
-      return (
-        document.querySelector(hash) ||
-        new Promise((resolve, reject) => {
-          if (x > 50) {
-            return resolve()
-          }
-          setTimeout(() => {
-            resolve(findEl(hash, ++x || 1))
-          }, 100)
-        })
-      )
-    }
-
-    if (location.hash) {
-      let el = await findEl(location.hash)
-      this.scrollTo(el.offsetTop)
-    } else {
-      return this.scrollTo(0)
-    }
-  }
-
   componentDidUpdate(prevProps) {
     if (prevProps.location.pathname === this.props.location.pathname) return
     this.track()
-    this.scroll(window.location)
   }
 
   componentDidMount() {

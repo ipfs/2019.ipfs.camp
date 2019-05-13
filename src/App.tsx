@@ -1,6 +1,6 @@
 import React from 'react'
 import { Root, Routes, useSiteData } from 'react-static'
-import { NavLink, Match, Router } from '@components/Router'
+import { NavLink, Match, Router, ScrollToTop } from '@components/Router'
 import { DefaultMeta, Card } from '@components/Meta'
 import './app.css'
 import '@components/System/global.css'
@@ -121,7 +121,9 @@ const App = () => {
               <main className="nested-links">
                 <MDXProvider>
                   <Router primary={false}>
-                    <Routes path="*" />
+                    <ScrollToTop path="*" exclude={/schedule/}>
+                      <Routes path="*" />
+                    </ScrollToTop>
                   </Router>
                 </MDXProvider>
               </main>
