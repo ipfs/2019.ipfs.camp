@@ -51,7 +51,7 @@ const NavItems: React.FC = () => (
 const Nav: React.FC<RouteComponentProps> = () => {
   return (
     <>
-      <nav className="monospace f5 fixed-ns left-0 right-0 top-0 z-999 bg-white shadow-3">
+      <nav className="monospace f5 fixed-ns left-0 right-0 top-0 z-999 bg-white bb b--neutral1">
         <div className="ph4 ph5-ns pv3 pv1-ns mw9 center flex items-center">
           <NavLink className="link white" activeClassName="" to="/">
             <Logo

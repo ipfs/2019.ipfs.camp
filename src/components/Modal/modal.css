@@ -1,12 +1,45 @@
-.ReactModal__Overlay {
+.modal-base {
+  top: 5%;
+  position: relative;
+  background-color: #fefefe;
   opacity: 0;
-  transition: opacity 100ms ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8);
+  border-style: solid;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-bottom-width: 0.5rem;
+  border-right-width: 0.5rem;
+  overflow-y: scroll;
+  max-height: 80vh;
 }
 
-.ReactModal__Overlay--after-open {
+.modal-base_after-open {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-base_before-close {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.overlay-base {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(66, 66, 66, 0.5);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.overlay-base_after-open {
   opacity: 1;
 }
 
-.ReactModal__Overlay--before-close {
+.overlay-base_before-close {
   opacity: 0;
 }

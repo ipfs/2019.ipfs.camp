@@ -111,11 +111,21 @@ const ScheduleModal: React.FC<ScheduleModal> = props => {
   const format = props.formats.find(format => format.type === current)
   return (
     <Modal
-      overlayClassName="test"
+      overlayClassName={{
+        base:
+          'overlay-base pa4 bl-ns b--light-silver flex items-center justify-center',
+        afterOpen: 'overlay-base_after-open',
+        beforeClose: 'overlay-base_before-close',
+      }}
+      className={{
+        base: 'modal-base pa3 pa4-ns bg-white br3 b--neutral1 outline-0',
+        afterOpen: 'modal-base_after-open',
+        beforeClose: 'modal-base_before-close',
+      }}
       isOpen={shouldOpenModal(props.location.pathname)}
-      onRequestClose={() => navigate('/schedule')}
+      onAfterClose={() => navigate('/schedule')}
     >
-      {format && convert(format.contents)}
+      <div className="lh-copy mw7">{format && convert(format.contents)}</div>
     </Modal>
   )
 }

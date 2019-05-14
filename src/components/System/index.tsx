@@ -111,12 +111,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${campTheme.colors.neutral6};
   }
-  .nested-links a {
-    color: ${campTheme.colors.primary5};
-    &:hover {
-      color: ${campTheme.colors.primary1};
-    }
-  }
 `
 
 const themed = (key: string) => (props: any) => props.theme[key]
