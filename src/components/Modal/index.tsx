@@ -15,7 +15,6 @@ export const Modal: React.FC<ModalProps> = props => {
   useEffect(() => {
     setModalOpen(isOpen)
   }, [isOpen])
-  console.log('Estado2: ', isModalOpen)
   return (
     <>
       <RModal
