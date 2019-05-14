@@ -111,6 +111,7 @@ const ScheduleModal: React.FC<ScheduleModal> = props => {
   const format = props.formats.find(format => format.type === current)
   return (
     <Modal
+      overlayClassName="test"
       isOpen={shouldOpenModal(props.location.pathname)}
       onRequestClose={() => navigate('/schedule')}
     >

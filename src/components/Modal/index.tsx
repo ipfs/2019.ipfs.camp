@@ -3,6 +3,9 @@ import RModal from 'react-modal'
 import './modal.css'
 
 const customStyles = {
+  overlay: {
+    background: 'rgba(0, 0, 0, 0.3)',
+  },
   content: {
     top: '50%',
     left: '50%',
@@ -16,55 +19,22 @@ const customStyles = {
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
 RModal.setAppElement('#root')
 
-type ModalProps = {
-  url?: string
+type ModalProps = RModal.Props & {
   children: React.ReactNode
-  isOpen?: boolean
-  onRequestClose?: () => void
 }
 
-type ModalState = {
-  modalIsOpen: boolean
-}
-
-export class Modal extends React.Component<ModalProps, ModalState> {
-  constructor(props: ModalProps) {
-    super(props)
-
-    this.state = {
-      modalIsOpen: props.isOpen || false,
-    }
-
-    this.openModal = this.openModal.bind(this)
-    this.afterOpenModal = this.afterOpenModal.bind(this)
-    this.closeModal = this.closeModal.bind(this)
-  }
-
-  openModal() {
-    this.setState({ modalIsOpen: true })
-  }
-
-  afterOpenModal() {}
-
-  closeModal() {
-    this.setState({ modalIsOpen: false })
-    this.props.onRequestClose && this.props.onRequestClose()
-  }
-
-  render() {
-    return (
-      <>
-        <RModal
-          isOpen={this.props.isOpen}
-          onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
-          style={customStyles}
-          closeTimeoutMS={100}
-          contentLabel="RS Modal"
-        >
-          <div className="lh-copy mw7">{this.props.children}</div>
-        </RModal>
-      </>
-    )
-  }
+export const Modal: React.FC<ModalProps> = props => {
+  const { children, ...modalProps } = props
+  return (
+    <>
+      <RModal
+        style={customStyles}
+        closeTimeoutMS={100}
+        contentLabel="RS Modal"
+        {...modalProps}
+      >
+        <div className="lh-copy mw7">{children}</div>
+      </RModal>
+    </>
+  )
 }
