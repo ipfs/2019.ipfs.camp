@@ -5,6 +5,7 @@ import { convert } from '@components/System/hrmr'
 
 import { Heading } from '@components/System'
 import { Modal } from '@components/Modal'
+import { Head } from '@components/Meta'
 
 type Session = {
   startTime: string
@@ -110,24 +111,28 @@ const ScheduleModal: React.FC<ScheduleModal> = props => {
   const shouldOpenModal = (locationPath: string) => {
     return /formats|session/.test(locationPath)
   }
+  const title = format ? format.title : ''
   return (
-    <Modal
-      overlayClassName={{
-        base:
-          'overlay-base pa4 bl-ns b--light-silver flex items-center justify-center',
-        afterOpen: 'overlay-base_after-open',
-        beforeClose: 'overlay-base_before-close',
-      }}
-      className={{
-        base: 'modal-base pa3 pa4-ns bg-white br3 ba b--neutral1 outline-0',
-        afterOpen: 'modal-base_after-open',
-        beforeClose: 'modal-base_before-close',
-      }}
-      isOpen={shouldOpenModal(props.location.pathname)}
-      onRequestClose={() => navigate('/schedule')}
-    >
-      <div className="lh-copy mw7">{format && convert(format.contents)}</div>
-    </Modal>
+    <>
+      <Head>{title && <title>{title}</title>}</Head>
+      <Modal
+        overlayClassName={{
+          base:
+            'overlay-base pa4 bl-ns b--light-silver flex items-center justify-center',
+          afterOpen: 'overlay-base_after-open',
+          beforeClose: 'overlay-base_before-close',
+        }}
+        className={{
+          base: 'modal-base pa3 pa4-ns bg-white br3 ba b--neutral1 outline-0',
+          afterOpen: 'modal-base_after-open',
+          beforeClose: 'modal-base_before-close',
+        }}
+        isOpen={shouldOpenModal(props.location.pathname)}
+        onRequestClose={() => navigate('/schedule')}
+      >
+        <div className="lh-copy mw7">{format && convert(format.contents)}</div>
+      </Modal>
+    </>
   )
 }
 
