@@ -6,8 +6,12 @@
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   transform: scale(0.8);
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 80vh;
+}
+
+.modal-base::-webkit-scrollbar {
+  display: none;
 }
 
 .modal-base_after-open {
