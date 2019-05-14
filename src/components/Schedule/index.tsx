@@ -102,7 +102,11 @@ export const Formats: React.FC<FormatProps> = ({
 type ScheduleModal = ScheduleProps & RouteComponentProps
 
 const ScheduleModal: React.FC<ScheduleModal> = props => {
-  const current = props.location.pathname.split('/').pop()
+  const current = props.location.pathname
+    .split('/')
+    .filter(el => el)
+    .pop()
+  debugger
   const format = props.formats.find(format => format.type === current)
   const shouldOpenModal = (locationPath: string) => {
     return /formats|session/.test(locationPath)
