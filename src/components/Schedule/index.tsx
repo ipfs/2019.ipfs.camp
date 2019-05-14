@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, NavLink, navigate } from '@components/Router'
+import { Router, Link, navigate } from '@components/Router'
 import { RouteComponentProps } from '@reach/router'
 import { convert } from '@components/System/hrmr'
 
@@ -84,15 +84,14 @@ export const Formats: React.FC<FormatProps> = ({
       <ul>
         {formats.map(format => (
           <li>
-            <NavLink
+            <Link
               to={`schedule/formats/${format.type}`}
               title={format.title}
-              className="dib pv1 mv1"
-              activeClassName="bb b--primary1"
+              className="dib pv1"
             >
               {format.legend}
               {format.title}
-            </NavLink>
+            </Link>
           </li>
         ))}
       </ul>
@@ -118,7 +117,7 @@ const ScheduleModal: React.FC<ScheduleModal> = props => {
         beforeClose: 'overlay-base_before-close',
       }}
       className={{
-        base: 'modal-base pa3 pa4-ns bg-white br3 b--neutral1 outline-0',
+        base: 'modal-base pa3 pa4-ns bg-white br3 ba b--neutral1 outline-0',
         afterOpen: 'modal-base_after-open',
         beforeClose: 'modal-base_before-close',
       }}

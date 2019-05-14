@@ -6,11 +6,6 @@
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   transform: scale(0.8);
-  border-style: solid;
-  border-top-width: 1px;
-  border-left-width: 1px;
-  border-bottom-width: 0.5rem;
-  border-right-width: 0.5rem;
   overflow-y: scroll;
   max-height: 80vh;
 }
@@ -31,7 +26,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(66, 66, 66, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   opacity: 0;
   transition: all 0.3s ease-out;
 }
