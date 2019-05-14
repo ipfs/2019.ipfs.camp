@@ -10,17 +10,29 @@ type ModalProps = RModal.Props & {
 }
 
 export const Modal: React.FC<ModalProps> = props => {
-  const { children, isOpen, ...modalProps } = props
+  const {
+    children,
+    closeTimeoutMS = 300,
+    isOpen,
+    onRequestClose,
+    ...modalProps
+  } = props
   const [isModalOpen, setModalOpen] = useState(false)
+
   useEffect(() => {
     setModalOpen(isOpen)
   }, [isOpen])
+
+  const onRequestCloseFn = () => {
+    setModalOpen(false)
+    onRequestClose && setTimeout(onRequestClose, closeTimeoutMS || 10)
+  }
   return (
     <>
       <RModal
-        closeTimeoutMS={300}
+        closeTimeoutMS={closeTimeoutMS}
         isOpen={isModalOpen}
-        onRequestClose={() => setModalOpen(false)}
+        onRequestClose={onRequestCloseFn}
         contentLabel="RS Modal"
         {...modalProps}
       >

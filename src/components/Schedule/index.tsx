@@ -99,15 +99,14 @@ export const Formats: React.FC<FormatProps> = ({
   </>
 )
 
-const shouldOpenModal = (locationPath: string) => {
-  return /formats|session/.test(locationPath)
-}
-
 type ScheduleModal = ScheduleProps & RouteComponentProps
 
 const ScheduleModal: React.FC<ScheduleModal> = props => {
   const current = props.location.pathname.split('/').pop()
   const format = props.formats.find(format => format.type === current)
+  const shouldOpenModal = (locationPath: string) => {
+    return /formats|session/.test(locationPath)
+  }
   return (
     <Modal
       overlayClassName={{
@@ -122,7 +121,7 @@ const ScheduleModal: React.FC<ScheduleModal> = props => {
         beforeClose: 'modal-base_before-close',
       }}
       isOpen={shouldOpenModal(props.location.pathname)}
-      onAfterClose={() => navigate('/schedule')}
+      onRequestClose={() => navigate('/schedule')}
     >
       <div className="lh-copy mw7">{format && convert(format.contents)}</div>
     </Modal>
