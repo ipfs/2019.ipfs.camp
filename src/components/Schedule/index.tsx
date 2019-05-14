@@ -106,7 +106,6 @@ const ScheduleModal: React.FC<ScheduleModal> = props => {
     .split('/')
     .filter(el => el)
     .pop()
-  debugger
   const format = props.formats.find(format => format.type === current)
   const shouldOpenModal = (locationPath: string) => {
     return /formats|session/.test(locationPath)
