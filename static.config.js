@@ -105,36 +105,26 @@ export default {
           formats: formatsShared,
         },
         getData: async () => ({}),
-        children: [
-          {
-            path: 'formats',
-            template: 'src/pages/formats.mdx',
-            sharedData: {
-              schedule: scheduleShared,
-              formats: formatsShared,
-            },
+        children: formats.map(format => ({
+          path: `formats/${format.type}`,
+          template: 'src/containers/Schedule.mdx',
+          sharedData: {
+            schedule: scheduleShared,
+            formats: formatsShared,
           },
-          ...formats.map(format => ({
-            path: `formats/${format.type}`,
-            template: 'src/containers/Schedule.mdx',
-            sharedData: {
-              schedule: scheduleShared,
-              formats: formatsShared,
+          getData: () => ({
+            title: 'Session Formats',
+            back: {
+              to: '/schedule',
+              title: 'Schedule',
             },
-            getData: () => ({
-              title: 'Session Formats',
-              back: {
-                to: '/schedule',
-                title: 'Schedule',
-              },
-              meta: {
-                title: 'testing',
-                className: 'mw7',
-              },
-              contents: format.contents,
-            }),
-          })),
-        ],
+            meta: {
+              title: 'testing',
+              className: 'mw7',
+            },
+            contents: format.contents,
+          }),
+        })),
       },
     ]
   },
