@@ -3,9 +3,8 @@
   position: relative;
   background-color: #fefefe;
   opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  transform: scale(0.8);
+  transform: scale(0.95) translateY(-1rem);
   overflow-y: auto;
   max-height: 80vh;
 }
@@ -16,11 +15,12 @@
 
 .modal-base_after-open {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1) translateY(0);
+  margin-top: 0;
 }
 
 .modal-base_before-close {
-  transform: scale(0.9);
+  transform: scale(0.95) translateY(-1rem);
   opacity: 0;
 }
 
