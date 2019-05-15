@@ -68,6 +68,9 @@ const Day: React.FC<DayProps> = ({ day }) => (
 type ScheduleProps = {
   schedule: Day[]
   formats: Format[]
+  meta: {
+    title: string
+  }
 }
 
 type FormatProps = {
@@ -84,7 +87,7 @@ export const Formats: React.FC<FormatProps> = ({
     <div className="nested-list-reset">
       <ul>
         {formats.map(format => (
-          <li>
+          <li key={format.type}>
             <Link
               to={`schedule/formats/${format.type}`}
               title={format.title}
@@ -111,7 +114,7 @@ const ScheduleModal: React.FC<ScheduleModal> = props => {
   const shouldOpenModal = (locationPath: string) => {
     return /formats|session/.test(locationPath)
   }
-  const title = format ? format.title : ''
+  const title = props.meta ? props.meta.title : ''
   return (
     <>
       <Head>{title && <title>{title}</title>}</Head>
@@ -136,14 +139,23 @@ const ScheduleModal: React.FC<ScheduleModal> = props => {
   )
 }
 
-export const Schedule: React.FC<ScheduleProps> = ({ schedule, formats }) => (
+export const Schedule: React.FC<ScheduleProps> = ({
+  schedule,
+  formats,
+  meta,
+}) => (
   <div>
     <Formats formats={formats} />
     {schedule.map(day => (
       <Day key={day.date} day={day} />
     ))}
     <Router primary={false}>
-      <ScheduleModal path="schedule/*" schedule={schedule} formats={formats} />
+      <ScheduleModal
+        path="schedule/*"
+        schedule={schedule}
+        formats={formats}
+        meta={meta}
+      />
     </Router>
   </div>
 )

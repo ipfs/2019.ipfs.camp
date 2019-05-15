@@ -119,8 +119,7 @@ export default {
               title: 'Schedule',
             },
             meta: {
-              title: 'testing',
-              className: 'mw7',
+              title: `${format.title} | Formats`,
             },
             contents: format.contents,
           }),
