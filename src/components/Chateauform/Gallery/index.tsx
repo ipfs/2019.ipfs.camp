@@ -1,10 +1,14 @@
 import React from 'react'
 import { Gallery } from '@components/Gallery'
 
-export const CFGallery = () => (
+type CFGalleryProps = {
+  heading?: string
+}
+
+export const CFGallery: React.FC<CFGalleryProps> = props => (
   <Gallery
     showThumbnails={true}
-    heading=""
+    {...props}
     images={[
       {
         src: require('./photos/Mola_1-1600x1000.jpg'),
@@ -72,7 +76,6 @@ export const CFGallery = () => (
 
 export const TicketGallery = () => (
   <Gallery
-    heading=""
     images={[
       {
         src: require('./photos/Mola_17-1600x1000.jpg'),
