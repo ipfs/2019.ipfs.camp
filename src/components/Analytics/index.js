@@ -58,7 +58,6 @@ export class Analytics extends React.Component {
   componentDidUpdate(prevProps) {
     if (prevProps.location.pathname === this.props.location.pathname) return
     this.track()
-    window.scrollTo(0, 0)
   }
 
   componentDidMount() {

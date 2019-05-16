@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link } from '@components/Router'
-import { LinkProps } from '@reach/router'
+import { LinkProps } from '@components/Router'
 import styled from 'styled-components'
 
 type ButtonProps<T> = LinkProps<T> & {
   href?: string
-  ref?: React.LegacyRef<Link<T>>
   type?: 'primary'
   size?: 'large'
   block?: boolean
@@ -27,12 +26,8 @@ const Button: React.FC<ButtonProps<HTMLAnchorElement>> = ({
   const cx = `${className} ${size === 'large' ? 'f3' : 'f5'} ${
     block ? 'db' : 'dib'
   }`
-  return href ? (
-    <a href={href} className={cx} {...rest}>
-      {children}
-    </a>
-  ) : (
-    <Link to={to} className={cx} {...rest}>
+  return (
+    <Link href={href} to={to} className={cx} {...rest}>
       {children}
     </Link>
   )

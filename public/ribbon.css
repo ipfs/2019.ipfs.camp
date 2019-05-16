@@ -70,14 +70,14 @@
 
 /* Cluster display patches */
 
-.container > .table-container > .header-section.right {
+header.w-100 > div > nav.db {
   -webkit-transition: padding ease 0.5s;
   -o-transition: padding ease 0.5s;
   transition: padding ease 0.5s;
 }
 
 @media only screen and (max-width: 1600px) {
-  .container > .table-container > .header-section.right {
+  header.w-100 > div > nav.db {
     padding-right: 100px;
   }
 }

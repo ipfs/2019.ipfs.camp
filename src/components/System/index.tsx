@@ -66,6 +66,7 @@ import {
 } from 'styled-system'
 import { ColorProperty } from 'csstype'
 import { format, parse } from 'date-fns'
+import { Link as SLink } from '@components/Router'
 
 // util
 import merge from 'lodash/merge'
@@ -109,12 +110,6 @@ export const GlobalStyle = createGlobalStyle`
   ${themeColors()}
   body {
     background-color: ${campTheme.colors.neutral6};
-  }
-  .nested-links a {
-    color: ${campTheme.colors.primary5};
-    &:hover {
-      color: ${campTheme.colors.primary1};
-    }
   }
 `
 
@@ -274,10 +269,9 @@ Heading.defaultProps = {
 
 type SystemLink = BaseProps<HTMLAnchorElement> & BaseOverrides
 
-export const Link = styled(Box)<SystemLink>(themed('Link'))
+export const Link = styled(SLink)<SystemLink>(themed('Link'))
 
 Link.defaultProps = {
-  as: 'a',
   color: 'blue',
   className: 'link',
 }

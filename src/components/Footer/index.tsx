@@ -46,16 +46,19 @@ export const Footer: React.FC<FooterProps> = () => (
         <ul>
           <h3 className="white">Related Projects</h3>
           <li>
-            <a href="https://ipfs.io/">ipfs.io</a>
+            <a href="https://ipfs.io/">IPFS</a>
           </li>
           <li>
-            <a href="https://libp2p.io/">libp2p.io</a>
+            <a href="https://cluster.ipfs.io/">IPFS Cluster</a>
           </li>
           <li>
-            <a href="https://ipld.io">ipld.io</a>
+            <a href="https://libp2p.io/">libp2p</a>
           </li>
           <li>
-            <a href="https://multiformats.io/">multiformats.io</a>
+            <a href="https://ipld.io">IPLD</a>
+          </li>
+          <li>
+            <a href="https://multiformats.io/">Multiformats</a>
           </li>
         </ul>
       </div>
@@ -63,13 +66,13 @@ export const Footer: React.FC<FooterProps> = () => (
         <ul>
           <h3 className="monospace white">Stay Updated</h3>
           <li>
-            <a href="http://eepurl.com/giMQzj">Subscribe to mlist</a>
+            <a href="http://eepurl.com/giMQzj">Mailing List</a>
           </li>
           <li>
             <a href="https://twitter.com/ipfsbot">@ipfsbot</a>
           </li>
           <li>
-            <a href="https://blog.ipfs.io/">Subscribe to blog</a>
+            <a href="https://blog.ipfs.io/">IPFS Blog</a>
           </li>
           <li>Join chat on IRC #ipfs-camp</li>
         </ul>

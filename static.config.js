@@ -1,16 +1,26 @@
 import axios from 'axios'
+import jdown from 'jdown'
 import path from 'path'
 import chokidar from 'chokidar'
 import fs from 'fs'
 import util from 'util'
-import { reloadClientData } from 'react-static/node'
+import {
+  reloadClientData,
+  rebuildRoutes,
+  createSharedData,
+} from 'react-static/node'
 
 // promisify readFile
 const readFile = util.promisify(fs.readFile)
 
 // hot reload routeData when files change in dev mode
 if (process.env.REACT_STATIC_ENV === 'development') {
-  chokidar.watch('./data').on('all', () => reloadClientData())
+  chokidar
+    .watch('data', { ignoreInitial: true })
+    .on('all', () => reloadClientData())
+  chokidar
+    .watch('content', { ignoreInitial: true })
+    .on('all', () => rebuildRoutes())
 }
 
 // util to fetch JSON from the filesystem
@@ -18,6 +28,30 @@ const readJSON = async file => {
   try {
     const data = await readFile(file, 'utf8')
     return JSON.parse(data)
+  } catch (e) {
+    throw new Error(e)
+  }
+}
+
+// loads any contentURL to the content field
+const fetchContent = async item => {
+  if (item.contentURL) {
+    const res = await axios.get(item.contentURL)
+    item.content = res.data
+  }
+  return item
+}
+
+// map and resolve all content links
+const getContent = async data => {
+  return await Promise.all(data.map(item => fetchContent(item)))
+}
+
+const resolveContent = async file => {
+  try {
+    const data = await readJSON(file)
+    const content = await getContent(data)
+    return content
   } catch (e) {
     throw new Error(e)
   }
@@ -55,12 +89,42 @@ export default {
       lastBuilt: Date.now(),
     },
   }),
-  getRoutes: async ({ dev }) => [
-    {
-      path: 'schedule',
-      getData: async () => ({
-        schedule: await readJSON('./data/schedule.json'),
-      }),
-    },
-  ],
+  getRoutes: async ({ dev }) => {
+    const content = await jdown('content')
+    const schedule = await readJSON('./data/schedule.json')
+    const formats = content.formats.sort((a, b) => (a.title > b.title ? 1 : -1))
+    const formatsShared = createSharedData(formats)
+    const scheduleShared = createSharedData(schedule)
+
+    return [
+      {
+        path: 'schedule',
+        template: 'src/containers/Schedule.mdx',
+        sharedData: {
+          schedule: scheduleShared,
+          formats: formatsShared,
+        },
+        getData: async () => ({}),
+        children: formats.map(format => ({
+          path: `formats/${format.type}`,
+          template: 'src/containers/Schedule.mdx',
+          sharedData: {
+            schedule: scheduleShared,
+            formats: formatsShared,
+          },
+          getData: () => ({
+            title: 'Session Formats',
+            back: {
+              to: '/schedule',
+              title: 'Schedule',
+            },
+            meta: {
+              title: `${format.title} | Formats`,
+            },
+            contents: format.contents,
+          }),
+        })),
+      },
+    ]
+  },
 }

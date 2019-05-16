@@ -1,6 +1,6 @@
 import React from 'react'
 import { Root, Routes, useSiteData } from 'react-static'
-import { NavLink, Match, Router } from '@components/Router'
+import { NavLink, Match, Router, ScrollToTop } from '@components/Router'
 import { DefaultMeta, Card } from '@components/Meta'
 import './app.css'
 import '@components/System/global.css'
@@ -51,7 +51,7 @@ const NavItems: React.FC = () => (
 const Nav: React.FC<RouteComponentProps> = () => {
   return (
     <>
-      <nav className="monospace f5 fixed-ns left-0 right-0 top-0 z-999 bg-white shadow-3">
+      <nav className="monospace f5 fixed-ns left-0 right-0 top-0 z-999 bg-white bb b--neutral1">
         <div className="ph4 ph5-ns pv3 pv1-ns mw9 center flex items-center">
           <NavLink className="link white" activeClassName="" to="/">
             <Logo
@@ -121,7 +121,9 @@ const App = () => {
               <main className="nested-links">
                 <MDXProvider>
                   <Router primary={false}>
-                    <Routes path="*" />
+                    <ScrollToTop path="*" exclude={/schedule/}>
+                      <Routes path="*" />
+                    </ScrollToTop>
                   </Router>
                 </MDXProvider>
               </main>
