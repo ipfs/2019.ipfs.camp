@@ -5,7 +5,7 @@ contentURL: https://raw.githubusercontent.com/ipfs/camp/master/POSTER_SESSIONS/R
 legend: 📃
 ---
 
-## 📃Poster Sessions
+## 📃 Poster Sessions
 
 Poster Sessions are one of the all times favorite IPFS Events. These sessions are designed to propagate knowledge by having small teams of people explore one of the many pieces of the IPFS stack together, with the goal to understand it so well that they can present it to the whole group aided by a Poster.
 

@@ -93,8 +93,7 @@ export const Formats: React.FC<FormatProps> = ({
               title={format.title}
               className="dib pv1"
             >
-              {format.legend}
-              {format.title}
+              {format.legend} {format.title}
             </Link>
           </li>
         ))}
