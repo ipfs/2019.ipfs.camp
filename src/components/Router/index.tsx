@@ -69,32 +69,45 @@ type ScrollToTopProps = RouteComponentProps & {
   exclude?: RegExp
 }
 
+var _lastPath = ''
+
 export const ScrollToTop: React.FC<ScrollToTopProps> = ({
   children,
   location,
   exclude,
 }) => {
-  React.useEffect(() => scroll(location), [location.pathname])
+  React.useEffect(() => scroll(location), [location.href])
 
-  const scrollTo = (offsetTop: number) => {
-    if ('scrollBehavior' in document.documentElement.style) {
-      return window.scrollTo({ top: offsetTop, behavior: 'smooth' })
-    } else {
-      return window.scrollTo(0, offsetTop)
-    }
+  const scrollToY = (offsetTop: number) => {
+    // run in a timeout to fix ops in firefox
+    setTimeout(() => {
+      if ('scrollBehavior' in document.documentElement.style) {
+        return window.scrollTo({ top: offsetTop, behavior: 'smooth' })
+      } else {
+        return window.scrollTo(0, offsetTop)
+      }
+    }, 200)
   }
 
   const scroll = (location: RouteComponentProps['location']) => {
-    if (exclude && location.pathname.search(exclude) !== -1) return
-
+    if (
+      exclude &&
+      _lastPath.search(exclude) !== -1 &&
+      location.href.search(exclude) !== -1
+    ) {
+      _lastPath = location.pathname
+      return
+    } else {
+      _lastPath = location.pathname
+    }
     const findEl = async (hash: string) => await document.querySelector(hash)
 
     if (location.hash) {
       findEl(location.hash).then(el => {
-        return scrollTo((el as any).offsetTop)
+        return scrollToY((el as any).offsetTop)
       })
     } else {
-      return scrollTo(0)
+      return scrollToY(0)
     }
   }
   return <>{children}</>
