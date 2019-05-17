@@ -32,7 +32,7 @@
       },
       {
         "startTime": "20:00",
-        "title": "Group Dinner in restaurant"
+        "title": "Group Dinner"
       },
       {
         "startTime": "21:30",
@@ -64,7 +64,7 @@
       {
         "startTime": "09:00",
         "endTime": "13:30",
-        "title": "Morning Workshops"
+        "title": "👩🏽‍🏫 Core Courses Part I"
       },
       {
         "startTime": "13:30",
@@ -74,9 +74,19 @@
       },
       {
         "startTime": "14:30",
-        "endTime": "19:00",
-        "title": "Afternoon Workshops"
+        "endTime": "16:30",
+        "title": "📃 Poster Sessions"
       },
+      {
+        "startTime": "16:30",
+        "endTime": "17:30",
+        "title": "📣 Report back, present your Poster and share what you learned with the Group!"
+      },      
+      {
+        "startTime": "17:30",
+        "endTime": "19:00",
+        "title": "⚡️ Lighting Talks I"
+      },          
       {
         "startTime": "19:00",
         "endTime": "19:30",
@@ -119,7 +129,7 @@
       {
         "startTime": "09:00",
         "endTime": "13:30",
-        "title": "Morning Sessions"
+        "title": "🏽‍🏫 Core Courses Part II & Elective Courses"
       },
       {
         "startTime": "13:30",
@@ -129,14 +139,24 @@
       },
       {
         "startTime": "14:30",
-        "endTime": "19:00",
-        "title": "Afternoon Sessions (Deep Dives and Lightning Talks)"
+        "endTime": "16:30",
+        "title": "🐋 Deep Dives"
       },
       {
         "startTime": "16:30",
-        "endTime": "18:00",
-        "title": "Sci-Fi Fair"
+        "endTime": "18:30",
+        "title": "🧬 Sci-Fi Fair"
       },
+      {
+        "startTime": "16:30",
+        "endTime": "18:30",
+        "title": "🧩 Unconf"
+      },      
+      {
+        "startTime": "18:30",
+        "endTime": "19:00",
+        "title": "⚡️ Lighting Talks II"
+      },             
       {
         "startTime": "19:00",
         "endTime": "19:30",
@@ -146,7 +166,7 @@
       {
         "startTime": "19:30",
         "endTime": "21:30",
-        "title": "Special Group Dinner"
+        "title": "Group Dinner with a Surprise 🎁"
       },
       {
         "startTime": "21:30",
@@ -174,7 +194,7 @@
       {
         "startTime": "09:00",
         "endTime": "12:00",
-        "title": "Closing session"
+        "title": "🎓 Graduation Ceremony & Closing Keynote"
       },
       {
         "startTime": "12:00",
