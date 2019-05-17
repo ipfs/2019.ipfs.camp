@@ -15,7 +15,7 @@ export type LinkProps<T> = RouterLinkProps<T> & {
 
 // router link that handles href and to props
 export const Link: React.FC<LinkProps<HTMLAnchorElement>> = ({
-  to,
+  to = '',
   href,
   children,
   ...props
