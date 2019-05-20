@@ -1,6 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Button } from '@components/Buttons'
+import { useSiteData } from 'react-static'
+import { SiteData } from '../../types'
+
+type TicketData = SiteData['tickets']
 
 const StyledOptions = styled.ul`
   list-style: square inside url(${require('./checkmark.svg')});
@@ -41,32 +45,47 @@ const Price: React.FC = ({ children }) => (
   </p>
 )
 
-const ApplicationBtn = ({ href }: { href: string }) => (
+const ApplicationBtn = ({
+  href,
+  ctaText,
+}: {
+  href: string
+  ctaText: string
+}) => (
   <Button block href={href}>
-    <div className="tc">Apply</div>
+    <div className="tc">{ctaText}</div>
   </Button>
 )
 
-const Shared = () => (
+const Shared = ({ waitlistCta, waitlist, regCta }: TicketData) => (
   <TicketCard>
     <h2>Shared Twin Room</h2>
     <Price>795 €</Price>
     <Benefits />
-    <ApplicationBtn href="https://docs.google.com/forms/d/e/1FAIpQLSesrGYpB6JbvFyRtd_vmol-nMxiAljfylab-hRizzrzbEAZww/viewform?usp=pp_url&entry.552566347=Shared+Twin+Room+795+%E2%82%AC" />
+    <ApplicationBtn
+      href="https://docs.google.com/forms/d/e/1FAIpQLSesrGYpB6JbvFyRtd_vmol-nMxiAljfylab-hRizzrzbEAZww/viewform?usp=pp_url&entry.552566347=Shared+Twin+Room+795+%E2%82%AC"
+      ctaText={waitlist ? waitlistCta : regCta}
+    />
   </TicketCard>
 )
-const Private = () => (
+const Private = ({ waitlistCta, waitlist, regCta }: TicketData) => (
   <TicketCard>
     <h2>Private Double Room</h2>
     <Price>995 €</Price>
     <Benefits />
-    <ApplicationBtn href="https://docs.google.com/forms/d/e/1FAIpQLSesrGYpB6JbvFyRtd_vmol-nMxiAljfylab-hRizzrzbEAZww/viewform?usp=pp_url&entry.552566347=Private+Double+Room+995+%E2%82%AC" />
+    <ApplicationBtn
+      href="https://docs.google.com/forms/d/e/1FAIpQLSesrGYpB6JbvFyRtd_vmol-nMxiAljfylab-hRizzrzbEAZww/viewform?usp=pp_url&entry.552566347=Private+Double+Room+995+%E2%82%AC"
+      ctaText={waitlist ? waitlistCta : regCta}
+    />
   </TicketCard>
 )
 
-export const Tickets = () => (
-  <div className="flex flex-column flex-row-ns space-between">
-    <Private />
-    <Shared />
-  </div>
-)
+export const Tickets = () => {
+  const { tickets } = useSiteData()
+  return (
+    <div className="flex flex-column flex-row-ns space-between">
+      <Private {...tickets} />
+      <Shared {...tickets} />
+    </div>
+  )
+}

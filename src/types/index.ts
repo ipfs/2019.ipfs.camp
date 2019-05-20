@@ -6,6 +6,13 @@ export interface Post {
 
 export type SiteData = {
   title: string
+  tickets: {
+    waitlist: boolean
+    waitlistCta: string
+    waitlistLink: string
+    regCta: string
+    regLink: string
+  }
   meta: {
     url: string
     title?: string

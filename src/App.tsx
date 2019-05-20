@@ -16,37 +16,44 @@ import { Analytics } from '@components/Analytics'
 import { Footer } from '@components/Footer'
 import { Logo } from '@components/Logo'
 import { RouteComponentProps } from '@reach/router'
-import { SiteData } from './types'
 import { Hamburgler } from '@components/Hamburgler'
 import { Sponsors } from '@components/Sponsors'
 
-const NavItems: React.FC = () => (
-  <>
-    <li className="dib">
-      <NavLink className="dark3 pv3 mh3" to="/schedule">
-        Schedule
-      </NavLink>
-    </li>
-    <li className="dib">
-      <NavLink className="dark3 pv3 mh3" to="/location">
-        Location
-      </NavLink>
-    </li>
-    <li className="dib">
-      <NavLink className="dark3 pv3 mh3" to="/faq">
-        FAQ
-      </NavLink>
-    </li>
-    <li className="dib">
-      <NavLink className="dark3 pv3 mh3" to="/code-of-conduct">
-        Conduct
-      </NavLink>
-    </li>
-    <li className="dib pv2 link ml3-ns">
-      <Button to="/register">Register</Button>
-    </li>
-  </>
-)
+// types
+import { SiteData } from './types'
+
+const NavItems: React.FC = () => {
+  const { tickets }: SiteData = useSiteData()
+  return (
+    <>
+      <li className="dib">
+        <NavLink className="dark3 pv3 mh3" to="/schedule">
+          Schedule
+        </NavLink>
+      </li>
+      <li className="dib">
+        <NavLink className="dark3 pv3 mh3" to="/location">
+          Location
+        </NavLink>
+      </li>
+      <li className="dib">
+        <NavLink className="dark3 pv3 mh3" to="/faq">
+          FAQ
+        </NavLink>
+      </li>
+      <li className="dib">
+        <NavLink className="dark3 pv3 mh3" to="/code-of-conduct">
+          Conduct
+        </NavLink>
+      </li>
+      <li className="dib pv2 link ml3-ns">
+        <Button to="/register">
+          {tickets.waitlist ? tickets.waitlistCta : tickets.regLink}
+        </Button>
+      </li>
+    </>
+  )
+}
 
 const Nav: React.FC<RouteComponentProps> = () => {
   return (
