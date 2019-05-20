@@ -31,12 +31,12 @@
         "title": "Welcome to IPFS Camp"
       },
       {
+        "startTime": "19:30",
+        "title": "Group Activity"
+      },      
+      {
         "startTime": "20:00",
         "title": "Group Dinner"
-      },
-      {
-        "startTime": "21:30",
-        "title": "Group Activity"
       }
     ]
   },
