@@ -108,9 +108,6 @@ const themeColors = (theme: any = campTheme, c = '') => {
 
 export const GlobalStyle = createGlobalStyle`
   ${themeColors()}
-  body {
-    background-color: ${campTheme.colors.neutral6};
-  }
 `
 
 const themed = (key: string) => (props: any) => props.theme[key]
