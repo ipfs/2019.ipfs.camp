@@ -46,7 +46,7 @@ const NavItems: React.FC = () => {
       </li>
       <li className="dib pv2 link ml3-ns">
         <Button to="/register">
-          {tickets.waitlist ? tickets.waitlistLink : tickets.regLink}
+          {tickets.waitlist ? tickets.waitlistCta : tickets.regLink}
         </Button>
       </li>
     </>
