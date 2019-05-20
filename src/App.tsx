@@ -16,12 +16,16 @@ import { Analytics } from '@components/Analytics'
 import { Footer } from '@components/Footer'
 import { Logo } from '@components/Logo'
 import { RouteComponentProps } from '@reach/router'
-import { SiteData } from './types'
 import { Hamburgler } from '@components/Hamburgler'
 import { Sponsors } from '@components/Sponsors'
 
+// types
+import { SiteData } from './types'
+
 const NavItems: React.FC = () => {
-  const { tickets } = useSiteData()
+  const {
+    siteData: { tickets },
+  }: { siteData: SiteData } = useSiteData()
   return (
     <>
       <li className="dib">

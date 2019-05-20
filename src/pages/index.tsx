@@ -9,9 +9,12 @@ import { Logo } from '@components/Logo'
 import { Projects } from '@components/Projects'
 
 import { useSiteData } from 'react-static'
+import { SiteData } from '../types'
 
 export default () => {
-  const { tickets } = useSiteData()
+  const {
+    siteData: { tickets },
+  }: { siteData: SiteData } = useSiteData()
   return (
     <>
       <Hero className="relative overflow-hidden tc tl-ns">
