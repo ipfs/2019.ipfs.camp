@@ -12,9 +12,7 @@ import { useSiteData } from 'react-static'
 import { SiteData } from '../types'
 
 export default () => {
-  const {
-    siteData: { tickets },
-  }: { siteData: SiteData } = useSiteData()
+  const { tickets }: SiteData = useSiteData()
   return (
     <>
       <Hero className="relative overflow-hidden tc tl-ns">

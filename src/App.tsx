@@ -23,9 +23,7 @@ import { Sponsors } from '@components/Sponsors'
 import { SiteData } from './types'
 
 const NavItems: React.FC = () => {
-  const {
-    siteData: { tickets },
-  }: { siteData: SiteData } = useSiteData()
+  const { tickets }: SiteData = useSiteData()
   return (
     <>
       <li className="dib">
