@@ -1,5 +1,4 @@
 ---
-type: unconf
 title: Unconf
 contentURL: https://raw.githubusercontent.com/ipfs/camp/master/UNCONF/README.md
 legend: 🧩

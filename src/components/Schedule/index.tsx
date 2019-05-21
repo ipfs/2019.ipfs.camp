@@ -26,7 +26,7 @@ type DayProps = {
 }
 
 type Format = {
-  type: string
+  id: string
   title: string
   legend: string
   contents: string
@@ -87,9 +87,9 @@ export const Formats: React.FC<FormatProps> = ({
     <div className="nested-list-reset">
       <ul>
         {formats.map(format => (
-          <li key={format.type}>
+          <li key={format.id}>
             <Link
-              to={`schedule/formats/${format.type}`}
+              to={`schedule/formats/${format.id}`}
               title={format.title}
               className="dib pv1"
             >
@@ -109,7 +109,7 @@ const ScheduleModal: React.FC<ScheduleModal> = props => {
     .split('/')
     .filter(el => el)
     .pop()
-  const format = props.formats.find(format => format.type === current)
+  const format = props.formats.find(format => format.id === current)
   const shouldOpenModal = (locationPath: string) => {
     return /formats|session/.test(locationPath)
   }

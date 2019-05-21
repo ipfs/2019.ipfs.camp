@@ -1,5 +1,4 @@
 ---
-type: poster
 title: Poster
 contentURL: https://raw.githubusercontent.com/ipfs/camp/master/POSTER_PROJECTS/README.md
 legend: 📃

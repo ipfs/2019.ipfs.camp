@@ -1,5 +1,4 @@
 ---
-type: course
 title: Core & Elective Courses
 contentURL: https://raw.githubusercontent.com/ipfs/camp/master/CORE_AND_ELECTIVE_COURSES/README.md
 legend: 👩🏽‍🏫
