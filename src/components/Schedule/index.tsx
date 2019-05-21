@@ -7,30 +7,10 @@ import { Heading } from '@components/System'
 import { Modal } from '@components/Modal'
 import { Head } from '@components/Meta'
 
-type Session = {
-  startTime: string
-  endTime?: string
-  title: string
-  type?: string
-}
-
-type Day = {
-  date: string
-  title: string
-  desc?: string
-  sessions: Session[]
-}
+import { Day as TDay, Format } from '../../types/schedule'
 
 type DayProps = {
-  day: Day
-}
-
-type Format = {
-  id: string
-  title: string
-  legend: string
-  contents: string
-  contentURL?: string
+  day: TDay
 }
 
 const Day: React.FC<DayProps> = ({ day }) => (
@@ -66,7 +46,7 @@ const Day: React.FC<DayProps> = ({ day }) => (
 )
 
 type ScheduleProps = {
-  schedule: Day[]
+  schedule: TDay[]
   formats: Format[]
   meta: {
     title: string
@@ -102,9 +82,9 @@ export const Formats: React.FC<FormatProps> = ({
   </>
 )
 
-type ScheduleModal = ScheduleProps & RouteComponentProps
+type ScheduleModalProps = ScheduleProps & RouteComponentProps
 
-const ScheduleModal: React.FC<ScheduleModal> = props => {
+const ScheduleModal: React.FC<ScheduleModalProps> = props => {
   const current = props.location.pathname
     .split('/')
     .filter(el => el)
