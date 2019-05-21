@@ -10,6 +10,8 @@ import {
   createSharedData,
 } from 'react-static/node'
 
+import slug from 'slug'
+
 // promisify readFile
 const readFile = util.promisify(fs.readFile)
 
@@ -57,6 +59,14 @@ const resolveContent = async file => {
   }
 }
 
+// setup url safe ids to use for slugs and item ident with manual override
+Array.prototype.mapIds = function(cb) {
+  return this.map(obj => {
+    obj.id = slug(obj.id ? obj.id : obj.fileInfo.name)
+    return obj
+  })
+}
+
 export default {
   // tweaks for CI
   maxThreads: process.env.CI ? 1 : Infinity,
@@ -97,9 +107,12 @@ export default {
     },
   }),
   getRoutes: async ({ dev }) => {
-    const content = await jdown('content')
+    const content = await jdown('content', { fileInfo: true })
+
     const schedule = await readJSON('./data/schedule.json')
-    const formats = content.formats.sort((a, b) => (a.title > b.title ? 1 : -1))
+    const formats = content.formats
+      .sort((a, b) => (a.title > b.title ? 1 : -1))
+      .mapIds()
     const formatsShared = createSharedData(formats)
     const scheduleShared = createSharedData(schedule)
 
@@ -113,7 +126,7 @@ export default {
         },
         getData: async () => ({}),
         children: formats.map(format => ({
-          path: `formats/${format.type}`,
+          path: `formats/${format.id}`,
           template: 'src/containers/Schedule.mdx',
           sharedData: {
             schedule: scheduleShared,

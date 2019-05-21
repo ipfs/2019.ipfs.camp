@@ -50,6 +50,7 @@
     "react-static-plugin-styled-components": "^7.0.10",
     "react-static-plugin-typescript": "^7.0.10",
     "serve": "11.0.0",
+    "slug": "^1.1.0",
     "terser": "^3.17.0",
     "typescript": "^3.4.5"
   },
