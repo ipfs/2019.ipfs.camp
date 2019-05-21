@@ -23,7 +23,7 @@ import { Sponsors } from '@components/Sponsors'
 import { SiteData } from './types'
 
 const NavItems: React.FC = () => {
-  const { tickets }: SiteData = useSiteData()
+  const { tickets } = useSiteData<SiteData>()
   return (
     <>
       <li className="dib">
@@ -107,7 +107,7 @@ const Nav: React.FC<RouteComponentProps> = () => {
 }
 
 const App = () => {
-  const { gtagId }: SiteData = useSiteData()
+  const { gtagId } = useSiteData<SiteData>()
   return (
     <ThemeProvider theme={theme}>
       <Root>

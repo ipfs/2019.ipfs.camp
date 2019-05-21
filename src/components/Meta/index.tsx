@@ -1,15 +1,15 @@
 import React, { PropsWithChildren } from 'react'
 import { Head as Helmet, useSiteData } from 'react-static'
-import { SiteData as TSiteData } from 'src/types'
+import { SiteData } from 'src/types'
 import { HelmetProps } from 'react-helmet'
 
-type HeadProps = HelmetProps & PropsWithChildren<TSiteData>
+type HeadProps = HelmetProps & PropsWithChildren<SiteData>
 
 export const Head: React.FC<HelmetProps> = ({
   children,
   ...rest
 }: HeadProps) => {
-  const { title }: TSiteData = useSiteData()
+  const { title } = useSiteData<SiteData>()
   return (
     <Helmet
       htmlAttributes={{ lang: 'en-US' }}
@@ -42,7 +42,7 @@ export const DefaultMeta: React.FC<DefaultMetaProps> = ({ children }) => (
 )
 
 export const Card: React.FC = () => {
-  const { meta, title }: TSiteData = useSiteData()
+  const { meta, title } = useSiteData<SiteData>()
   return (
     <Head>
       <meta name="twitter:card" content="summary_large_image" />
