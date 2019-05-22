@@ -110,11 +110,23 @@ export default {
     const content = await jdown('content', { fileInfo: true })
 
     const schedule = await readJSON('./data/schedule.json')
+
     const formats = content.formats
       .sort((a, b) => (a.title > b.title ? 1 : -1))
       .mapIds()
-    const formatsShared = createSharedData(formats)
-    const scheduleShared = createSharedData(schedule)
+    const speakers = content.speakers.mapIds()
+    const sessions = content.sessions.mapIds()
+    const venues = content.venues.mapIds()
+
+    const locations = content.locations.mapIds()
+
+    const scheduleShared = createSharedData({
+      schedule,
+      formats,
+      speakers,
+      venues,
+      locations,
+    })
 
     return [
       {
@@ -122,28 +134,46 @@ export default {
         template: 'src/containers/Schedule.mdx',
         sharedData: {
           schedule: scheduleShared,
-          formats: formatsShared,
         },
         getData: async () => ({}),
-        children: formats.map(format => ({
-          path: `formats/${format.id}`,
-          template: 'src/containers/Schedule.mdx',
-          sharedData: {
-            schedule: scheduleShared,
-            formats: formatsShared,
-          },
-          getData: () => ({
-            title: 'Session Formats',
-            back: {
-              to: '/schedule',
-              title: 'Schedule',
+        children: [
+          ...formats.map(format => ({
+            path: `format/${format.id}`,
+            template: 'src/containers/Schedule.mdx',
+            sharedData: {
+              schedule: scheduleShared,
             },
-            meta: {
-              title: `${format.title} | Formats`,
+            getData: () => ({
+              title: format.title,
+              back: {
+                to: '/schedule',
+                title: 'Schedule',
+              },
+              meta: {
+                title: `${format.title} | Formats`,
+              },
+              contents: format.contents,
+            }),
+          })),
+          ...sessions.map(session => ({
+            path: `session/${session.id}`,
+            template: 'src/containers/Schedule.mdx',
+            sharedData: {
+              schedule: scheduleShared,
             },
-            contents: format.contents,
-          }),
-        })),
+            getData: () => ({
+              title: session.title,
+              back: {
+                to: '/schedule',
+                title: 'Schedule',
+              },
+              meta: {
+                title: `${session.title} | Sessions`,
+              },
+              contents: session.contents,
+            }),
+          })),
+        ],
       },
     ]
   },

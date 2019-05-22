@@ -1,11 +1,13 @@
-interface SessionItem {
+type SessionItem = {
   id: string
   contents: string
   title: string
 }
 
 export type Speaker = SessionItem & {}
-export type Location = SessionItem & {}
+export type Location = SessionItem & {
+  venueId: Venue
+}
 export type Venue = SessionItem & {}
 
 export type Time = {
@@ -20,17 +22,29 @@ export type Format = SessionItem & {
 }
 
 export type Session = SessionItem & {
-  formatId: string
+  format: Format
+  speakers?: Speaker[]
+}
+
+export type Event = SessionItem & {
+  sessionId: string
   startTime: string
   endTime?: string
   type?: string
-  speakers: Speaker[]
 }
 
 export type Day = SessionItem & {
   date: string
   desc?: string
-  sessions: Session[]
+  events: Event[]
 }
 
 export type Schedule = Day[]
+
+export type ScheduleData = {
+  schedule: Schedule
+  venues: Venue[]
+  locations: Location[]
+  speakers: Speaker[]
+  formats: Format[]
+}
