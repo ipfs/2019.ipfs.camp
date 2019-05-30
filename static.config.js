@@ -67,6 +67,14 @@ Array.prototype.mapIds = function(cb) {
   })
 }
 
+// return one
+const findById = (collection, index, key = 'id') =>
+  collection.find(item => item[key] === index)
+
+// return all
+const filterById = (collection, index, key = 'id') =>
+  collection.filter(item => item[key] === index)
+
 export default {
   // tweaks for CI
   maxThreads: process.env.CI ? 1 : Infinity,
@@ -117,15 +125,11 @@ export default {
     const speakers = content.speakers.mapIds()
     const sessions = content.sessions.mapIds()
     const venues = content.venues.mapIds()
-
     const locations = content.locations.mapIds()
 
     const scheduleShared = createSharedData({
       schedule,
       formats,
-      speakers,
-      venues,
-      locations,
     })
 
     return [
@@ -137,40 +141,74 @@ export default {
         },
         getData: async () => ({}),
         children: [
-          ...formats.map(format => ({
-            path: `format/${format.id}`,
+          ...formats.map(item => ({
+            path: `format/${item.id}`,
             template: 'src/containers/Schedule.mdx',
             sharedData: {
               schedule: scheduleShared,
             },
             getData: () => ({
-              title: format.title,
+              title: item.title,
               back: {
                 to: '/schedule',
                 title: 'Schedule',
               },
               meta: {
-                title: `${format.title} | Formats`,
+                title: `${item.title} | Formats`,
               },
-              contents: format.contents,
+              contents: item.contents,
             }),
           })),
-          ...sessions.map(session => ({
-            path: `session/${session.id}`,
+          ...sessions.map(item => ({
+            path: `session/${item.id}`,
+            template: 'src/containers/Schedule.mdx',
+            sharedData: {
+              schedule: scheduleShared,
+            },
+            getData: () => {
+              // console.log(schedule[0].events)
+              const events = filterById(
+                schedule[0].events,
+                item.id,
+                'sessionId',
+              )
+              console.log(events)
+
+              const loc = events.map(event =>
+                filterById(locations, event.locationId, 'id'),
+              )
+              return {
+                title: item.title,
+                back: {
+                  to: '/schedule',
+                  title: 'Schedule',
+                },
+                meta: {
+                  title: `${item.title} | Sessions`,
+                },
+                contents: item.contents,
+                locations: loc,
+                events,
+              }
+            },
+          })),
+          ...locations.map(item => ({
+            path: `location/${item.id}`,
             template: 'src/containers/Schedule.mdx',
             sharedData: {
               schedule: scheduleShared,
             },
             getData: () => ({
-              title: session.title,
+              title: item.title,
               back: {
                 to: '/schedule',
                 title: 'Schedule',
               },
               meta: {
-                title: `${session.title} | Sessions`,
+                title: `${item.title} | Locations`,
               },
-              contents: session.contents,
+              contents: item.contents,
+              loc: item,
             }),
           })),
         ],

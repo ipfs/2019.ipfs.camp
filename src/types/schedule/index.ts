@@ -4,17 +4,20 @@ type SessionItem = {
   title: string
 }
 
+export type SessionItemData = {
+  venues?: Venue[]
+  locations?: Location[]
+  speakers?: Speaker[]
+  format?: Format
+  sessions?: Session[]
+  events?: Event[]
+}
+
 export type Speaker = SessionItem & {}
 export type Location = SessionItem & {
   venueId: Venue
 }
 export type Venue = SessionItem & {}
-
-export type Time = {
-  startTime: string
-  endTime: string
-  session: Session
-}
 
 export type Format = SessionItem & {
   legend: string
@@ -28,6 +31,7 @@ export type Session = SessionItem & {
 
 export type Event = SessionItem & {
   sessionId: string
+  locationId: string
   startTime: string
   endTime?: string
   type?: string

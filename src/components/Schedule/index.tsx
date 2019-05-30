@@ -7,7 +7,11 @@ import { Heading } from '@components/System'
 import { Modal } from '@components/Modal'
 import { Head } from '@components/Meta'
 
-import { ScheduleData, Day as TDay } from '../../types/schedule'
+import {
+  ScheduleData,
+  SessionItemData,
+  Day as TDay,
+} from '../../types/schedule'
 
 type DayProps = {
   day: TDay
@@ -44,6 +48,11 @@ const Day: React.FC<DayProps> = ({ day }) => (
             ) : (
               event.title
             )}
+            {event.locationId && (
+              <Link to={`/schedule/location/${event.locationId}`}>
+                {event.locationId}
+              </Link>
+            )}
           </div>
         </div>
       ))}
@@ -51,7 +60,7 @@ const Day: React.FC<DayProps> = ({ day }) => (
   </div>
 )
 
-type ScheduleProps = {
+type ScheduleProps = SessionItemData & {
   schedule: ScheduleData
   title: string
   contents: string
@@ -89,12 +98,14 @@ export const Formats: React.FC<FormatProps> = ({
   </>
 )
 
-type ScheduleModalProps = ScheduleProps & RouteComponentProps
+type ScheduleModalProps = RouteComponentProps & ScheduleProps
 
 const ScheduleModal: React.FC<ScheduleModalProps> = ({
   location,
   meta,
   contents,
+  locations,
+  events,
 }) => {
   // const current = location.pathname
   //   .split('/')
@@ -102,7 +113,7 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
   //   .pop()
 
   const shouldOpenModal = (locationPath: string) => {
-    return /format|session/.test(locationPath)
+    return /format|session|location/.test(locationPath)
   }
 
   return (
@@ -124,30 +135,27 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
         onRequestClose={() => navigate('/schedule')}
       >
         <div className="lh-copy mw7">{contents && convert(contents)}</div>
+
+        {locations && (
+          <div>
+            <h1>Where?</h1>
+            {JSON.stringify(locations)}
+          </div>
+        )}
+        {JSON.stringify(events)}
       </Modal>
     </>
   )
 }
 
-export const Schedule: React.FC<ScheduleProps> = ({
-  schedule,
-  title,
-  meta,
-  contents,
-}) => (
+export const Schedule: React.FC<ScheduleProps> = ({ schedule, ...rest }) => (
   <div>
     <Formats formats={schedule.formats} />
     {schedule.schedule.map(day => (
       <Day key={day.date} day={day} />
     ))}
     <Router primary={false}>
-      <ScheduleModal
-        path="schedule/*"
-        schedule={schedule}
-        meta={meta}
-        contents={contents}
-        title={title}
-      />
+      <ScheduleModal path="schedule/*" schedule={schedule} {...rest} />
     </Router>
   </div>
 )
