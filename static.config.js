@@ -75,6 +75,53 @@ const findById = (collection, index, key = 'id') =>
 const filterById = (collection, index, key = 'id') =>
   collection.filter(item => item[key] === index)
 
+const getEventsBySession = (collection, id, key = 'sessionId') => {
+  return collection.reduce((all, day) => {
+    const events = filterById(day.events, id, key)
+    if (events.length) {
+      all.push({ ...day, events })
+    }
+    return all
+  }, [])
+}
+
+// events.map(day =>
+//   day.events.map(event => filterById(locations, event.locationId, 'id')),
+// )
+
+// TODO
+const getLocationsByEvents = (collection, id, key = 'locationId') => {
+  return collection.reduce((all, day) => {
+    const locations = day.events.map(event => findById())
+    if (locations.length) {
+      all.push({ ...day, events })
+    }
+    return all
+  }, [])
+}
+
+const getFormatBySession = (sessions, formats, id, formatId) => {
+  return sessions.find(s => s.formatId === formatId)
+}
+
+const getEventsByFormat = (events, sessions, id, key = 'formatId') => {
+  return events.flatMap(day => {
+    return {
+      ...day,
+      events: day.events.filter(event => {
+        const session = event.sessionId && findById(sessions, event.sessionId)
+        return !!session && session.formatId === id
+      }),
+    }
+  })
+}
+
+const getEventsBySpeaker = ''
+const getEventsByLocation = ''
+const getSpeakersBySession = ''
+const getLocationsByVenue = ''
+const getVenueByLocation = ''
+
 export default {
   // tweaks for CI
   maxThreads: process.env.CI ? 1 : Infinity,
@@ -147,17 +194,21 @@ export default {
             sharedData: {
               schedule: scheduleShared,
             },
-            getData: () => ({
-              title: item.title,
-              back: {
-                to: '/schedule',
-                title: 'Schedule',
-              },
-              meta: {
-                title: `${item.title} | Formats`,
-              },
-              contents: item.contents,
-            }),
+            getData: () => {
+              const events = getEventsByFormat(schedule, sessions, item.id)
+              return {
+                title: item.title,
+                back: {
+                  to: '/schedule',
+                  title: 'Schedule',
+                },
+                meta: {
+                  title: `${item.title} | Formats`,
+                },
+                contents: item.contents,
+                events,
+              }
+            },
           })),
           ...sessions.map(item => ({
             path: `session/${item.id}`,
@@ -166,17 +217,16 @@ export default {
               schedule: scheduleShared,
             },
             getData: () => {
-              // console.log(schedule[0].events)
-              const events = filterById(
-                schedule[0].events,
-                item.id,
-                'sessionId',
-              )
-              console.log(events)
+              // get all events for this session
+              const events = getEventsBySession(schedule, item.id, 'sessionId')
 
-              const loc = events.map(event =>
-                filterById(locations, event.locationId, 'id'),
+              // get all locations for this session
+              const loc = events.flatMap(day =>
+                day.events.flatMap(event =>
+                  filterById(locations, event.locationId, 'id'),
+                ),
               )
+
               return {
                 title: item.title,
                 back: {
