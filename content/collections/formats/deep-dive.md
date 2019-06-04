@@ -1,4 +1,5 @@
 ---
+type: deep-dive
 title: Deep Dives
 contentURL: https://raw.githubusercontent.com/ipfs/camp/master/DEEP_DIVES/README.md
 legend: 🐋

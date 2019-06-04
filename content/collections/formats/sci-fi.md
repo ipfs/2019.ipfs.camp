@@ -1,4 +1,5 @@
 ---
+type: sci-fi
 title: Sci-Fi Fair
 contentURL: https://raw.githubusercontent.com/ipfs/camp/master/SCI-FI_FAIR/README.md
 legend: 🧬

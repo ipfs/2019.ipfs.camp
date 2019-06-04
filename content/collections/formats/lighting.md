@@ -1,4 +1,5 @@
 ---
+type: lighting
 title: Lighting Talks
 contentURL: https://raw.githubusercontent.com/ipfs/camp/master/LIGHTING_TALKS/README.md
 legend: ⚡️
