@@ -107,11 +107,6 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
   locations,
   events,
 }) => {
-  // const current = location.pathname
-  //   .split('/')
-  //   .filter(el => el)
-  //   .pop()
-
   const shouldOpenModal = (locationPath: string) => {
     return /format|session|location/.test(locationPath)
   }
