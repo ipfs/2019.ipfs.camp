@@ -7,30 +7,14 @@ import { Heading } from '@components/System'
 import { Modal } from '@components/Modal'
 import { Head } from '@components/Meta'
 
-type Session = {
-  startTime: string
-  endTime?: string
-  title: string
-  type?: string
-}
-
-type Day = {
-  date: string
-  title: string
-  desc?: string
-  sessions: Session[]
-}
+import {
+  ScheduleData,
+  SessionItemData,
+  Day as TDay,
+} from '../../types/schedule'
 
 type DayProps = {
-  day: Day
-}
-
-type Format = {
-  type: string
-  title: string
-  legend: string
-  contents: string
-  contentURL?: string
+  day: TDay
 }
 
 const Day: React.FC<DayProps> = ({ day }) => (
@@ -47,17 +31,28 @@ const Day: React.FC<DayProps> = ({ day }) => (
         <div className="dtc b ph3">Session</div>
       </div>
 
-      {day.sessions.map((session, i) => (
+      {day.events.map((event, i) => (
         <div key={i} className="dt-row pt2 pb2">
           <div className="dtc nowrap bb primary9 pv3 b--neutral5">
-            {session.startTime} {session.endTime && ` - ${session.endTime}`}
+            {event.startTime} {event.endTime && ` - ${event.endTime}`}
           </div>
           <div
             className={`dtc ph3 pv3 bb b--neutral4 f4-ns w-100 ${
-              session.type && session.type === 'break' ? 'neutral3' : 'dark3'
+              event.type && event.type === 'break' ? 'neutral3' : 'dark3'
             }`}
           >
-            {session.title}
+            {event.sessionId ? (
+              <Link to={`/schedule/session/${event.sessionId}`}>
+                {event.title}
+              </Link>
+            ) : (
+              event.title
+            )}
+            {event.locationId && (
+              <Link to={`/schedule/location/${event.locationId}`}>
+                {event.locationId}
+              </Link>
+            )}
           </div>
         </div>
       ))}
@@ -65,16 +60,17 @@ const Day: React.FC<DayProps> = ({ day }) => (
   </div>
 )
 
-type ScheduleProps = {
-  schedule: Day[]
-  formats: Format[]
+type ScheduleProps = SessionItemData & {
+  schedule: ScheduleData
+  title: string
+  contents: string
   meta: {
     title: string
   }
 }
 
 type FormatProps = {
-  formats: Format[]
+  formats: ScheduleData['formats']
   title?: string
 }
 
@@ -87,9 +83,9 @@ export const Formats: React.FC<FormatProps> = ({
     <div className="nested-list-reset">
       <ul>
         {formats.map(format => (
-          <li key={format.type}>
+          <li key={format.id}>
             <Link
-              to={`schedule/formats/${format.type}`}
+              to={`schedule/format/${format.id}`}
               title={format.title}
               className="dib pv1"
             >
@@ -102,21 +98,22 @@ export const Formats: React.FC<FormatProps> = ({
   </>
 )
 
-type ScheduleModal = ScheduleProps & RouteComponentProps
+type ScheduleModalProps = RouteComponentProps & ScheduleProps
 
-const ScheduleModal: React.FC<ScheduleModal> = props => {
-  const current = props.location.pathname
-    .split('/')
-    .filter(el => el)
-    .pop()
-  const format = props.formats.find(format => format.type === current)
+const ScheduleModal: React.FC<ScheduleModalProps> = ({
+  location,
+  meta,
+  contents,
+  locations,
+  events,
+}) => {
   const shouldOpenModal = (locationPath: string) => {
-    return /formats|session/.test(locationPath)
+    return /format|session|location/.test(locationPath)
   }
-  const title = props.meta ? props.meta.title : ''
+
   return (
     <>
-      <Head>{title && <title>{title}</title>}</Head>
+      {meta && <Head>{meta.title && <title>{meta.title}</title>}</Head>}
       <Modal
         overlayClassName={{
           base:
@@ -129,32 +126,36 @@ const ScheduleModal: React.FC<ScheduleModal> = props => {
           afterOpen: 'modal-base_after-open',
           beforeClose: 'modal-base_before-close',
         }}
-        isOpen={shouldOpenModal(props.location.pathname)}
+        isOpen={shouldOpenModal(location.pathname)}
         onRequestClose={() => navigate('/schedule')}
       >
-        <div className="lh-copy mw7">{format && convert(format.contents)}</div>
+        <div className="lh-copy mw7">{contents && convert(contents)}</div>
+
+        {locations && locations.length > 0 && (
+          <div>
+            <h1>Where?</h1>
+            {JSON.stringify(locations)}
+          </div>
+        )}
+        {events && events[0] && events[0].events.length > 0 && (
+          <div>
+            <h1>Events</h1>
+            {JSON.stringify(events)}
+          </div>
+        )}
       </Modal>
     </>
   )
 }
 
-export const Schedule: React.FC<ScheduleProps> = ({
-  schedule,
-  formats,
-  meta,
-}) => (
+export const Schedule: React.FC<ScheduleProps> = ({ schedule, ...rest }) => (
   <div>
-    <Formats formats={formats} />
-    {schedule.map(day => (
+    <Formats formats={schedule.formats} />
+    {schedule.schedule.map(day => (
       <Day key={day.date} day={day} />
     ))}
     <Router primary={false}>
-      <ScheduleModal
-        path="schedule/*"
-        schedule={schedule}
-        formats={formats}
-        meta={meta}
-      />
+      <ScheduleModal path="schedule/*" schedule={schedule} {...rest} />
     </Router>
   </div>
 )

@@ -81,7 +81,7 @@ const Private = ({ waitlistCta, waitlist, regCta }: TicketData) => (
 )
 
 export const Tickets = () => {
-  const { tickets } = useSiteData()
+  const { tickets } = useSiteData<SiteData>()
   return (
     <div className="flex flex-column flex-row-ns space-between">
       <Private {...tickets} />
