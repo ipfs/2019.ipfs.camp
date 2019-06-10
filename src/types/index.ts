@@ -12,6 +12,7 @@ export type SiteData = {
     waitlistLink: string
     regCta: string
     regLink: string
+    onSale: boolean
   }
   meta: {
     url: string

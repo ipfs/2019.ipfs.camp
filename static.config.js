@@ -150,6 +150,7 @@ export default {
       waitlistLink: 'Waitlist',
       regCta: 'Apply',
       regLink: 'Register',
+      onSale: false,
     },
     meta: {
       url: 'https://camp.ipfs.io',
