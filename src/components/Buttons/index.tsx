@@ -8,10 +8,11 @@ type ButtonProps<T> = LinkProps<T> & {
   type?: 'primary'
   size?: 'large'
   block?: boolean
+  outline?: boolean
+  primaryColor?: string
 }
 
-const defaultClassName =
-  'white pv3 ph4 grow pointer br2 bg-primary3 monospace lh-solid'
+const defaultClassName = 'pv3 ph4 grow pointer br2 monospace lh-solid'
 
 const Button: React.FC<ButtonProps<HTMLAnchorElement>> = ({
   to,
@@ -21,20 +22,20 @@ const Button: React.FC<ButtonProps<HTMLAnchorElement>> = ({
   type,
   size,
   block,
+  outline,
+  primaryColor = 'primary3',
   ...rest
 }) => {
-  const cx = `${className} ${size === 'large' ? 'f3' : 'f5'} ${
-    block ? 'db' : 'dib'
-  }`
+  const cx = `${className} ${outline && 'ba b1'} ${primaryColor} ${
+    size === 'large' ? 'f3' : 'f5'
+  } ${block ? 'db' : 'dib'}`
   return (
     <Link href={href} to={to} className={cx} {...rest}>
       {children}
     </Link>
   )
 }
-const StyledButton = styled(Button)`
-  color: white !important;
-`
+const StyledButton = styled(Button)``
 
 StyledButton.defaultProps = {
   className: defaultClassName,

@@ -55,8 +55,16 @@ export default () => {
               June 27-30 · Barcelona, Spain
             </Text>
             <p className="mv4">
-              <Button to="register">
-                {tickets.waitlist ? tickets.waitlistCta : tickets.regCta}
+              <Button
+                to="register"
+                outline={!tickets.onSale}
+                primaryColor="white"
+              >
+                {tickets.onSale
+                  ? tickets.waitlist
+                    ? tickets.waitlistCta
+                    : tickets.regLink
+                  : 'Sold Out'}
               </Button>
             </p>
           </Box>

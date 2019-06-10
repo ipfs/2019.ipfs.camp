@@ -57,35 +57,50 @@ const ApplicationBtn = ({
   </Button>
 )
 
-const Shared = ({ waitlistCta, waitlist, regCta }: TicketData) => (
+const Shared = ({ waitlistCta, waitlist, regCta, onSale }: TicketData) => (
   <TicketCard>
     <h2>Shared Twin Room</h2>
     <Price>795 €</Price>
     <Benefits />
-    <ApplicationBtn
-      href="https://docs.google.com/forms/d/e/1FAIpQLSesrGYpB6JbvFyRtd_vmol-nMxiAljfylab-hRizzrzbEAZww/viewform?usp=pp_url&entry.552566347=Shared+Twin+Room+795+%E2%82%AC"
-      ctaText={waitlist ? waitlistCta : regCta}
-    />
+    {onSale ? (
+      <ApplicationBtn
+        href="https://docs.google.com/forms/d/e/1FAIpQLSesrGYpB6JbvFyRtd_vmol-nMxiAljfylab-hRizzrzbEAZww/viewform?usp=pp_url&entry.552566347=Shared+Twin+Room+795+%E2%82%AC"
+        ctaText={waitlist ? waitlistCta : regCta}
+      />
+    ) : (
+      <h2>Sold Out</h2>
+    )}
   </TicketCard>
 )
-const Private = ({ waitlistCta, waitlist, regCta }: TicketData) => (
+const Private = ({ waitlistCta, waitlist, regCta, onSale }: TicketData) => (
   <TicketCard>
     <h2>Private Double Room</h2>
     <Price>995 €</Price>
     <Benefits />
-    <ApplicationBtn
-      href="https://docs.google.com/forms/d/e/1FAIpQLSesrGYpB6JbvFyRtd_vmol-nMxiAljfylab-hRizzrzbEAZww/viewform?usp=pp_url&entry.552566347=Private+Double+Room+995+%E2%82%AC"
-      ctaText={waitlist ? waitlistCta : regCta}
-    />
+    {onSale ? (
+      <ApplicationBtn
+        href="https://docs.google.com/forms/d/e/1FAIpQLSesrGYpB6JbvFyRtd_vmol-nMxiAljfylab-hRizzrzbEAZww/viewform?usp=pp_url&entry.552566347=Private+Double+Room+995+%E2%82%AC"
+        ctaText={waitlist ? waitlistCta : regCta}
+      />
+    ) : (
+      <h2>Sold Out</h2>
+    )}
   </TicketCard>
 )
 
-export const Tickets = () => {
+export const Tickets = ({ waitListText }: { waitListText: string }) => {
   const { tickets } = useSiteData<SiteData>()
   return (
-    <div className="flex flex-column flex-row-ns space-between">
-      <Private {...tickets} />
-      <Shared {...tickets} />
-    </div>
+    <>
+      {tickets.onSale && tickets.waitlist && (
+        <p>
+          <strong>{waitListText}</strong>
+        </p>
+      )}
+      <div className="flex flex-column flex-row-ns space-between">
+        <Private {...tickets} />
+        <Shared {...tickets} />
+      </div>
+    </>
   )
 }
