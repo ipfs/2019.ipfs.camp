@@ -131,13 +131,13 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
       >
         <div className="lh-copy mw7">{contents && convert(contents)}</div>
 
-        {locations && locations.length > 1 && (
+        {locations && locations.length > 0 && (
           <div>
             <h1>Where?</h1>
             {JSON.stringify(locations)}
           </div>
         )}
-        {events && events[0] && events[0].events.length > 1 && (
+        {events && events[0] && events[0].events.length > 0 && (
           <div>
             <h1>Events</h1>
             {JSON.stringify(events)}
