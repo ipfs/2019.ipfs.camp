@@ -10,7 +10,7 @@ export type SessionItemData = {
   speakers?: Speaker[]
   format?: Format
   sessions?: Session[]
-  events?: Event[]
+  events?: Day[]
 }
 
 export type Speaker = SessionItem & {}
