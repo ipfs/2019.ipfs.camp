@@ -47,7 +47,7 @@ const NavItems: React.FC = () => {
         </NavLink>
       </li>
       <li className="dib pv2 link ml3-ns">
-        <Button to="/register" outline={!tickets.onSale}>
+        <Button to="/register" outline={!tickets.onSale} primaryColor="dark3">
           {tickets.onSale
             ? tickets.waitlist
               ? tickets.waitlistCta
