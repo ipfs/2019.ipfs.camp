@@ -47,8 +47,12 @@ const NavItems: React.FC = () => {
         </NavLink>
       </li>
       <li className="dib pv2 link ml3-ns">
-        <Button to="/register">
-          {tickets.waitlist ? tickets.waitlistCta : tickets.regLink}
+        <Button to="/register" outline={!tickets.onSale}>
+          {tickets.onSale
+            ? tickets.waitlist
+              ? tickets.waitlistCta
+              : tickets.regLink
+            : 'Sold Out'}
         </Button>
       </li>
     </>
@@ -125,7 +129,7 @@ const App = () => {
           </Match>
           <Box className="sans-serif white transition-all">
             <FadeIn>
-              <main className="nested-links">
+              <main>
                 <MDXProvider>
                   <Router primary={false}>
                     <ScrollToTop path="*" exclude={/schedule/}>

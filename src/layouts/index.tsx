@@ -27,7 +27,10 @@ export const Page: React.FC<PageProps> = ({ children, meta, title }) => (
         </Box>
       </Hero>
     )}
-    <Box className="ph4 pv3 ph5-ns pv3-ns center mw9 lh-copy" color="dark3">
+    <Box
+      className="nested-links ph4 pv3 ph5-ns pv3-ns center mw9 lh-copy"
+      color="dark3"
+    >
       <Box className={meta && meta.className}>{children}</Box>
     </Box>
   </>
