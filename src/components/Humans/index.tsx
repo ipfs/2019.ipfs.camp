@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Humans } from 'types/humans'
+import { Humans, Human } from 'types/humans'
 
 const HumanImage = styled.img`
   min-width: 128px;
@@ -15,12 +15,12 @@ type HumanGridProps = {
 export const HumanGrid: React.FC<HumanGridProps> = ({ humans }) => (
   <div className="flex flex-wrap justify-center">
     {humans.map(human => (
-      <Human key={human.title} {...human} />
+      <HumanTile key={human.title} {...human} />
     ))}
   </div>
 )
 
-export const Human = (human: any) => (
+export const HumanTile = (human: Human) => (
   <div className="mw4 ma2">
     <div className="tc lh-copy">
       <a href={`https://github.com/${human.github}`}>
@@ -30,7 +30,6 @@ export const Human = (human: any) => (
         />
       </a>
       <p className="f6">{human.title}</p>
-      <RolePills roles={human.roles} />
     </div>
   </div>
 )
