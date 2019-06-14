@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import { Humans, Human } from 'types/humans'
 
 const HumanImage = styled.img`
-  min-width: 128px;
-  min-height: 128px;
   transition: all 0.5s;
 `
 
@@ -15,21 +13,33 @@ type HumanGridProps = {
 export const HumanGrid: React.FC<HumanGridProps> = ({ humans }) => (
   <div className="flex flex-wrap justify-center">
     {humans.map(human => (
-      <HumanTile key={human.title} {...human} />
+      <HumanTile size={256} className="ma3" key={human.title} {...human} />
     ))}
   </div>
 )
 
-export const HumanTile = (human: Human) => (
-  <div className="mw4 ma2">
+type HumanTileProps = Human & {
+  className?: string
+  size?: number
+}
+
+export const HumanTile: React.FC<HumanTileProps> = ({
+  github,
+  title,
+  className,
+  size = 256,
+}) => (
+  <div className={className} style={{ maxWidth: size / 2 }}>
     <div className="tc lh-copy">
-      <a href={`https://github.com/${human.github}`}>
+      <a href={`https://github.com/${github}`}>
         <HumanImage
-          className="br3 bg-animate grow"
-          src={`https://github.com/${human.github}.png?size=200`}
+          className="img br3 bg-animate grow"
+          alt={title}
+          style={{ width: size / 2, height: size / 2 }}
+          src={`https://github.com/${github}.png?size=${size}`}
         />
       </a>
-      <p className="f6">{human.title}</p>
+      <p className="f6">{title}</p>
     </div>
   </div>
 )
