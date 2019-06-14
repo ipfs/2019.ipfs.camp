@@ -170,7 +170,7 @@ export default {
     const formats = content.formats
       .sort((a, b) => (a.title > b.title ? 1 : -1))
       .mapIds()
-    const speakers = content.speakers.mapIds()
+    const humans = content.humans.mapIds()
     const sessions = content.sessions.mapIds()
     const venues = content.venues.mapIds()
     const locations = content.locations.mapIds()
@@ -182,9 +182,9 @@ export default {
 
     return [
       {
-        path: 'speakers',
-        template: 'src/containers/Speakers',
-        getData: async () => ({ speakers, title: 'Contributors' }),
+        path: 'team',
+        template: 'src/containers/Team',
+        getData: async () => ({ humans, title: '🏕 Team' }),
       },
       {
         path: 'schedule',
