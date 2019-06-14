@@ -2,7 +2,7 @@
 title:
 github:
 roles:
-  - team
+  - none
 ---
 
 #
