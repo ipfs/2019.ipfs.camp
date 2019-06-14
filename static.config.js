@@ -182,6 +182,11 @@ export default {
 
     return [
       {
+        path: 'speakers',
+        template: 'src/containers/Speakers',
+        getData: async () => ({ speakers, title: 'Contributors' }),
+      },
+      {
         path: 'schedule',
         template: 'src/containers/Schedule.mdx',
         sharedData: {
