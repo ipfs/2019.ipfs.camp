@@ -20,22 +20,17 @@ export default () => {
       <Heading>Production Team</Heading>
       <div className="flex flex-wrap justify-center">
         <HumanGrid
-          humans={humans
-            .filter(human => !!human.roles.includes('core'))
-            .sort(() => Math.random() - 0.5)}
+          humans={humans.filter(human => !!human.roles.includes('core'))}
         />
       </div>
       <Heading>Speakers & Trainers</Heading>
       <div className="flex flex-wrap justify-center">
         <HumanGrid
-          humans={humans
-            .filter(
-              human =>
-                (human.roles.includes('team') &&
-                  !human.roles.includes('core')) ||
-                human.roles.includes('contrib'),
-            )
-            .sort(() => Math.random() - 0.5)}
+          humans={humans.filter(
+            human =>
+              (human.roles.includes('team') && !human.roles.includes('core')) ||
+              human.roles.includes('contrib'),
+          )}
         />
       </div>
     </Page>
