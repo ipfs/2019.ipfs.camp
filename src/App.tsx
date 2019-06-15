@@ -32,6 +32,11 @@ const NavItems: React.FC = () => {
         </NavLink>
       </li>
       <li className="dib">
+        <NavLink className="dark3 pv3 mh3" to="/team">
+          Team
+        </NavLink>
+      </li>
+      <li className="dib">
         <NavLink className="dark3 pv3 mh3" to="/location">
           Location
         </NavLink>

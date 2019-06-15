@@ -27,9 +27,10 @@ export const Footer: React.FC<FooterProps> = () => (
             <Link to="/">About</Link>
           </li>
           <li>
-            <Link className="" to="/register">
-              Registration
-            </Link>
+            <Link to="/schedule">Schedule</Link>
+          </li>
+          <li>
+            <Link to="/team">Team</Link>
           </li>
           <li>
             <Link to="/faq">FAQ</Link>
