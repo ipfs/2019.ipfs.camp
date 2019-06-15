@@ -3,7 +3,8 @@ title: Oli Evans
 github: olizilla
 roles:
   - team
-  - core
+  - content
+  - contrib
 ---
 
 # Oli Evans

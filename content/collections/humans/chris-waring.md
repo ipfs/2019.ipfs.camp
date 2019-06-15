@@ -3,7 +3,7 @@ title: Chris Waring
 github: cwaring
 roles:
   - team
-  - core
+  - production
 ---
 
 # Chris Waring

@@ -3,7 +3,7 @@ title: Molly Mackinlay
 github: momack2
 roles:
   - team
-  - core
+  - content
 ---
 
 # Molly Mackinlay

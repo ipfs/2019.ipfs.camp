@@ -20,17 +20,19 @@ export default () => {
       <Heading>Production Team</Heading>
       <div className="flex flex-wrap justify-center">
         <HumanGrid
-          humans={humans.filter(human => !!human.roles.includes('core'))}
+          humans={humans.filter(human => human.roles.includes('production'))}
+        />
+      </div>
+      <Heading>Content Team</Heading>
+      <div className="flex flex-wrap justify-center">
+        <HumanGrid
+          humans={humans.filter(human => human.roles.includes('content'))}
         />
       </div>
       <Heading>Speakers & Trainers</Heading>
       <div className="flex flex-wrap justify-center">
         <HumanGrid
-          humans={humans.filter(
-            human =>
-              (human.roles.includes('team') && !human.roles.includes('core')) ||
-              human.roles.includes('contrib'),
-          )}
+          humans={humans.filter(human => human.roles.includes('contrib'))}
         />
       </div>
     </Page>

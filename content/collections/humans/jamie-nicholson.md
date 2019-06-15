@@ -3,7 +3,7 @@ title: Jamie Nicholson
 github: jamiejn
 roles:
   - team
-  - core
+  - production
 ---
 
 # Jamie Nicholson

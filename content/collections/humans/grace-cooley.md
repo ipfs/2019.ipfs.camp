@@ -3,7 +3,7 @@ title: Grace Cooley
 github: keepitcooley
 roles:
   - team
-  - core
+  - production
 ---
 
 # Grace Cooley

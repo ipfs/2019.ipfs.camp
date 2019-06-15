@@ -3,7 +3,7 @@ title: Agata Krych
 github: akrych
 roles:
   - team
-  - core
+  - production
 ---
 
 # Agata Krych

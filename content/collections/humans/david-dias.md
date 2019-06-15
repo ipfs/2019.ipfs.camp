@@ -3,7 +3,8 @@ title: David Dias
 github: daviddias
 roles:
   - team
-  - core
+  - production
+  - contrib
 ---
 
 # David Dias

@@ -3,7 +3,7 @@ title: Angie Maguire
 github: angiemaguire
 roles:
   - team
-  - core
+  - production
 ---
 
 # Angie Maguire

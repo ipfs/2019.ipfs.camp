@@ -3,7 +3,7 @@ title: Jakub Sztandera
 github: kubuxu
 roles:
   - team
-  - core
+  - production
 ---
 
 # Jakub Sztandera

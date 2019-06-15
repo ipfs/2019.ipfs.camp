@@ -2,7 +2,7 @@
 title: Paulo Marcos
 github: paulobmarcos
 roles:
-  - team
+  - contrib
 ---
 
 # Paulo Marcos

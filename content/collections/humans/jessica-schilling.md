@@ -3,7 +3,7 @@ title: Jessica Schilling
 github: jessicaschilling
 roles:
   - team
-  - core
+  - content
 ---
 
 # Jessica Schilling
