@@ -20,7 +20,7 @@
 
 .stars,
 .stars-cl {
-  animation: 4000s linear infinite rotate;
+  /* animation: 4000s linear infinite rotate; */
   background: url('./stars.svg') center/1000px auto repeat;
   height: 100%;
   left: calc(50% - 1000px);
@@ -34,7 +34,7 @@
 }
 
 .stars-cl {
-  animation: 2000s linear infinite rotate, 20s linear infinite alternate pulse;
+  /* animation: 2000s linear infinite rotate, 20s linear infinite alternate pulse; */
   background-size: 100%;
   opacity: 0.2;
 }
