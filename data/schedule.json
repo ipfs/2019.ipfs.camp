@@ -5,7 +5,7 @@
     "desc": "Arrive, settle in and get to know your fellow campers.",
     "events": [
       {
-        "startTime": "14:30",
+        "startTime": "15:00",
         "title": "Shuttle departs BCN airport (Terminal 1)"
       },
       {
@@ -18,7 +18,7 @@
         "title": "Train station: Shuttles from Terrassa Train Station (every half hour until 6pm)"
       },
       {
-        "startTime": "16:00",
+        "startTime": "17:00",
         "title": "Shuttle departs BCN airport (Terminal 1)"
       },
       {
