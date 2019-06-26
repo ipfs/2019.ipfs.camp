@@ -206,7 +206,6 @@ export default {
             },
             getData: () => {
               const events = getEventsByFormat(schedule, sessions, item.id)
-              console.log(events)
               return {
                 title: item.title,
                 back: {

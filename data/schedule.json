@@ -71,11 +71,6 @@
       },
       {
         "startTime": "09:00",
-        "endTime": "13:30",
-        "title": "👩🏽‍🏫 Core Courses Part I"
-      },
-      {
-        "startTime": "09:00",
         "endTime": "10:15",
         "title": "Core Course A",
         "sessionId": "core-course-a"
@@ -184,7 +179,8 @@
       {
         "startTime": "17:30",
         "endTime": "19:00",
-        "title": "⚡️ Lightning Talks I"
+        "title": "⚡️ Lightning Talks I",
+        "sessionId": "lightning-talks"
       },
       {
         "startTime": "19:00",
@@ -239,7 +235,8 @@
       {
         "startTime": "14:30",
         "endTime": "16:30",
-        "title": "🐋 Deep Dives"
+        "title": "🐋 Deep Dives",
+        "sessionId": "deep-dives"
       },
       {
         "startTime": "16:30",
@@ -254,7 +251,8 @@
       {
         "startTime": "18:30",
         "endTime": "19:00",
-        "title": "⚡️ Lightning Talks II"
+        "title": "⚡️ Lightning Talks II",
+        "sessionId": "lightning-talks"
       },
       {
         "startTime": "19:00",
