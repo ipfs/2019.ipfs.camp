@@ -18,7 +18,7 @@
       {
         "startTime": "15:00",
         "endTime": "18:00",
-        "title": "Train station: Shuttles from Terrassa Train Station (every half hour until 6pm)",
+        "title": "Train station: Shuttles from Terrassa Train Station",
         "sessionId": "terrasa-shuttle",
         "locationId": "terassa-train-station"
       },
@@ -227,6 +227,36 @@
         "title": "👩🏽‍🏫 Core Courses Part II & Elective Courses"
       },
       {
+        "startTime": "09:00",
+        "endTime": "10:15",
+        "title": "Core Course A",
+        "sessionId": "core-course-a"
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "10:15",
+        "title": "Core Course B",
+        "sessionId": "core-course-b"
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "10:15",
+        "title": "Core Course C",
+        "sessionId": "core-course-c"
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "10:15",
+        "title": "Core Course D",
+        "sessionId": "core-course-d"
+      },
+      {
+        "startTime": "10:15",
+        "endTime": "10:30",
+        "title": "Break",
+        "type": "break"
+      },
+      {
         "startTime": "13:30",
         "endTime": "14:30",
         "title": "Lunch",
@@ -241,12 +271,14 @@
       {
         "startTime": "16:30",
         "endTime": "18:30",
-        "title": "🧬 Sci-Fi Fair"
+        "title": "🧬 Sci-Fi Fair",
+        "sessionId": "sci-fi-fair"
       },
       {
         "startTime": "16:30",
         "endTime": "18:30",
-        "title": "🧩 Unconf"
+        "title": "🧩 Unconf",
+        "sessionId": "unconf"
       },
       {
         "startTime": "18:30",

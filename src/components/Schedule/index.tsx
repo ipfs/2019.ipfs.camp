@@ -49,9 +49,12 @@ const Day: React.FC<DayProps> = ({ day }) => (
               event.title
             )}
             {event.locationId && (
-              <Link to={`/schedule/location/${event.locationId}`}>
-                {event.locationId}
-              </Link>
+              <div className="f5">
+                <span className="mr2">📍location:</span>
+                <Link to={`/schedule/location/${event.locationId}`}>
+                  {event.locationId}
+                </Link>
+              </div>
             )}
           </div>
         </div>

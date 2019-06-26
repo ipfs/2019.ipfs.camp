@@ -7,7 +7,7 @@ speakers:
   - Alex Potsides
 ---
 
-# `Core B` Solving distributed networking problems with libp2p
+# Solving distributed networking problems with libp2p
 
 > In this course we will cover common problems encountered when developing distributed apps and ways we are able to solve them with libp2p. As we discuss these capabilities we will implement them in live coding exercises to see them in action.
 
