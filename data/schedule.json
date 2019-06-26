@@ -6,20 +6,27 @@
     "events": [
       {
         "startTime": "15:00",
-        "title": "Shuttle departs BCN airport (Terminal 1)"
+        "title": "1st shuttle departs BCN airport (Terminal 1)",
+        "sessionId": "bcn-shuttle",
+        "locationId": "terminal-1"
       },
       {
         "startTime": "15:00",
-        "title": "Check in opens"
+        "title": "Check in opens",
+        "sessionId": "registration"
       },
       {
         "startTime": "15:00",
         "endTime": "18:00",
-        "title": "Train station: Shuttles from Terrassa Train Station (every half hour until 6pm)"
+        "title": "Train station: Shuttles from Terrassa Train Station (every half hour until 6pm)",
+        "sessionId": "terrasa-shuttle",
+        "locationId": "terassa-train-station"
       },
       {
         "startTime": "17:00",
-        "title": "Shuttle departs BCN airport (Terminal 1)"
+        "title": "2nd shuttle departs BCN airport (Terminal 1)",
+        "sessionId": "bcn-shuttle",
+        "locationId": "terminal-1"
       },
       {
         "startTime": "18:00",
@@ -28,7 +35,8 @@
       },
       {
         "startTime": "19:00",
-        "title": "Welcome to IPFS Camp"
+        "title": "Welcome to IPFS Camp",
+        "sessionId": "core-course-a"
       },
       {
         "startTime": "19:30",
@@ -67,6 +75,96 @@
         "title": "👩🏽‍🏫 Core Courses Part I"
       },
       {
+        "startTime": "09:00",
+        "endTime": "10:15",
+        "title": "Core Course A",
+        "sessionId": "core-course-a"
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "10:15",
+        "title": "Core Course B",
+        "sessionId": "core-course-b"
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "10:15",
+        "title": "Core Course C",
+        "sessionId": "core-course-c"
+      },
+      {
+        "startTime": "09:00",
+        "endTime": "10:15",
+        "title": "Core Course D",
+        "sessionId": "core-course-d"
+      },
+      {
+        "startTime": "10:15",
+        "endTime": "10:30",
+        "title": "Break",
+        "type": "break"
+      },
+      {
+        "startTime": "10:30",
+        "endTime": "11:45",
+        "title": "Core Course A",
+        "sessionId": "core-course-a"
+      },
+      {
+        "startTime": "10:30",
+        "endTime": "11:45",
+        "title": "Core Course B",
+        "sessionId": "core-course-b"
+      },
+      {
+        "startTime": "10:30",
+        "endTime": "11:45",
+        "title": "Core Course C",
+        "sessionId": "core-course-c"
+      },
+      {
+        "startTime": "10:30",
+        "endTime": "10:15",
+        "title": "Core Course D",
+        "sessionId": "core-course-d"
+      },
+      {
+        "startTime": "11:40",
+        "endTime": "12:00",
+        "title": "Break",
+        "type": "break"
+      },
+      {
+        "startTime": "12:00",
+        "endTime": "13:15",
+        "title": "Core Course A",
+        "sessionId": "core-course-a"
+      },
+      {
+        "startTime": "12:00",
+        "endTime": "13:15",
+        "title": "Core Course B",
+        "sessionId": "core-course-b"
+      },
+      {
+        "startTime": "12:00",
+        "endTime": "13:15",
+        "title": "Core Course C",
+        "sessionId": "core-course-c"
+      },
+      {
+        "startTime": "12:00",
+        "endTime": "13:15",
+        "title": "Core Course D",
+        "sessionId": "core-course-d"
+      },
+      {
+        "startTime": "10:15",
+        "endTime": "10:30",
+        "title": "Break",
+        "type": "break"
+      },
+      {
         "startTime": "13:30",
         "endTime": "14:30",
         "title": "Lunch",
@@ -75,7 +173,8 @@
       {
         "startTime": "14:30",
         "endTime": "16:30",
-        "title": "📃 Poster Projects"
+        "title": "Poster Projects",
+        "sessionId": "poster-projects"
       },
       {
         "startTime": "16:30",

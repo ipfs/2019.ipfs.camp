@@ -137,7 +137,7 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
             {JSON.stringify(locations)}
           </div>
         )}
-        {events && events[0] && events[0].events.length > 0 && (
+        {events && (
           <div>
             <h1>Events</h1>
             {JSON.stringify(events)}
