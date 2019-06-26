@@ -10,6 +10,8 @@ import {
   createSharedData,
 } from 'react-static/node'
 
+import masterSchedule from './data/schedule.json'
+
 import slug from 'slug'
 
 // promisify readFile
@@ -104,8 +106,8 @@ const getFormatBySession = (sessions, formats, id, formatId) => {
   return sessions.find(s => s.formatId === formatId)
 }
 
-const getEventsByFormat = (events, sessions, id, key = 'formatId') => {
-  return events.flatMap(day => {
+const getEventsByFormat = (schedule, sessions, id, key = 'formatId') => {
+  return schedule.flatMap(day => {
     return {
       ...day,
       events: day.events.filter(event => {
@@ -115,6 +117,8 @@ const getEventsByFormat = (events, sessions, id, key = 'formatId') => {
     }
   })
 }
+
+const hasEvents = days => days.some(day => day.events.length >= 1)
 
 const getEventsBySpeaker = ''
 const getEventsByLocation = ''
@@ -165,7 +169,7 @@ export default {
   getRoutes: async ({ dev }) => {
     const content = await jdown('content', { fileInfo: true })
 
-    const schedule = await readJSON('./data/schedule.json')
+    const schedule = masterSchedule
 
     const formats = content.formats
       .sort((a, b) => (a.title > b.title ? 1 : -1))
@@ -202,6 +206,7 @@ export default {
             },
             getData: () => {
               const events = getEventsByFormat(schedule, sessions, item.id)
+              console.log(events)
               return {
                 title: item.title,
                 back: {
@@ -212,7 +217,7 @@ export default {
                   title: `${item.title} | Formats`,
                 },
                 contents: item.contents,
-                events,
+                events: hasEvents(events) && events,
               }
             },
           })),
