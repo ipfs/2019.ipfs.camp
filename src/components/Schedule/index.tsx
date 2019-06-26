@@ -108,6 +108,7 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
   meta,
   contents,
   locations,
+  venues,
   events,
 }) => {
   const shouldOpenModal = (locationPath: string) => {
@@ -144,6 +145,12 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
           <div>
             <h1>Events</h1>
             {JSON.stringify(events)}
+          </div>
+        )}
+        {venues && (
+          <div>
+            <h1>Venues</h1>
+            {JSON.stringify(venues)}
           </div>
         )}
       </Modal>
