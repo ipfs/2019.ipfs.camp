@@ -124,7 +124,8 @@ const getEventsBySpeaker = ''
 const getEventsByLocation = ''
 const getSpeakersBySession = ''
 const getLocationsByVenue = ''
-const getVenueByLocation = ''
+const getVenueByLocation = (venues, id) =>
+  venues && venues.find(venue => venue.id === id)
 
 export default {
   // tweaks for CI
@@ -258,18 +259,22 @@ export default {
             sharedData: {
               schedule: scheduleShared,
             },
-            getData: () => ({
-              title: item.title,
-              back: {
-                to: '/schedule',
-                title: 'Schedule',
-              },
-              meta: {
-                title: `${item.title} | Locations`,
-              },
-              contents: item.contents,
-              loc: item,
-            }),
+            getData: () => {
+              const selectedVenue = getVenueByLocation(venues, item.venueId)
+              return {
+                title: item.title,
+                back: {
+                  to: '/schedule',
+                  title: 'Schedule',
+                },
+                meta: {
+                  title: `${item.title} | Locations`,
+                },
+                contents: item.contents,
+                // locations: item,
+                venues: selectedVenue,
+              }
+            },
           })),
         ],
       },
