@@ -173,10 +173,10 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
 
 export const Schedule: React.FC<ScheduleProps> = ({ schedule, ...rest }) => (
   <div>
-    <Formats formats={schedule.formats} />
     {schedule.schedule.map(day => (
       <Day key={day.date} day={day} />
     ))}
+    <Formats formats={schedule.formats} />
     <Router primary={false}>
       <ScheduleModal path="schedule/*" schedule={schedule} {...rest} />
     </Router>
