@@ -30,7 +30,9 @@
       {
         "startTime": "18:00",
         "title": "Aperitifs",
-        "type": "break"
+        "type": "break",
+        "sessionId": "aperitifs-1",
+        "locationId": "caravan"
       },
       {
         "startTime": "19:00",
