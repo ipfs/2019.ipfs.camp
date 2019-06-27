@@ -254,7 +254,8 @@
         "startTime": "09:00",
         "endTime": "10:15",
         "title": "Core Course A",
-        "sessionId": "core-course-a"
+        "sessionId": "core-course-a",
+        "locationId": "diane-burko"
       },
       {
         "startTime": "09:00",
