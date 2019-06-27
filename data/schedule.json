@@ -175,18 +175,21 @@
         "startTime": "14:30",
         "endTime": "16:30",
         "title": "Poster Projects",
-        "sessionId": "poster-projects"
+        "sessionId": "poster-projects",
+        "locationId": "mas-bonvilar"
       },
       {
         "startTime": "16:30",
         "endTime": "17:30",
-        "title": "📣 Report back, present your Poster and share what you learned with the Group!"
+        "title": "📣 Report back, present your Poster and share what you learned with the Group!",
+        "locationId": "mas-bonvilar"
       },
       {
         "startTime": "17:30",
         "endTime": "19:00",
         "title": "⚡️ Lightning Talks I",
-        "sessionId": "lightning-talks"
+        "sessionId": "lightning-talks",
+        "locationId": "mas-bonvilar"
       },
       {
         "startTime": "19:00",
