@@ -47,7 +47,8 @@
       },
       {
         "startTime": "20:00",
-        "title": "Group Dinner"
+        "title": "Group Dinner",
+        "locationId": "restaurant-terrace"
       }
     ]
   },
@@ -59,18 +60,20 @@
       {
         "startTime": "07:00",
         "endTime": "08:00",
-        "title": "Daily Morning Fitness (Running, Biking, Yoga, Swimming)"
+        "title": "Daily Morning Fitness (Running)"
       },
       {
         "startTime": "07:00",
         "endTime": "08:30",
         "title": "Breakfast",
-        "type": "break"
+        "type": "break",
+        "locationId": "restaurant"
       },
       {
         "startTime": "08:30",
         "endTime": "09:00",
-        "title": "Opening Announcements"
+        "title": "Opening Announcements",
+        "locationId": "mas-bonvilar"
       },
       {
         "startTime": "09:00",
@@ -189,12 +192,14 @@
         "startTime": "19:00",
         "endTime": "19:30",
         "title": "Aperitifs",
-        "type": "break"
+        "type": "break",
+        "locationId": "restaurant-terrace"
       },
       {
         "startTime": "19:30",
         "endTime": "21:30",
-        "title": "Group Dinner"
+        "title": "Group Dinner",
+        "locationId": "restaurant"
       },
       {
         "startTime": "21:30",
@@ -211,23 +216,20 @@
       {
         "startTime": "07:00",
         "endTime": "08:00",
-        "title": "Daily Morning Fitness (Running, Biking, Yoga, Swimming)"
+        "title": "Daily Morning Fitness (Biking)"
       },
       {
         "startTime": "07:00",
         "endTime": "08:30",
         "title": "Breakfast",
-        "type": "break"
+        "type": "break",
+        "locationId": "restaurant"
       },
       {
         "startTime": "08:30",
         "endTime": "09:00",
-        "title": "Opening Announcements"
-      },
-      {
-        "startTime": "09:00",
-        "endTime": "13:30",
-        "title": "👩🏽‍🏫 Core Courses Part II & Elective Courses"
+        "title": "Opening Announcements",
+        "locationId": "mas-bonvilar"
       },
       {
         "startTime": "09:00",
@@ -329,19 +331,22 @@
         "startTime": "16:30",
         "endTime": "18:30",
         "title": "🧬 Sci-Fi Fair",
-        "sessionId": "sci-fi-fair"
+        "sessionId": "sci-fi-fair",
+        "locationId": "mas-bonvilar"
       },
       {
         "startTime": "16:30",
         "endTime": "18:30",
         "title": "🧩 Unconf",
-        "sessionId": "unconf"
+        "sessionId": "unconf",
+        "locationId": "mas-bonvilar"
       },
       {
         "startTime": "18:30",
         "endTime": "19:00",
         "title": "⚡️ Lightning Talks II",
-        "sessionId": "lightning-talks"
+        "sessionId": "lightning-talks",
+        "locationId": "mas-bonvilar"
       },
       {
         "startTime": "19:30",
@@ -368,25 +373,23 @@
     "events": [
       {
         "startTime": "07:00",
-        "endTime": "8:00",
-        "title": "Daily Morning Fitness (Running, Biking, Yoga, Swimming)"
-      },
-      {
-        "startTime": "07:00",
         "endTime": "8:30",
         "title": "Breakfast",
-        "type": "break"
+        "type": "break",
+        "locationId": "restaurant"
       },
       {
         "startTime": "09:00",
         "endTime": "12:00",
-        "title": "🎓 Graduation Ceremony & Closing Keynote"
+        "title": "🎓 Graduation Ceremony & Closing Keynote",
+        "locationId": "mas-bonvilar"
       },
       {
         "startTime": "12:00",
         "endTime": "13:00",
         "title": "Lunch",
-        "type": "break"
+        "type": "break",
+        "locationId": "restaurant"
       },
       {
         "startTime": "13:00",

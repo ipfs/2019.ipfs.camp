@@ -1,5 +1,5 @@
 ---
-title: Breakfast
+title: Group Activity
 ---
 
 # Surprise group activity

@@ -1,6 +1,8 @@
 ---
 venueId: campus-la-mola
-title: Resturant Terrace
+title: Restaurant Terrace
 ---
 
-# Resturant Terrace
+# Restaurant Terrace
+
+La Mola building, downstairs from reception - #8 on your map

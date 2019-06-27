@@ -5,4 +5,4 @@ title: Caravan
 
 # Caravan
 
-La Mola building - on the front lawn outside reception, number 3 on your room map
+La Mola building, on the front lawn outside reception, #3 on your room map
