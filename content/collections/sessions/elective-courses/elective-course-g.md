@@ -12,7 +12,7 @@ title: Managing Datasets with QRI
 | **Brendan O'Brien**                                   | **Michelle Brous**                                     | **N/A**                                              |
 | ----------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------- |
 | ![](https://avatars0.githubusercontent.com/u/1154390) | ![](https://avatars2.githubusercontent.com/u/17201865) | ![](https://avatars1.githubusercontent.com/u/583231) |
-| [@b5](https://github.com/b5/)                         | [@na](https://github.com/michellebrous)                | [@na](https://github.com/na)                         |
+| [@b5](https://github.com/b5/)                         | [@michellebrous](https://github.com/michellebrous)     | [@na](https://github.com/na)                         |
 
 ## What you will learn with this Course
 

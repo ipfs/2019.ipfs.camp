@@ -141,7 +141,7 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
               location =>
                 location && (
                   <div className="f6">
-                    Location:{' '}
+                    📍location:{' '}
                     <Link to={`schedule/location/${location.id}`}>
                       {location.title}
                     </Link>
