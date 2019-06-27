@@ -175,7 +175,10 @@ export default {
     },
   }),
   getRoutes: async ({ dev }) => {
-    const content = await jdown('content', { fileInfo: true })
+    const content = await jdown('content', {
+      fileInfo: true,
+      assets: { output: 'public', path: '/' },
+    })
 
     const schedule = masterSchedule
 

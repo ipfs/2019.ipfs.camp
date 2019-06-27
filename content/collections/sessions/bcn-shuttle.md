@@ -9,3 +9,5 @@ IPFS Camp shuttles will leave from Terminal 1 (international terminal) at BCN at
 Our meeting point is Go Natural in Terminal 1 arrivals.
 
 ### **Look out for Grace wearing an IPFS t-shirt and holding an IPFS Camp sign.**
+
+![](./assets/grace.jpg)
