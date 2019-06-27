@@ -162,6 +162,7 @@ export default {
       regCta: 'Apply',
       regLink: 'Register',
       onSale: false,
+      viewSchedule: true,
     },
     meta: {
       url: 'https://camp.ipfs.io',

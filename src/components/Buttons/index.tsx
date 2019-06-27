@@ -12,7 +12,7 @@ type ButtonProps<T> = LinkProps<T> & {
   primaryColor?: string
 }
 
-const defaultClassName = 'pv3 ph4 grow pointer br2 monospace lh-solid'
+const defaultClassName = 'pv3 ph4 grow pointer br2 monospace lh-solid white'
 
 const Button: React.FC<ButtonProps<HTMLAnchorElement>> = ({
   to,
@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps<HTMLAnchorElement>> = ({
   size,
   block,
   outline,
-  primaryColor = 'primary3',
+  primaryColor = 'bg-primary3',
   ...rest
 }) => {
   const cx = `${className} ${outline && 'ba b1'} ${primaryColor} ${

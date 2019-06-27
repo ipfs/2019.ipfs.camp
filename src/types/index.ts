@@ -13,6 +13,7 @@ export type SiteData = {
     regCta: string
     regLink: string
     onSale: boolean
+    viewSchedule: boolean
   }
   meta: {
     url: string
