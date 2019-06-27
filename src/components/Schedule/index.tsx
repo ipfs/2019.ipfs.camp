@@ -137,20 +137,29 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
 
         {locations && locations.length > 0 && (
           <div>
-            <h1>Where?</h1>
-            {JSON.stringify(locations)}
+            {locations.map(
+              location =>
+                location && (
+                  <div className="f6">
+                    Location:{' '}
+                    <Link to={`schedule/location/${location.id}`}>
+                      {location.title}
+                    </Link>
+                  </div>
+                ),
+            )}
+            {/* {JSON.stringify(locations)} */}
           </div>
         )}
         {events && (
-          <div>
-            <h1>Events</h1>
-            {JSON.stringify(events)}
-          </div>
+          <div>{/* <h1>Events</h1>
+            {JSON.stringify(events)} */}</div>
         )}
         {venues && (
           <div>
-            <h1>Venues</h1>
-            {JSON.stringify(venues)}
+            <h3>Venue</h3>
+            {venues.map(venue => venue && venue.title)}
+            {/* {JSON.stringify(venues)} */}
           </div>
         )}
       </Modal>

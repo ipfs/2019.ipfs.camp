@@ -8,25 +8,24 @@
         "startTime": "15:00",
         "title": "1st shuttle departs BCN airport (Terminal 1)",
         "sessionId": "bcn-shuttle",
-        "locationId": "terminal-1"
+        "locationId": "bcn-terminal-1"
       },
       {
         "startTime": "15:00",
-        "title": "Check in opens",
-        "sessionId": "registration"
+        "title": "Check in opens"
       },
       {
         "startTime": "15:00",
         "endTime": "18:00",
-        "title": "Train station: Shuttles from Terrassa Train Station",
+        "title": "Train station: Shuttles from Terrassa Rambla Train Station",
         "sessionId": "terrasa-shuttle",
-        "locationId": "terassa-train-station"
+        "locationId": "terassa-rambla-train-station"
       },
       {
         "startTime": "17:00",
         "title": "2nd shuttle departs BCN airport (Terminal 1)",
         "sessionId": "bcn-shuttle",
-        "locationId": "terminal-1"
+        "locationId": "bcn-terminal-1"
       },
       {
         "startTime": "18:00",
@@ -35,8 +34,7 @@
       },
       {
         "startTime": "19:00",
-        "title": "Welcome to IPFS Camp",
-        "sessionId": "core-course-a"
+        "title": "Welcome to IPFS Camp"
       },
       {
         "startTime": "19:30",

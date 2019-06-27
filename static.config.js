@@ -272,7 +272,7 @@ export default {
                 },
                 contents: item.contents,
                 // locations: item,
-                venues: selectedVenue,
+                venues: [selectedVenue],
               }
             },
           })),
