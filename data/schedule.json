@@ -325,7 +325,8 @@
         "startTime": "14:30",
         "endTime": "16:30",
         "title": "🐋 Deep Dives",
-        "sessionId": "deep-dives"
+        "sessionId": "deep-dives",
+        "locationId": "mas-bonvilar"
       },
       {
         "startTime": "16:30",
