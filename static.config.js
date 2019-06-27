@@ -10,6 +10,8 @@ import {
   createSharedData,
 } from 'react-static/node'
 
+import masterSchedule from './data/schedule.json'
+
 import slug from 'slug'
 
 // promisify readFile
@@ -89,6 +91,12 @@ const getEventsBySession = (collection, id, key = 'sessionId') => {
 //   day.events.map(event => filterById(locations, event.locationId, 'id')),
 // )
 
+function removeDuplicates(myArr, prop) {
+  return myArr.filter((obj, pos, arr) => {
+    return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos
+  })
+}
+
 // TODO
 const getLocationsByEvents = (collection, id, key = 'locationId') => {
   return collection.reduce((all, day) => {
@@ -104,8 +112,8 @@ const getFormatBySession = (sessions, formats, id, formatId) => {
   return sessions.find(s => s.formatId === formatId)
 }
 
-const getEventsByFormat = (events, sessions, id, key = 'formatId') => {
-  return events.flatMap(day => {
+const getEventsByFormat = (schedule, sessions, id, key = 'formatId') => {
+  return schedule.flatMap(day => {
     return {
       ...day,
       events: day.events.filter(event => {
@@ -116,11 +124,14 @@ const getEventsByFormat = (events, sessions, id, key = 'formatId') => {
   })
 }
 
+const hasEvents = days => days.some(day => day.events.length >= 1)
+
 const getEventsBySpeaker = ''
 const getEventsByLocation = ''
 const getSpeakersBySession = ''
 const getLocationsByVenue = ''
-const getVenueByLocation = ''
+const getVenueByLocation = (venues, id) =>
+  venues && venues.find(venue => venue.id === id)
 
 export default {
   // tweaks for CI
@@ -151,6 +162,7 @@ export default {
       regCta: 'Apply',
       regLink: 'Register',
       onSale: false,
+      viewSchedule: true,
     },
     meta: {
       url: 'https://camp.ipfs.io',
@@ -163,9 +175,12 @@ export default {
     },
   }),
   getRoutes: async ({ dev }) => {
-    const content = await jdown('content', { fileInfo: true })
+    const content = await jdown('content', {
+      fileInfo: true,
+      assets: { output: 'public', path: '/' },
+    })
 
-    const schedule = await readJSON('./data/schedule.json')
+    const schedule = masterSchedule
 
     const formats = content.formats
       .sort((a, b) => (a.title > b.title ? 1 : -1))
@@ -212,7 +227,7 @@ export default {
                   title: `${item.title} | Formats`,
                 },
                 contents: item.contents,
-                events,
+                events: hasEvents(events) && events,
               }
             },
           })),
@@ -243,7 +258,7 @@ export default {
                   title: `${item.title} | Sessions`,
                 },
                 contents: item.contents,
-                locations: loc,
+                locations: removeDuplicates(loc, 'id'),
                 events,
               }
             },
@@ -254,18 +269,22 @@ export default {
             sharedData: {
               schedule: scheduleShared,
             },
-            getData: () => ({
-              title: item.title,
-              back: {
-                to: '/schedule',
-                title: 'Schedule',
-              },
-              meta: {
-                title: `${item.title} | Locations`,
-              },
-              contents: item.contents,
-              loc: item,
-            }),
+            getData: () => {
+              const selectedVenue = getVenueByLocation(venues, item.venueId)
+              return {
+                title: item.title,
+                back: {
+                  to: '/schedule',
+                  title: 'Schedule',
+                },
+                meta: {
+                  title: `${item.title} | Locations`,
+                },
+                contents: item.contents,
+                // locations: item,
+                venues: [selectedVenue],
+              }
+            },
           })),
         ],
       },

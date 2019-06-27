@@ -49,9 +49,12 @@ const Day: React.FC<DayProps> = ({ day }) => (
               event.title
             )}
             {event.locationId && (
-              <Link to={`/schedule/location/${event.locationId}`}>
-                {event.locationId}
-              </Link>
+              <div className="f5">
+                <span className="mr2">📍location:</span>
+                <Link to={`/schedule/location/${event.locationId}`}>
+                  {event.locationId}
+                </Link>
+              </div>
             )}
           </div>
         </div>
@@ -105,6 +108,7 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
   meta,
   contents,
   locations,
+  venues,
   events,
 }) => {
   const shouldOpenModal = (locationPath: string) => {
@@ -129,18 +133,37 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
         isOpen={shouldOpenModal(location.pathname)}
         onRequestClose={() => navigate('/schedule')}
       >
-        <div className="lh-copy mw7">{contents && convert(contents)}</div>
+        <div className="lh-copy mw7 nested-links">
+          {contents && convert(contents)}
+        </div>
 
         {locations && locations.length > 0 && (
           <div>
-            <h1>Where?</h1>
-            {JSON.stringify(locations)}
+            {locations.map(
+              location =>
+                location && (
+                  <div key={location.id} className="f6">
+                    📍location:{' '}
+                    <Link to={`schedule/location/${location.id}`}>
+                      {location.title}
+                    </Link>
+                  </div>
+                ),
+            )}
+            {/* {JSON.stringify(locations)} */}
           </div>
         )}
-        {events && events[0] && events[0].events.length > 0 && (
+        {events && (
+          <div>{/* <h1>Events</h1>
+            {JSON.stringify(events)} */}</div>
+        )}
+        {venues && (
           <div>
-            <h1>Events</h1>
-            {JSON.stringify(events)}
+            <h3>Venue</h3>
+            {venues.map(
+              venue => venue && <div key={venue.id}>{venue.title}</div>,
+            )}
+            {/* {JSON.stringify(venues)} */}
           </div>
         )}
       </Modal>
@@ -150,10 +173,10 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
 
 export const Schedule: React.FC<ScheduleProps> = ({ schedule, ...rest }) => (
   <div>
-    <Formats formats={schedule.formats} />
     {schedule.schedule.map(day => (
       <Day key={day.date} day={day} />
     ))}
+    <Formats formats={schedule.formats} />
     <Router primary={false}>
       <ScheduleModal path="schedule/*" schedule={schedule} {...rest} />
     </Router>
