@@ -91,6 +91,12 @@ const getEventsBySession = (collection, id, key = 'sessionId') => {
 //   day.events.map(event => filterById(locations, event.locationId, 'id')),
 // )
 
+function removeDuplicates(myArr, prop) {
+  return myArr.filter((obj, pos, arr) => {
+    return arr.map(mapObj => mapObj[prop]).indexOf(obj[prop]) === pos
+  })
+}
+
 // TODO
 const getLocationsByEvents = (collection, id, key = 'locationId') => {
   return collection.reduce((all, day) => {
@@ -248,7 +254,7 @@ export default {
                   title: `${item.title} | Sessions`,
                 },
                 contents: item.contents,
-                locations: loc,
+                locations: removeDuplicates(loc, 'id'),
                 events,
               }
             },
