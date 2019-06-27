@@ -60,7 +60,9 @@
       {
         "startTime": "07:00",
         "endTime": "08:00",
-        "title": "Daily Morning Fitness (Running)"
+        "title": "Daily Morning Fitness (Running)",
+        "locationId": "lobby",
+        "sessionId": "fitness-running"
       },
       {
         "startTime": "07:00",
@@ -79,25 +81,29 @@
         "startTime": "09:00",
         "endTime": "10:15",
         "title": "Core Course A",
-        "sessionId": "core-course-a"
+        "sessionId": "core-course-a",
+        "locationId": "diane-burko"
       },
       {
         "startTime": "09:00",
         "endTime": "10:15",
         "title": "Core Course B",
-        "sessionId": "core-course-b"
+        "sessionId": "core-course-b",
+        "locationId": "chris-jordan"
       },
       {
         "startTime": "09:00",
         "endTime": "10:15",
         "title": "Core Course C",
-        "sessionId": "core-course-c"
+        "sessionId": "core-course-c",
+        "locationId": "nids"
       },
       {
         "startTime": "09:00",
         "endTime": "10:15",
         "title": "Core Course D",
-        "sessionId": "core-course-d"
+        "sessionId": "core-course-d",
+        "locationId": "art-in-nature"
       },
       {
         "startTime": "10:15",
@@ -109,25 +115,29 @@
         "startTime": "10:30",
         "endTime": "11:45",
         "title": "Core Course A",
-        "sessionId": "core-course-a"
+        "sessionId": "core-course-a",
+        "locationId": "diane-burko"
       },
       {
         "startTime": "10:30",
         "endTime": "11:45",
         "title": "Core Course B",
-        "sessionId": "core-course-b"
+        "sessionId": "core-course-b",
+        "locationId": "chris-jordan"
       },
       {
         "startTime": "10:30",
         "endTime": "11:45",
         "title": "Core Course C",
-        "sessionId": "core-course-c"
+        "sessionId": "core-course-c",
+        "locationId": "nids"
       },
       {
         "startTime": "10:30",
         "endTime": "10:15",
         "title": "Core Course D",
-        "sessionId": "core-course-d"
+        "sessionId": "core-course-d",
+        "locationId": "art-in-nature"
       },
       {
         "startTime": "11:40",
@@ -139,25 +149,29 @@
         "startTime": "12:00",
         "endTime": "13:15",
         "title": "Core Course A",
-        "sessionId": "core-course-a"
+        "sessionId": "core-course-a",
+        "locationId": "diane-burko"
       },
       {
         "startTime": "12:00",
         "endTime": "13:15",
         "title": "Core Course B",
-        "sessionId": "core-course-b"
+        "sessionId": "core-course-b",
+        "locationId": "chris-jordan"
       },
       {
         "startTime": "12:00",
         "endTime": "13:15",
         "title": "Core Course C",
-        "sessionId": "core-course-c"
+        "sessionId": "core-course-c",
+        "locationId": "nids"
       },
       {
         "startTime": "12:00",
         "endTime": "13:15",
         "title": "Core Course D",
-        "sessionId": "core-course-d"
+        "sessionId": "core-course-d",
+        "locationId": "art-in-nature"
       },
       {
         "startTime": "10:15",
@@ -219,7 +233,9 @@
       {
         "startTime": "07:00",
         "endTime": "08:00",
-        "title": "Daily Morning Fitness (Biking)"
+        "title": "Daily Morning Fitness (Biking)",
+        "locationId": "lobby",
+        "sessionId": "fitness-biking"
       },
       {
         "startTime": "07:00",
@@ -244,19 +260,22 @@
         "startTime": "09:00",
         "endTime": "10:15",
         "title": "Core Course B",
-        "sessionId": "core-course-b"
+        "sessionId": "core-course-b",
+        "locationId": "chris-jordan"
       },
       {
         "startTime": "09:00",
         "endTime": "10:15",
         "title": "Core Course C",
-        "sessionId": "core-course-c"
+        "sessionId": "core-course-c",
+        "locationId": "nids"
       },
       {
         "startTime": "09:00",
         "endTime": "10:15",
         "title": "Core Course D",
-        "sessionId": "core-course-d"
+        "sessionId": "core-course-d",
+        "locationId": "art-in-nature"
       },
       {
         "startTime": "10:15",
@@ -268,25 +287,29 @@
         "startTime": "10:30",
         "endTime": "11:45",
         "title": "Elective Course A",
-        "sessionId": "elective-course-a"
+        "sessionId": "elective-course-a",
+        "locationId": "diane-burko"
       },
       {
         "startTime": "10:30",
         "endTime": "11:45",
         "title": "Elective Course B",
-        "sessionId": "elective-course-b"
+        "sessionId": "elective-course-b",
+        "locationId": "chris-jordan"
       },
       {
         "startTime": "10:30",
         "endTime": "11:45",
         "title": "Elective Course C",
-        "sessionId": "elective-course-c"
+        "sessionId": "elective-course-c",
+        "locationId": "nids"
       },
       {
         "startTime": "10:30",
         "endTime": "11:45",
         "title": "Elective Course D",
-        "sessionId": "elective-course-d"
+        "sessionId": "elective-course-d",
+        "locationId": "art-in-nature"
       },
       {
         "startTime": "11:45",
@@ -298,25 +321,29 @@
         "startTime": "12:00",
         "endTime": "13:15",
         "title": "Elective Course E",
-        "sessionId": "elective-course-e"
+        "sessionId": "elective-course-e",
+        "locationId": "diane-burko"
       },
       {
         "startTime": "12:00",
         "endTime": "13:15",
         "title": "Elective Course F",
-        "sessionId": "elective-course-f"
+        "sessionId": "elective-course-f",
+        "locationId": "chris-jordan"
       },
       {
         "startTime": "12:00",
         "endTime": "13:15",
         "title": "Elective Course G",
-        "sessionId": "elective-course-g"
+        "sessionId": "elective-course-g",
+        "locationId": "nids"
       },
       {
         "startTime": "12:00",
         "endTime": "13:15",
         "title": "Elective Course H",
-        "sessionId": "elective-course-h"
+        "sessionId": "elective-course-h",
+        "locationId": "art-in-nature"
       },
       {
         "startTime": "13:30",
@@ -361,12 +388,14 @@
       {
         "startTime": "20:00",
         "endTime": "21:30",
-        "title": "Group Dinner with a Surprise 🎁"
+        "title": "Group Dinner with a Surprise 🎁",
+        "locationId": "restaurant"
       },
       {
         "startTime": "21:30",
         "endTime": "...",
-        "title": "Music on the Terrace"
+        "title": "Music on the Terrace",
+        "locationId": "restaurant-terrace"
       }
     ]
   },
