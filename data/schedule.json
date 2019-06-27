@@ -36,11 +36,14 @@
       },
       {
         "startTime": "19:00",
-        "title": "Welcome to IPFS Camp"
+        "title": "Welcome to IPFS Camp",
+        "sessionId": "welcome-into",
+        "locationId": "mas-bonvilar"
       },
       {
         "startTime": "19:30",
-        "title": "Group Activity"
+        "title": "Group Activity",
+        "locationId": "mas-bonvilar"
       },
       {
         "startTime": "20:00",
