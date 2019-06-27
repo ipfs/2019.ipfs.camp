@@ -133,14 +133,16 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
         isOpen={shouldOpenModal(location.pathname)}
         onRequestClose={() => navigate('/schedule')}
       >
-        <div className="lh-copy mw7">{contents && convert(contents)}</div>
+        <div className="lh-copy mw7 nested-links">
+          {contents && convert(contents)}
+        </div>
 
         {locations && locations.length > 0 && (
           <div>
             {locations.map(
               location =>
                 location && (
-                  <div className="f6">
+                  <div key={location.id} className="f6">
                     📍location:{' '}
                     <Link to={`schedule/location/${location.id}`}>
                       {location.title}
@@ -158,7 +160,9 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({
         {venues && (
           <div>
             <h3>Venue</h3>
-            {venues.map(venue => venue && venue.title)}
+            {venues.map(
+              venue => venue && <div key={venue.id}>{venue.title}</div>,
+            )}
             {/* {JSON.stringify(venues)} */}
           </div>
         )}
