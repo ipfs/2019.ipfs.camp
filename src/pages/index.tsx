@@ -67,10 +67,10 @@ export default () => {
                     : 'Sold Out'}
                 </Button>
               )}
-              <Text className="mv4 pt-mono f4 f3-ns">
-                June 27-30 · Barcelona, Spain
-              </Text>
             </p>
+            <Text className="mv4 pt-mono f4 f3-ns">
+              June 27-30 · Barcelona, Spain
+            </Text>
           </Box>
         </Box>
       </Hero>
