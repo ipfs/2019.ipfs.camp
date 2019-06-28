@@ -207,14 +207,14 @@
         "locationId": "mas-bonvilar"
       },
       {
-        "startTime": "19:00",
-        "endTime": "19:30",
+        "startTime": "19:30",
+        "endTime": "20:00",
         "title": "Aperitifs",
         "type": "break",
         "locationId": "restaurant-terrace"
       },
       {
-        "startTime": "19:30",
+        "startTime": "20:00",
         "endTime": "21:30",
         "title": "Group Dinner",
         "locationId": "restaurant"
@@ -222,7 +222,7 @@
       {
         "startTime": "21:30",
         "endTime": "...",
-        "title": "Group Activity",
+        "title": "Games on the Lawn",
         "locationId": "caravan"
       }
     ]
@@ -390,13 +390,19 @@
         "locationId": "mas-bonvilar"
       },
       {
-        "startTime": "19:30",
-        "endTime": "20:00",
+        "startTime": "19:00",
+        "endTime": "19:45",
+        "title": "Break",
+        "type": "break"
+      },
+      {
+        "startTime": "19:45",
+        "endTime": "20:15",
         "title": "Aperitifs",
         "type": "break"
       },
       {
-        "startTime": "20:00",
+        "startTime": "20:15",
         "endTime": "21:30",
         "title": "Special Group Dinner",
         "locationId": "mas-bonvilar"
