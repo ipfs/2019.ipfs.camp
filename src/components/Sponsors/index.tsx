@@ -11,7 +11,7 @@ export const Sponsors = () => (
     <section className="ph4 ph5-ns pv5 mw9 center tc dark3">
       <Heading>Thanks to our sponsors &amp; community partners</Heading>
       <div className="flex flex-column flex-row-ns w-80 w-100-ns mw8 items-center center">
-        <div className="ma4">
+        <div className="mh4 mv3">
           <a className="db" href="https://protocol.ai">
             <img
               className="h4"
@@ -19,12 +19,12 @@ export const Sponsors = () => (
             />
           </a>
         </div>
-        <div className="ma4">
+        <div className="mh4 mv3">
           <a className="db" href="https://pinata.cloud/">
             <img className="h4" src={require('./pinata-logo.svg')} />
           </a>
         </div>
-        <div className="ma4">
+        <div className="mh4 mv3">
           <a className="db" href="https://qri.io/">
             <img className="h4" src={require('./qri-logo.svg')} />
           </a>
@@ -34,7 +34,7 @@ export const Sponsors = () => (
             <img className="h4" src={require('./textile-logo.svg')} />
           </a>
         </div>
-        <div className="ma4">
+        <div className="mh4 mv3">
           <a className="db" href="https://www.mozilla.org/en-US/">
             <img className="h4" src={require('./moz-logo.svg')} />
           </a>
