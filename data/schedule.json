@@ -183,7 +183,8 @@
         "startTime": "13:30",
         "endTime": "14:30",
         "title": "Lunch",
-        "type": "break"
+        "type": "break",
+        "locationId": "restaurant"
       },
       {
         "startTime": "14:30",
@@ -221,7 +222,8 @@
       {
         "startTime": "21:30",
         "endTime": "...",
-        "title": "Group Activity"
+        "title": "Group Activity",
+        "locationId": "caravan"
       }
     ]
   },
@@ -356,7 +358,8 @@
         "startTime": "13:30",
         "endTime": "14:30",
         "title": "Lunch",
-        "type": "break"
+        "type": "break",
+        "locationId": "restaurant"
       },
       {
         "startTime": "14:30",
@@ -395,14 +398,8 @@
       {
         "startTime": "20:00",
         "endTime": "21:30",
-        "title": "Group Dinner with a Surprise 🎁",
-        "locationId": "restaurant"
-      },
-      {
-        "startTime": "21:30",
-        "endTime": "...",
-        "title": "Music on the Terrace",
-        "locationId": "restaurant-terrace"
+        "title": "Special Group Dinner",
+        "locationId": "mas-bonvilar"
       }
     ]
   },
