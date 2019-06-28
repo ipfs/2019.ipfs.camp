@@ -51,9 +51,6 @@ export default () => {
               Join the core developers for a hands on experience packed with
               workshops, lectures and deep-dives.
             </Text>
-            <Text className="mv4 pt-mono f4 f3-ns">
-              June 27-30 · Barcelona, Spain
-            </Text>
             <p className="mv4">
               {tickets.viewSchedule ? (
                 <Button to="/schedule">View Schedule</Button>
@@ -70,6 +67,9 @@ export default () => {
                     : 'Sold Out'}
                 </Button>
               )}
+              <Text className="mv4 pt-mono f4 f3-ns">
+                June 27-30 · Barcelona, Spain
+              </Text>
             </p>
           </Box>
         </Box>
