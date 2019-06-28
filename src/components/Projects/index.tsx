@@ -12,7 +12,7 @@ const ProjectGrid = styled.div`
   background: url(${grid}) no-repeat top left;
   background-size: 800px;
   position: absolute;
-  top: 900px;
+  top: 780px;
   left: 50%;
   width: 50%;
   height: 800px;
