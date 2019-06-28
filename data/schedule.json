@@ -399,7 +399,8 @@
         "startTime": "19:45",
         "endTime": "20:15",
         "title": "Aperitifs",
-        "type": "break"
+        "type": "break",
+        "locationId": "mas-bonvilar"
       },
       {
         "startTime": "20:15",
