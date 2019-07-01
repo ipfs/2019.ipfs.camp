@@ -17,6 +17,9 @@
   }
 
   ready(function() {
+    // camp complete, disable ribbon until next event 🙌
+    if (Date.now() > 1561933800000) return
+
     var head = document.getElementsByTagName('head')[0]
 
     // add style
