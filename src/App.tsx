@@ -23,7 +23,7 @@ import { Sponsors } from '@components/Sponsors'
 import { SiteData } from './types'
 
 const NavItems: React.FC = () => {
-  const { tickets } = useSiteData<SiteData>()
+  const { tickets, archived } = useSiteData<SiteData>()
   return (
     <>
       <li className="dib">
@@ -52,13 +52,19 @@ const NavItems: React.FC = () => {
         </NavLink>
       </li>
       <li className="dib pv2 link ml3-ns">
-        <Button to="/register" outline={!tickets.onSale} primaryColor="dark3">
-          {tickets.onSale
-            ? tickets.waitlist
-              ? tickets.waitlistCta
-              : tickets.regLink
-            : 'Sold Out'}
-        </Button>
+        {!archived ? (
+          <Button to="/register" outline={!tickets.onSale} primaryColor="dark3">
+            {tickets.onSale
+              ? tickets.waitlist
+                ? tickets.waitlistCta
+                : tickets.regLink
+              : 'Sold Out'}
+          </Button>
+        ) : (
+          <Button to="/schedule" outline={!tickets.onSale} primaryColor="dark3">
+            Schedule
+          </Button>
+        )}
       </li>
     </>
   )

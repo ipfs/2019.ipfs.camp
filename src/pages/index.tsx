@@ -69,7 +69,7 @@ export default () => {
               )}
             </p>
             <Text className="mv4 pt-mono f4 f3-ns">
-              June 27-30 · Barcelona, Spain
+              June 27-30 2019 · Barcelona, Spain
             </Text>
           </Box>
         </Box>

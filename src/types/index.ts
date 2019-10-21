@@ -6,6 +6,7 @@ export interface Post {
 
 export type SiteData = {
   title: string
+  archived?: boolean
   tickets: {
     waitlist: boolean
     waitlistCta: string

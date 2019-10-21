@@ -155,6 +155,7 @@ export default {
   getSiteData: () => ({
     title: 'IPFS Camp, June 27-30 2019 🏕',
     gtagId: 'UA-96910779-12',
+    archived: true,
     tickets: {
       waitlist: true,
       waitlistCta: 'Join Waitlist',
