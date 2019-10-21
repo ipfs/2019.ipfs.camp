@@ -52,7 +52,7 @@ const ApplicationBtn = ({
   href: string
   ctaText: string
 }) => (
-  <Button block to={href}>
+  <Button block href={href}>
     <div className="tc">{ctaText}</div>
   </Button>
 )
