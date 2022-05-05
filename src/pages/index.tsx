@@ -15,10 +15,10 @@ export default () => {
   const { tickets } = useSiteData<SiteData>()
   return (
     <>
-      <Hero className="relative overflow-hidden tc tl-ns">
+      <Hero className="relative overflow-hidden tc tl-ns min-vh-100">
         <Stars className="bg-dark3" />
         <Box className="pa4 pa5-ns lh-copy mw9 center">
-          <Box className="mw7 left">
+          <Box className="mw7 center-ns tc">
             <Box className="mv4 flex flex-column flex-row-ns items-center-ns">
               <Box>
                 <Logo
@@ -52,6 +52,9 @@ export default () => {
               workshops, lectures and deep-dives.
             </Text>
             <p className="mv4">
+              <Button to="https://google.com">Apply to speak</Button>
+              {/* {' '}<Button to="https://google.com" outline primaryColor="white">Ticket Launch</Button> */}
+
               {tickets.viewSchedule ? (
                 <Button to="/schedule">View Schedule</Button>
               ) : (
@@ -69,12 +72,12 @@ export default () => {
               )}
             </p>
             <Text className="mv4 pt-mono f4 f3-ns">
-              June 27-30 2019 · Barcelona, Spain
+              July 14-17 2022 · Amsterdam, Netherlands
             </Text>
           </Box>
         </Box>
       </Hero>
-      <section className="bg-white lh-copy dark3 tc tl-ns">
+      {/* <section className="bg-white lh-copy dark3 tc tl-ns">
         <div className="mt4 mb4 pa4 pa5-ns pt0 mw9 center f5 f4-l">
           <div className="flex-ns items-center">
             <div className="w-50-ns">
@@ -83,7 +86,7 @@ export default () => {
               </Heading>
               <p>
                 This unique experience is designed to bring together{' '}
-                <strong>150 pioneers</strong> in the Distributed Web space and
+                <strong>300 pioneers</strong> in the Distributed Web space and
                 is an opportunity to develop your ideas and learn from the IPFS
                 core team and community.
               </p>
@@ -100,7 +103,7 @@ export default () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

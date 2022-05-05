@@ -135,9 +135,9 @@ const App = () => {
 
           <DefaultMeta />
           <Card />
-          <Match path="/*">
+          {/* <Match path="/*">
             {(props: any) => (props.match ? <Nav /> : null)}
-          </Match>
+          </Match> */}
           <Box className="sans-serif white transition-all">
             <FadeIn>
               <main>
@@ -149,10 +149,10 @@ const App = () => {
                   </Router>
                 </MDXProvider>
               </main>
-              <Sponsors />
+              {/* <Sponsors /> */}
             </FadeIn>
           </Box>
-          <Footer />
+          {/* <Footer /> */}
         </React.Suspense>
       </Root>
     </ThemeProvider>
