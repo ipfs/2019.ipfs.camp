@@ -17,8 +17,8 @@ export default () => {
     <>
       <Hero className="relative overflow-hidden tc tl-ns min-vh-100">
         <Stars className="bg-dark3" />
-        <Box className="pa4 pa5-ns lh-copy mw9 center">
-          <Box className="mw7 center-ns tc">
+        <Box className="pa2 pa5-ns lh-copy mw9 center min-vh-100">
+          <Box className="mw7 center-ns tc flex flex-column">
             <Box className="mv4 flex flex-column flex-row-ns items-center-ns">
               <Box>
                 <Logo
@@ -51,7 +51,10 @@ export default () => {
               Join the core developers for a hands on experience packed with
               workshops, lectures and deep-dives.
             </Text>
-            <p className="mv4">
+            <Text className="mv4 pt-mono f4 f3-ns">
+              July 14-17 2022 · Amsterdam, Netherlands
+            </Text>
+            <div className="mv4">
               <div className="mh2 mv2 dib">
                 <Button to="https://ipfs.io">Apply to speak</Button>
               </div>
@@ -76,10 +79,7 @@ export default () => {
                     : 'Sold Out'}
                 </Button>
               )} */}
-            </p>
-            <Text className="mv4 pt-mono f4 f3-ns">
-              July 14-17 2022 · Amsterdam, Netherlands
-            </Text>
+            </div>
           </Box>
         </Box>
       </Hero>
