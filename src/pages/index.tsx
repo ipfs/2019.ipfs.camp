@@ -52,10 +52,16 @@ export default () => {
               workshops, lectures and deep-dives.
             </Text>
             <p className="mv4">
-              <Button to="https://google.com">Apply to speak</Button>
-              {/* {' '}<Button to="https://google.com" outline primaryColor="white">Ticket Launch</Button> */}
+              <div className="mh2 mv2 dib">
+                <Button to="https://ipfs.io">Apply to speak</Button>
+              </div>
+              <div className="mh2 mv2 dib">
+                <Button to="https://ipfs.io" outline primaryColor="white">
+                  Ticket Waitlist
+                </Button>
+              </div>
 
-              {tickets.viewSchedule ? (
+              {/* {tickets.viewSchedule ? (
                 <Button to="/schedule">View Schedule</Button>
               ) : (
                 <Button
@@ -69,7 +75,7 @@ export default () => {
                       : tickets.regLink
                     : 'Sold Out'}
                 </Button>
-              )}
+              )} */}
             </p>
             <Text className="mv4 pt-mono f4 f3-ns">
               July 14-17 2022 · Amsterdam, Netherlands

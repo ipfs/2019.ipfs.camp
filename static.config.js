@@ -158,7 +158,7 @@ export default {
     archived: false,
     tickets: {
       waitlist: true,
-      waitlistCta: 'Tickets',
+      waitlistCta: 'Join Waitlist',
       waitlistLink: 'Waitlist',
       regCta: 'Apply',
       regLink: 'Register',
