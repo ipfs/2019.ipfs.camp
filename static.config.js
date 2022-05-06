@@ -154,7 +154,7 @@ export default {
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getSiteData: () => ({
     title: 'IPFS Camp, July 14-17 2022 🏕',
-    gtagId: '314186901',
+    gtagId: 'G-CTDWM780PR',
     archived: false,
     tickets: {
       waitlist: true,
