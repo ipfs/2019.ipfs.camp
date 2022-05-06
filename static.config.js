@@ -150,11 +150,11 @@ export default {
     ],
   ],
   siteRoot:
-    process.env.CONTEXT === 'production' ? 'https://2022.camp.ipfs' : undefined,
+    process.env.CONTEXT === 'production' ? 'https://2022.ipfs.camp' : undefined,
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getSiteData: () => ({
     title: 'IPFS Camp, July 14-17 2022 🏕',
-    gtagId: '',
+    gtagId: '314186901',
     archived: false,
     tickets: {
       waitlist: true,
@@ -166,7 +166,7 @@ export default {
       viewSchedule: false,
     },
     meta: {
-      url: 'https://2022.camp.ipfs',
+      url: 'https://2022.ipfs.camp',
       title: '',
       keywords: 'IPFS, IPFS Camp, IPFS Conf, dweb, libp2p, multiformats',
       twitter: 'ipfsbot',
