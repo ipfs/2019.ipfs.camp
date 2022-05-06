@@ -56,7 +56,9 @@ export default () => {
             </Text>
             <div className="mv4">
               <div className="mh2 mv2 dib">
-                <Button to="https://ipfs.io">Apply to speak</Button>
+                <Button to="https://protocollabs.typeform.com/IPFSCamp2022">
+                  Apply to speak
+                </Button>
               </div>
               <div className="mh2 mv2 dib">
                 <Button to="https://ipfs.io" outline primaryColor="white">
