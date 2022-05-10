@@ -46,10 +46,11 @@ export default () => {
             </Box>
             <Text className="measure-wide f5 f4-m f3-l" color="neutral2">
               <strong>IPFS Camp</strong> is a{' '}
-              <strong>3 day hacker retreat</strong> designed for the{' '}
+              <strong>four day conference</strong> designed for the{' '}
               <strong>builders</strong> of the <strong>Distributed Web</strong>.
-              Join the core developers for a hands on experience packed with
-              workshops, lectures and deep-dives.
+              Join the core developers and community members for a hands on
+              experience packed with workshops, presentations, deep-dives, a
+              hackathon and more.
             </Text>
             <Text className="mv4 pt-mono f4 f3-ns">
               July 14-17 2022 · Amsterdam, Netherlands
@@ -61,7 +62,11 @@ export default () => {
                 </Button>
               </div>
               <div className="mh2 mv2 dib">
-                <Button to="https://ipfs.io" outline primaryColor="white">
+                <Button
+                  to="https://www.eventbrite.com/e/ipfs-camp-2022-tickets-335454492417"
+                  outline
+                  primaryColor="white"
+                >
                   Ticket Waitlist
                 </Button>
               </div>

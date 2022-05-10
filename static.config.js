@@ -169,9 +169,9 @@ export default {
       url: 'https://2022.ipfs.camp',
       title: '',
       keywords: 'IPFS, IPFS Camp, IPFS Conf, dweb, libp2p, multiformats',
-      twitter: 'ipfsbot',
+      twitter: 'ipfs',
       desc:
-        'IPFS Camp is a 3 day hacker retreat designed for the builders of the Distributed Web.',
+        'IPFS Camp is a four day conference designed for the builders of the Distributed Web.',
       lastBuilt: Date.now(),
     },
   }),
