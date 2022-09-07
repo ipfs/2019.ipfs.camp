@@ -1,4 +1,4 @@
-;(function() {
+; (function () {
   // polyfill for ie11
   if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach
@@ -10,13 +10,13 @@
     } else if (document.addEventListener) {
       document.addEventListener('DOMContentLoaded', fn)
     } else {
-      document.attachEvent('onreadystatechange', function() {
+      document.attachEvent('onreadystatechange', function () {
         if (document.readyState != 'loading') fn()
       })
     }
   }
 
-  ready(function() {
+  ready(function () {
     // camp complete, disable ribbon until next event 🙌
     if (Date.now() > 1561933800000) return
 
@@ -27,7 +27,7 @@
     style.href =
       window.location.href.indexOf('//localhost') > -1
         ? '//localhost:3000/ribbon.css'
-        : '//camp.ipfs.io/ribbon.css'
+        : '//2019.ipfs.io/ribbon.css'
     style.type = 'text/css'
     style.rel = 'stylesheet'
     head.appendChild(style)
@@ -38,8 +38,8 @@
     ribbon.className = 'ipfs-camp-ribbon'
     ribbon.style = 'display:none;'
     ribbonChild.className = 'ipfs-camp-ribbon-inner'
-    ribbonChild.onclick = function() {
-      window.open('https://camp.ipfs.io')
+    ribbonChild.onclick = function () {
+      window.open('https://2019.ipfs.io')
     }
     ribbonChild.innerHTML =
       '<div>Join us at<br/><span style="font-size:18px; font-weight: bold">IPFS Camp</span><br/>27-30 June</div>'
@@ -47,7 +47,7 @@
 
     // remove any existing ribbons
     if ('querySelectorAll' in document)
-      document.querySelectorAll('.' + ribbon.className).forEach(function(n) {
+      document.querySelectorAll('.' + ribbon.className).forEach(function (n) {
         n.remove()
       })
 
