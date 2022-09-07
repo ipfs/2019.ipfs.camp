@@ -62,7 +62,7 @@ const resolveContent = async file => {
 }
 
 // setup url safe ids to use for slugs and item ident with manual override
-Array.prototype.mapIds = function(cb) {
+Array.prototype.mapIds = function (cb) {
   return this.map(obj => {
     obj.id = slug(obj.id ? obj.id : obj.fileInfo.name)
     return obj
@@ -150,7 +150,7 @@ export default {
     ],
   ],
   siteRoot:
-    process.env.CONTEXT === 'production' ? 'https://camp.ipfs.io' : undefined,
+    process.env.CONTEXT === 'production' ? 'https://2019.ipfs.io' : undefined,
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getSiteData: () => ({
     title: 'IPFS Camp, June 27-30 2019 🏕',
@@ -166,7 +166,7 @@ export default {
       viewSchedule: true,
     },
     meta: {
-      url: 'https://camp.ipfs.io',
+      url: 'https://2019.ipfs.io',
       title: '',
       keywords: 'IPFS, IPFS Camp, IPFS Conf, dweb, libp2p, multiformats',
       twitter: 'ipfsbot',
