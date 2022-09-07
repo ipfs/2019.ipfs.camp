@@ -27,7 +27,7 @@
     style.href =
       window.location.href.indexOf('//localhost') > -1
         ? '//localhost:3000/ribbon.css'
-        : '//2019.ipfs.io/ribbon.css'
+        : '//2019.ipfs.camp/ribbon.css'
     style.type = 'text/css'
     style.rel = 'stylesheet'
     head.appendChild(style)
@@ -39,7 +39,7 @@
     ribbon.style = 'display:none;'
     ribbonChild.className = 'ipfs-camp-ribbon-inner'
     ribbonChild.onclick = function () {
-      window.open('https://2019.ipfs.io')
+      window.open('https://2019.ipfs.camp')
     }
     ribbonChild.innerHTML =
       '<div>Join us at<br/><span style="font-size:18px; font-weight: bold">IPFS Camp</span><br/>27-30 June</div>'

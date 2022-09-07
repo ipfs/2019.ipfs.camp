@@ -150,7 +150,7 @@ export default {
     ],
   ],
   siteRoot:
-    process.env.CONTEXT === 'production' ? 'https://2019.ipfs.io' : undefined,
+    process.env.CONTEXT === 'production' ? 'https://2019.ipfs.camp' : undefined,
   entry: path.join(__dirname, 'src', 'index.tsx'),
   getSiteData: () => ({
     title: 'IPFS Camp, June 27-30 2019 🏕',
@@ -166,7 +166,7 @@ export default {
       viewSchedule: true,
     },
     meta: {
-      url: 'https://2019.ipfs.io',
+      url: 'https://2019.ipfs.camp',
       title: '',
       keywords: 'IPFS, IPFS Camp, IPFS Conf, dweb, libp2p, multiformats',
       twitter: 'ipfsbot',
