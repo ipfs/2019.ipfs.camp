@@ -4,10 +4,11 @@
   "scripts": {
     "start": "react-static start",
     "stage": "react-static build --staging",
-    "build": "react-static build && yarn ribbon:minify",
+    "build": "react-static build && yarn ribbon:minify && yarn ipfs-404",
     "bundle": "react-static bundle",
     "export": "react-static export",
     "serve": "serve dist -p 3000 -s",
+    "ipfs-404": "cp ./dist/index.html ./dist/ipfs-404.html",
     "ribbon:minify": "terser dist/ribbon.js -o dist/ribbon.min.js -c -m --source-map"
   },
   "dependencies": {
