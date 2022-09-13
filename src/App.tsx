@@ -74,10 +74,9 @@ const Nav: React.FC<RouteComponentProps> = () => {
   return (
     <>
       <nav className="monospace f5 fixed-ns left-0 right-0 top-0 z-999 bg-white bb b--neutral1">
-        <div className="block pa3 tc bg-primary2 white f7 b">
-          <a className="link white db" href="https://ipfs.camp">
-            IPFS Camp is back,{' '}
-            <span className="underline">join the latest event!</span>
+        <div className="block pa3 tc bg-primary2 white f7">
+          <a className="link white db" href="https://2022.ipfs.camp">
+            🏕 IPFS Camp is back! <span className="fb">Join us →</span>
           </a>
         </div>
         <div className="ph4 ph5-ns pv3 pv1-ns mw9 center flex items-center">
